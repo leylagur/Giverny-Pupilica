@@ -1,0 +1,5502 @@
+[
+  {
+    "input": "İlgi alanlarım: tasarım. YKS sıralaması: 400000",
+    "output": "OYUN GELİŞTİRME VE PROGRAMLAMA - İstanbul Bilgi Ü. (Sıralama: 311300)",
+    "metadata": {
+      "department": "OYUN GELİŞTİRME VE PROGRAMLAMA",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "311300",
+      "target_range": "300000-500000",
+      "interests": [
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yaratıcılık. YKS sıralaması: 400000",
+    "output": "OYUN GELİŞTİRME VE PROGRAMLAMA - İstanbul Bilgi Ü. (Sıralama: 311300)",
+    "metadata": {
+      "department": "OYUN GELİŞTİRME VE PROGRAMLAMA",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "311300",
+      "target_range": "300000-500000",
+      "interests": [
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, sistem tasarımı, yazılım, insan ilişkileri, tasarım. YKS sıralaması: 400000",
+    "output": "HAVACILIK ELEKTRONİĞİ TEKNOLOJİLERİ - Ankara Ü. (Sıralama: 326200)",
+    "metadata": {
+      "department": "HAVACILIK ELEKTRONİĞİ TEKNOLOJİLERİ",
+      "university": "Ankara Ü.",
+      "city": "Ankara",
+      "actual_ranking": "326200",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "iletişim",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, estetik. YKS sıralaması: 850000",
+    "output": "AMBALAJ TASARIMI - Fatih Sultan Mehmet Vakıf Ü. (Sıralama: 852800)",
+    "metadata": {
+      "department": "AMBALAJ TASARIMI",
+      "university": "Fatih Sultan Mehmet Vakıf Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "852800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, yaratıcılık. YKS sıralaması: 850000",
+    "output": "AMBALAJ TASARIMI - Fatih Sultan Mehmet Vakıf Ü. (Sıralama: 852800)",
+    "metadata": {
+      "department": "AMBALAJ TASARIMI",
+      "university": "Fatih Sultan Mehmet Vakıf Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "852800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, bilgisayar, sayısal analiz, yaratıcılık. YKS sıralaması: 400000",
+    "output": "E-TİCARET VE PAZARLAMA - w\nİstanbul Bilgi Ü. (Sıralama: 327400)",
+    "metadata": {
+      "department": "E-TİCARET VE PAZARLAMA",
+      "university": "w\nİstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "327400",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "matematik",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "OTOMOTİV TEKNOLOJİSİ - Yeditepe Ü. (Sıralama: 221500)",
+    "metadata": {
+      "department": "OTOMOTİV TEKNOLOJİSİ",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "221500",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "OTOMOTİV TEKNOLOJİSİ - Yeditepe Ü. (Sıralama: 221500)",
+    "metadata": {
+      "department": "OTOMOTİV TEKNOLOJİSİ",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "221500",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, sistem tasarımı, teknoloji, sosyal beceiler, çevre. YKS sıralaması: 400000",
+    "output": "İNSANSIZ ARAÇ TEKNİKERLİĞİ - Ondokuz Mayıs Ü. (Sıralama: 466200)",
+    "metadata": {
+      "department": "İNSANSIZ ARAÇ TEKNİKERLİĞİ",
+      "university": "Ondokuz Mayıs Ü.",
+      "city": "Samsun",
+      "actual_ranking": "466200",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "iletişim",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, mühendislik, yazılım, medya, ekoloji. YKS sıralaması: 400000",
+    "output": "İNSANSIZ ARAÇ TEKNİKERLİĞİ - Ondokuz Mayıs Ü. (Sıralama: 466200)",
+    "metadata": {
+      "department": "İNSANSIZ ARAÇ TEKNİKERLİĞİ",
+      "university": "Ondokuz Mayıs Ü.",
+      "city": "Samsun",
+      "actual_ranking": "466200",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "iletişim",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, sağlık hizmetleri, teknik bilim. YKS sıralaması: 600000",
+    "output": "OPTOELEKTRONİK VE ELEKTRO OPTİK TEKNOLOJİLERİ - Ankara Ü. (Sıralama: 529000)",
+    "metadata": {
+      "department": "OPTOELEKTRONİK VE ELEKTRO OPTİK TEKNOLOJİLERİ",
+      "university": "Ankara Ü.",
+      "city": "Ankara",
+      "actual_ranking": "529000",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, görsel sanatlar. YKS sıralaması: 400000",
+    "output": "ÖN-YÜZ YAZILIM GELİŞTİRME - Ege Ü. (Sıralama: 350800)",
+    "metadata": {
+      "department": "ÖN-YÜZ YAZILIM GELİŞTİRME",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "350800",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, yaratıcılık. YKS sıralaması: 400000",
+    "output": "ÖN-YÜZ YAZILIM GELİŞTİRME - Ege Ü. (Sıralama: 350800)",
+    "metadata": {
+      "department": "ÖN-YÜZ YAZILIM GELİŞTİRME",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "350800",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, görsel sanatlar, medya. YKS sıralaması: 600000",
+    "output": "FOTOĞRAFÇILIK VE KAMERAMANLIK - Başkent Ü. (Sıralama: 604500)",
+    "metadata": {
+      "department": "FOTOĞRAFÇILIK VE KAMERAMANLIK",
+      "university": "Başkent Ü.",
+      "city": "Ankara",
+      "actual_ranking": "604500",
+      "target_range": "500000-700000",
+      "interests": [
+        "mühendislik",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: mühendislik, estetik, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "FOTOĞRAFÇILIK VE KAMERAMANLIK - Başkent Ü. (Sıralama: 604500)",
+    "metadata": {
+      "department": "FOTOĞRAFÇILIK VE KAMERAMANLIK",
+      "university": "Başkent Ü.",
+      "city": "Ankara",
+      "actual_ranking": "604500",
+      "target_range": "500000-700000",
+      "interests": [
+        "mühendislik",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, tıp, kurtarma operasyonları, proje yönetimi. YKS sıralaması: 600000",
+    "output": "KAYNAK TEKNOLOJİSİ - İstanbul Gedik Ü. (Sıralama: 538900)",
+    "metadata": {
+      "department": "KAYNAK TEKNOLOJİSİ",
+      "university": "İstanbul Gedik Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "538900",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, tıp, kurtarma operasyonları, mühendislik. YKS sıralaması: 600000",
+    "output": "KAYNAK TEKNOLOJİSİ - İstanbul Gedik Ü. (Sıralama: 538900)",
+    "metadata": {
+      "department": "KAYNAK TEKNOLOJİSİ",
+      "university": "İstanbul Gedik Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "538900",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: fiziksel aktivite, medikal, sanat, mühendislik. YKS sıralaması: 600000",
+    "output": "İŞ VE UĞRAŞI TERAPİSİ - Kocaeli Ü. (Sıralama: 692500)",
+    "metadata": {
+      "department": "İŞ VE UĞRAŞI TERAPİSİ",
+      "university": "Kocaeli Ü.",
+      "city": "Kocaeli",
+      "actual_ranking": "692500",
+      "target_range": "500000-700000",
+      "interests": [
+        "spor",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: fiziksel aktivite, sağlık hizmetleri, tasarım, teknik bilim. YKS sıralaması: 600000",
+    "output": "İŞ VE UĞRAŞI TERAPİSİ - Kocaeli Ü. (Sıralama: 692500)",
+    "metadata": {
+      "department": "İŞ VE UĞRAŞI TERAPİSİ",
+      "university": "Kocaeli Ü.",
+      "city": "Kocaeli",
+      "actual_ranking": "692500",
+      "target_range": "500000-700000",
+      "interests": [
+        "spor",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, yazılım. YKS sıralaması: 225000",
+    "output": "BİLGİSAYAR PROGRAMCILIĞI - Çankaya Ü. (Sıralama: 160100)",
+    "metadata": {
+      "department": "BİLGİSAYAR PROGRAMCILIĞI",
+      "university": "Çankaya Ü.",
+      "city": "Ankara",
+      "actual_ranking": "160100",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sanat, mühendislik. YKS sıralaması: 850000",
+    "output": "SERAMİK VE CAM TASARIMI - İstanbul Ü.-Cerrahpaşa (Sıralama: 739100)",
+    "metadata": {
+      "department": "SERAMİK VE CAM TASARIMI",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "739100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: estetik, proje yönetimi. YKS sıralaması: 850000",
+    "output": "SERAMİK VE CAM TASARIMI - İstanbul Ü.-Cerrahpaşa (Sıralama: 739100)",
+    "metadata": {
+      "department": "SERAMİK VE CAM TASARIMI",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "739100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, yazılım, yaratıcılık. YKS sıralaması: 400000",
+    "output": "SANAL VE ARTIRILMIŞ GERÇEKLİK - İstanbul Ü.-Cerrahpaşa (Sıralama: 373200)",
+    "metadata": {
+      "department": "SANAL VE ARTIRILMIŞ GERÇEKLİK",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "373200",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, proje yönetimi. YKS sıralaması: 400000",
+    "output": "AŞÇILIK (UÖ) - İstanbul Topkapı Ü. (Sıralama: 364000)",
+    "metadata": {
+      "department": "AŞÇILIK (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "364000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, teknik bilim. YKS sıralaması: 400000",
+    "output": "AŞÇILIK (UÖ) - İstanbul Topkapı Ü. (Sıralama: 364000)",
+    "metadata": {
+      "department": "AŞÇILIK (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "364000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, medikal, emniyet, mühendislik. YKS sıralaması: 225000",
+    "output": "SİLAH SANAYİ TEKNİKERLİĞİ - Ostim Teknik Ü. (Sıralama: 279600)",
+    "metadata": {
+      "department": "SİLAH SANAYİ TEKNİKERLİĞİ",
+      "university": "Ostim Teknik Ü.",
+      "city": "Ankara",
+      "actual_ranking": "279600",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, sağlık hizmetleri. YKS sıralaması: 400000",
+    "output": "ECZANE HİZMETLERİ - Hacettepe Ü. (Sıralama: 356500)",
+    "metadata": {
+      "department": "ECZANE HİZMETLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "356500",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, fitness, koruma. YKS sıralaması: 400000",
+    "output": "YAT KAPTANLIĞI - Muğla Sıtkı Koçman Ü. (Sıralama: 473700)",
+    "metadata": {
+      "department": "YAT KAPTANLIĞI",
+      "university": "Muğla Sıtkı Koçman Ü.",
+      "city": "Muğla",
+      "actual_ranking": "473700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "spor",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tarım, tıp, yaratıcılık, sosyal beceiler. YKS sıralaması: 850000",
+    "output": "PEYZAJ VE SÜS BİTKİLERİ YETİŞTİRİCİLİĞİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 814800)",
+    "metadata": {
+      "department": "PEYZAJ VE SÜS BİTKİLERİ YETİŞTİRİCİLİĞİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "814800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "doğa",
+        "sağlık",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: çevre, hasta bakımı, görsel sanatlar, iletişim. YKS sıralaması: 850000",
+    "output": "PEYZAJ VE SÜS BİTKİLERİ YETİŞTİRİCİLİĞİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 814800)",
+    "metadata": {
+      "department": "PEYZAJ VE SÜS BİTKİLERİ YETİŞTİRİCİLİĞİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "814800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "doğa",
+        "sağlık",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, sistem tasarımı, bilgisayar, doğa, estetik. YKS sıralaması: 850000",
+    "output": "SULAMA TEKNOLOJİSİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 894900)",
+    "metadata": {
+      "department": "SULAMA TEKNOLOJİSİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "894900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, teknik bilim, yazılım, ekoloji, yaratıcılık. YKS sıralaması: 850000",
+    "output": "SULAMA TEKNOLOJİSİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 894900)",
+    "metadata": {
+      "department": "SULAMA TEKNOLOJİSİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "894900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: insan ilişkileri. YKS sıralaması: 600000",
+    "output": "SOSYAL HİZMETLER - İstanbul Medipol Ü. (Sıralama: 507400)",
+    "metadata": {
+      "department": "SOSYAL HİZMETLER",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "507400",
+      "target_range": "500000-700000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: iletişim. YKS sıralaması: 600000",
+    "output": "SOSYAL HİZMETLER - İstanbul Medipol Ü. (Sıralama: 507400)",
+    "metadata": {
+      "department": "SOSYAL HİZMETLER",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "507400",
+      "target_range": "500000-700000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, tasarım, sistem tasarımı. YKS sıralaması: 600000",
+    "output": "SAHNE IŞIK VE SES TEKNOLOJİLERİ - Hacettepe Ü. (Sıralama: 509200)",
+    "metadata": {
+      "department": "SAHNE IŞIK VE SES TEKNOLOJİLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "509200",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sanat, sistem tasarımı. YKS sıralaması: 600000",
+    "output": "SAHNE IŞIK VE SES TEKNOLOJİLERİ - Hacettepe Ü. (Sıralama: 509200)",
+    "metadata": {
+      "department": "SAHNE IŞIK VE SES TEKNOLOJİLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "509200",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, bilgisayar, mühendislik. YKS sıralaması: 850000",
+    "output": "BİLGİSAYAR TEKNOLOJİSİ (UÖ) - Ankara Ü. (Sıralama: 758200)",
+    "metadata": {
+      "department": "BİLGİSAYAR TEKNOLOJİSİ (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "758200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, teknoloji, proje yönetimi. YKS sıralaması: 850000",
+    "output": "BİLGİSAYAR TEKNOLOJİSİ (UÖ) - Ankara Ü. (Sıralama: 758200)",
+    "metadata": {
+      "department": "BİLGİSAYAR TEKNOLOJİSİ (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "758200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal. YKS sıralaması: 850000",
+    "output": "ENGELLİ BAKIMI VE REHABİLİTASYON - Üsküdar Ü. (Sıralama: 764900)",
+    "metadata": {
+      "department": "ENGELLİ BAKIMI VE REHABİLİTASYON",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "764900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme. YKS sıralaması: 850000",
+    "output": "ACİL DURUM VE AFET YÖNETİMİ (UÖ) - Ankara Ü. (Sıralama: 808500)",
+    "metadata": {
+      "department": "ACİL DURUM VE AFET YÖNETİMİ (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "808500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, estetik, insan ilişkileri. YKS sıralaması: 850000",
+    "output": "WEB TASARIMI VE KODLAMA (UÖ) - Sakarya Ü. (Sıralama: 902400)",
+    "metadata": {
+      "department": "WEB TASARIMI VE KODLAMA (UÖ)",
+      "university": "Sakarya Ü.",
+      "city": "Genel",
+      "actual_ranking": "902400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, hasta bakımı, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "DİYALİZ - Ankara Medipol Ü. (Sıralama: 447500)",
+    "metadata": {
+      "department": "DİYALİZ",
+      "university": "Ankara Medipol Ü.",
+      "city": "Ankara",
+      "actual_ranking": "447500",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, sağlık hizmetleri, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "DİYALİZ - Ankara Medipol Ü. (Sıralama: 447500)",
+    "metadata": {
+      "department": "DİYALİZ",
+      "university": "Ankara Medipol Ü.",
+      "city": "Ankara",
+      "actual_ranking": "447500",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, iletişim. YKS sıralaması: 600000",
+    "output": "EVDE HASTA BAKIMI - Mardin Artuklu Ü. (Sıralama: 571600)",
+    "metadata": {
+      "department": "EVDE HASTA BAKIMI",
+      "university": "Mardin Artuklu Ü.",
+      "city": "Mardin",
+      "actual_ranking": "571600",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "EVDE HASTA BAKIMI - Mardin Artuklu Ü. (Sıralama: 571600)",
+    "metadata": {
+      "department": "EVDE HASTA BAKIMI",
+      "university": "Mardin Artuklu Ü.",
+      "city": "Mardin",
+      "actual_ranking": "571600",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, bilgisayar, tıp, mühendislik. YKS sıralaması: 850000",
+    "output": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ (UÖ) - Isparta Uygulamalı Bilimler Ü. (Sıralama: 993500)",
+    "metadata": {
+      "department": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ (UÖ)",
+      "university": "Isparta Uygulamalı Bilimler Ü.",
+      "city": "Genel",
+      "actual_ranking": "993500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, dijital teknoloji, tıp, teknik bilim. YKS sıralaması: 850000",
+    "output": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ (UÖ) - Isparta Uygulamalı Bilimler Ü. (Sıralama: 993500)",
+    "metadata": {
+      "department": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ (UÖ)",
+      "university": "Isparta Uygulamalı Bilimler Ü.",
+      "city": "Genel",
+      "actual_ranking": "993500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sanat, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "TEKSTİL TEKNOLOJİSİ - İstanbul Beykent Ü. (Sıralama: 700000)",
+    "metadata": {
+      "department": "TEKSTİL TEKNOLOJİSİ",
+      "university": "İstanbul Beykent Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "700000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, yaratıcılık, mühendislik. YKS sıralaması: 850000",
+    "output": "TEKSTİL TEKNOLOJİSİ - İstanbul Beykent Ü. (Sıralama: 700000)",
+    "metadata": {
+      "department": "TEKSTİL TEKNOLOJİSİ",
+      "university": "İstanbul Beykent Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "700000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, estetik, proje yönetimi. YKS sıralaması: 600000",
+    "output": "TEKSTİL TEKNOLOJİSİ - İstanbul Beykent Ü. (Sıralama: 700000)",
+    "metadata": {
+      "department": "TEKSTİL TEKNOLOJİSİ",
+      "university": "İstanbul Beykent Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "700000",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, tasarım, teknik bilim. YKS sıralaması: 600000",
+    "output": "TEKSTİL TEKNOLOJİSİ - İstanbul Beykent Ü. (Sıralama: 700000)",
+    "metadata": {
+      "department": "TEKSTİL TEKNOLOJİSİ",
+      "university": "İstanbul Beykent Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "700000",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, estetik, proje yönetimi. YKS sıralaması: 400000",
+    "output": "KONTROL VE OTOMASYON TEKNOLOJİSİ - Marmara Ü. (Sıralama: 318600)",
+    "metadata": {
+      "department": "KONTROL VE OTOMASYON TEKNOLOJİSİ",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "318600",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sanat, mühendislik. YKS sıralaması: 400000",
+    "output": "KONTROL VE OTOMASYON TEKNOLOJİSİ - Marmara Ü. (Sıralama: 318600)",
+    "metadata": {
+      "department": "KONTROL VE OTOMASYON TEKNOLOJİSİ",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "318600",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sağlık, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "NÜKLEER TIP TEKNİKLERİ - Dokuz Eylül Ü. (Sıralama: 527900)",
+    "metadata": {
+      "department": "NÜKLEER TIP TEKNİKLERİ",
+      "university": "Dokuz Eylül Ü.",
+      "city": "İzmir",
+      "actual_ranking": "527900",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: insan ilişkileri. YKS sıralaması: 225000",
+    "output": "İŞ SAĞLIĞI VE GÜVENLİĞİ (UÖ) - İstanbul Okan Ü. (Sıralama: 261600)",
+    "metadata": {
+      "department": "İŞ SAĞLIĞI VE GÜVENLİĞİ (UÖ)",
+      "university": "İstanbul Okan Ü.",
+      "city": "Genel",
+      "actual_ranking": "261600",
+      "target_range": "150000-300000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: çevre, hasta bakımı, mühendislik. YKS sıralaması: 400000",
+    "output": "LABORANT VE VETERİNER SAĞLIK - Ankara Yıldırım Beyazıt Ü. (Sıralama: 447200)",
+    "metadata": {
+      "department": "LABORANT VE VETERİNER SAĞLIK",
+      "university": "Ankara Yıldırım Beyazıt Ü.",
+      "city": "Ankara",
+      "actual_ranking": "447200",
+      "target_range": "300000-500000",
+      "interests": [
+        "doğa",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, IT, tasarım. YKS sıralaması: 600000",
+    "output": "CNC PROGRAMLAMA VE OPERATÖRLÜĞÜ - Necmettin Erbakan Ü. (Sıralama: 510900)",
+    "metadata": {
+      "department": "CNC PROGRAMLAMA VE OPERATÖRLÜĞÜ",
+      "university": "Necmettin Erbakan Ü.",
+      "city": "Konya",
+      "actual_ranking": "510900",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, tarım, medya. YKS sıralaması: 850000",
+    "output": "İNSAN KAYNAKLARI YÖNETİMİ (AÖ) - Anadolu Ü. (Sıralama: 780800)",
+    "metadata": {
+      "department": "İNSAN KAYNAKLARI YÖNETİMİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "780800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim. YKS sıralaması: 600000",
+    "output": "LOJİSTİK (UÖ) - Beykoz Ü. (Sıralama: 570300)",
+    "metadata": {
+      "department": "LOJİSTİK (UÖ)",
+      "university": "Beykoz Ü.",
+      "city": "Genel",
+      "actual_ranking": "570300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret. YKS sıralaması: 600000",
+    "output": "LOJİSTİK (UÖ) - Beykoz Ü. (Sıralama: 570300)",
+    "metadata": {
+      "department": "LOJİSTİK (UÖ)",
+      "university": "Beykoz Ü.",
+      "city": "Genel",
+      "actual_ranking": "570300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematik, proje yönetimi. YKS sıralaması: 600000",
+    "output": "w\nGIDA KALİTE KONTROLÜ VE ANALİZİ - İstanbul Gelişim Ü. (Sıralama: 685100)",
+    "metadata": {
+      "department": "w\nGIDA KALİTE KONTROLÜ VE ANALİZİ",
+      "university": "İstanbul Gelişim Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "685100",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sayısal analiz, mühendislik. YKS sıralaması: 600000",
+    "output": "w\nGIDA KALİTE KONTROLÜ VE ANALİZİ - İstanbul Gelişim Ü. (Sıralama: 685100)",
+    "metadata": {
+      "department": "w\nGIDA KALİTE KONTROLÜ VE ANALİZİ",
+      "university": "İstanbul Gelişim Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "685100",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, girişimcilik, teknoloji, güvenlik, insan ilişkileri. YKS sıralaması: 225000",
+    "output": "İNTERNET VE AĞ TEKNOLOJİLERİ - Yeditepe Ü. (Sıralama: 272200)",
+    "metadata": {
+      "department": "İNTERNET VE AĞ TEKNOLOJİLERİ",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "272200",
+      "target_range": "150000-300000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: mühendislik, ticaret, bilgisayar, kurtarma operasyonları, iletişim. YKS sıralaması: 225000",
+    "output": "İNTERNET VE AĞ TEKNOLOJİLERİ - Yeditepe Ü. (Sıralama: 272200)",
+    "metadata": {
+      "department": "İNTERNET VE AĞ TEKNOLOJİLERİ",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "272200",
+      "target_range": "150000-300000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, insan ilişkileri. YKS sıralaması: 225000",
+    "output": "DENİZ BROKERLİĞİ - Piri Reis Ü. (Sıralama: 257500)",
+    "metadata": {
+      "department": "DENİZ BROKERLİĞİ",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "257500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, iletişim. YKS sıralaması: 225000",
+    "output": "DENİZ BROKERLİĞİ - Piri Reis Ü. (Sıralama: 257500)",
+    "metadata": {
+      "department": "DENİZ BROKERLİĞİ",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "257500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, yazılım, sistem tasarımı, medya. YKS sıralaması: 850000",
+    "output": "MEDYA VE İLETİŞİM (AÖ) - Anadolu Ü. (Sıralama: 975700)",
+    "metadata": {
+      "department": "MEDYA VE İLETİŞİM (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "975700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sayısal analiz, yazılım, tıp. YKS sıralaması: 600000",
+    "output": "NÜKLEER TEKNOLOJİ VE RADYASYON GÜVENLİĞİ - Üsküdar Ü. (Sıralama: 663200)",
+    "metadata": {
+      "department": "NÜKLEER TEKNOLOJİ VE RADYASYON GÜVENLİĞİ",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "663200",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "teknoloji",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, tıp, yaratıcılık. YKS sıralaması: 850000",
+    "output": "OTOMOTİV GÖVDE VE YÜZEY İŞLEM TEKNOLOJİLERİ - İstanbul Gelişim Ü. (Sıralama: 708900)",
+    "metadata": {
+      "department": "OTOMOTİV GÖVDE VE YÜZEY İŞLEM TEKNOLOJİLERİ",
+      "university": "İstanbul Gelişim Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "708900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, doğa, güvenlik, proje yönetimi. YKS sıralaması: 850000",
+    "output": "ÇEVRE KORUMA VE KONTROL - Eskişehir Osmangazi Ü. (Sıralama: 960600)",
+    "metadata": {
+      "department": "ÇEVRE KORUMA VE KONTROL",
+      "university": "Eskişehir Osmangazi Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "960600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematiksel düşünce, tasarım, proje yönetimi. YKS sıralaması: 600000",
+    "output": "MODA TASARIMI (UÖ) - İstanbul Topkapı Ü. (Sıralama: 641100)",
+    "metadata": {
+      "department": "MODA TASARIMI (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "641100",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sayısal analiz, tasarım, teknik bilim. YKS sıralaması: 600000",
+    "output": "MODA TASARIMI (UÖ) - İstanbul Topkapı Ü. (Sıralama: 641100)",
+    "metadata": {
+      "department": "MODA TASARIMI (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "641100",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, proje yönetimi. YKS sıralaması: 400000",
+    "output": "MAHKEME BÜRO HİZMETLERİ - Ankara Medipol Ü. (Sıralama: 411800)",
+    "metadata": {
+      "department": "MAHKEME BÜRO HİZMETLERİ",
+      "university": "Ankara Medipol Ü.",
+      "city": "Ankara",
+      "actual_ranking": "411800",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, teknik bilim. YKS sıralaması: 400000",
+    "output": "MAHKEME BÜRO HİZMETLERİ - Ankara Medipol Ü. (Sıralama: 411800)",
+    "metadata": {
+      "department": "MAHKEME BÜRO HİZMETLERİ",
+      "university": "Ankara Medipol Ü.",
+      "city": "Ankara",
+      "actual_ranking": "411800",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "YEREL YÖNETİMLER - Marmara Ü. (Sıralama: 636000)",
+    "metadata": {
+      "department": "YEREL YÖNETİMLER",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "636000",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "TURİST REHBERLİĞİ - Fatih Sultan Mehmet Vakıf Ü. (Sıralama: 416300)",
+    "metadata": {
+      "department": "TURİST REHBERLİĞİ",
+      "university": "Fatih Sultan Mehmet Vakıf Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "416300",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "İŞLETME YÖNETİMİ - İstanbul Bilgi Ü. (Sıralama: 360600)",
+    "metadata": {
+      "department": "İŞLETME YÖNETİMİ",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "360600",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, teknik bilim, bilgisayar, medya, tasarım. YKS sıralaması: 400000",
+    "output": "ELEKTRONİK HABERLEŞME TEKNOLOJİSİ - Marmara Ü. (Sıralama: 427700)",
+    "metadata": {
+      "department": "ELEKTRONİK HABERLEŞME TEKNOLOJİSİ",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "427700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "iletişim",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, girişimcilik, bilgisayar, hesaplama, tasarım. YKS sıralaması: 225000",
+    "output": "YAPAY ZEKÂ OPERATÖRLÜĞÜ - Türk Hava Kurumu Ü. (Sıralama: 230200)",
+    "metadata": {
+      "department": "YAPAY ZEKÂ OPERATÖRLÜĞÜ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "230200",
+      "target_range": "150000-300000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "matematik",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, yönetim, yazılım, hesaplama, sanat. YKS sıralaması: 225000",
+    "output": "YAPAY ZEKÂ OPERATÖRLÜĞÜ - Türk Hava Kurumu Ü. (Sıralama: 230200)",
+    "metadata": {
+      "department": "YAPAY ZEKÂ OPERATÖRLÜĞÜ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "230200",
+      "target_range": "150000-300000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "matematik",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: insan ilişkileri. YKS sıralaması: 850000",
+    "output": "ENGELLİLER İÇİN GÖLGE ÖĞRETİCİLİK - Fatih Sultan Mehmet Vakıf Ü. (Sıralama: 822700)",
+    "metadata": {
+      "department": "ENGELLİLER İÇİN GÖLGE ÖĞRETİCİLİK",
+      "university": "Fatih Sultan Mehmet Vakıf Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "822700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret. YKS sıralaması: 400000",
+    "output": "HAVA LOJİSTİĞİ - Türk Hava Kurumu Ü. (Sıralama: 316600)",
+    "metadata": {
+      "department": "HAVA LOJİSTİĞİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "316600",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme. YKS sıralaması: 400000",
+    "output": "HAVA LOJİSTİĞİ - Türk Hava Kurumu Ü. (Sıralama: 316600)",
+    "metadata": {
+      "department": "HAVA LOJİSTİĞİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "316600",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sanat, mühendislik. YKS sıralaması: 225000",
+    "output": "MEKATRONİK - Yeditepe Ü. (Sıralama: 235900)",
+    "metadata": {
+      "department": "MEKATRONİK",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "235900",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, görsel sanatlar, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "MEKATRONİK - Yeditepe Ü. (Sıralama: 235900)",
+    "metadata": {
+      "department": "MEKATRONİK",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "235900",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, yazılım, mühendislik. YKS sıralaması: 850000",
+    "output": "ULAŞTIRMA VE TRAFİK HİZMETLERİ - Eskişehir Teknik Ü. (Sıralama: 992300)",
+    "metadata": {
+      "department": "ULAŞTIRMA VE TRAFİK HİZMETLERİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "992300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, bilgisayar, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "ULAŞTIRMA VE TRAFİK HİZMETLERİ - Eskişehir Teknik Ü. (Sıralama: 992300)",
+    "metadata": {
+      "department": "ULAŞTIRMA VE TRAFİK HİZMETLERİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "992300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tasarım, mühendislik. YKS sıralaması: 400000",
+    "output": "İÇ MEKAN TASARIMI - İzmir Ekonomi Ü. (Sıralama: 339700)",
+    "metadata": {
+      "department": "İÇ MEKAN TASARIMI",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "339700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sanat, proje yönetimi. YKS sıralaması: 400000",
+    "output": "İÇ MEKAN TASARIMI - İzmir Ekonomi Ü. (Sıralama: 339700)",
+    "metadata": {
+      "department": "İÇ MEKAN TASARIMI",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "339700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, iletişim. YKS sıralaması: 100000",
+    "output": "ANESTEZİ (MSB) - Sağlık Bilimleri Ü. (Sıralama: 146200)",
+    "metadata": {
+      "department": "ANESTEZİ (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "146200",
+      "target_range": "50000-150000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, medikal, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ - Hacettepe Ü. (Sıralama: 171200)",
+    "metadata": {
+      "department": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "171200",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, tıp, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ - Hacettepe Ü. (Sıralama: 171200)",
+    "metadata": {
+      "department": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "171200",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, IT, ekoloji. YKS sıralaması: 850000",
+    "output": "SONDAJ TEKNOLOJİSİ - Şırnak Ü. (Sıralama: 914500)",
+    "metadata": {
+      "department": "SONDAJ TEKNOLOJİSİ",
+      "university": "Şırnak Ü.",
+      "city": "Şırnak",
+      "actual_ranking": "914500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, dijital teknoloji, doğa. YKS sıralaması: 850000",
+    "output": "SONDAJ TEKNOLOJİSİ - Şırnak Ü. (Sıralama: 914500)",
+    "metadata": {
+      "department": "SONDAJ TEKNOLOJİSİ",
+      "university": "Şırnak Ü.",
+      "city": "Şırnak",
+      "actual_ranking": "914500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, bilgisayar, yaratıcılık. YKS sıralaması: 225000",
+    "output": "DİŞ PROTEZ TEKNOLOJİSİ - Bahçeşehir Ü. (Sıralama: 169900)",
+    "metadata": {
+      "department": "DİŞ PROTEZ TEKNOLOJİSİ",
+      "university": "Bahçeşehir Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "169900",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, yaratıcılık. YKS sıralaması: 225000",
+    "output": "ROBOTİK VE YAPAY ZEKÂ - Eskişehir Teknik Ü. (Sıralama: 223200)",
+    "metadata": {
+      "department": "ROBOTİK VE YAPAY ZEKÂ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "223200",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, yaratıcılık. YKS sıralaması: 225000",
+    "output": "ROBOTİK VE YAPAY ZEKÂ - Eskişehir Teknik Ü. (Sıralama: 223200)",
+    "metadata": {
+      "department": "ROBOTİK VE YAPAY ZEKÂ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "223200",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, sağlık, sanat, proje yönetimi. YKS sıralaması: 225000",
+    "output": "MAKİNE - Ostim Teknik Ü. (Sıralama: 261200)",
+    "metadata": {
+      "department": "MAKİNE",
+      "university": "Ostim Teknik Ü.",
+      "city": "Ankara",
+      "actual_ranking": "261200",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, sistem tasarımı, girişimcilik, dijital teknoloji, ekoloji, yaratıcılık. YKS sıralaması: 850000",
+    "output": "TARIM MAKİNELERİ - Ege Ü. (Sıralama: 927900)",
+    "metadata": {
+      "department": "TARIM MAKİNELERİ",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "927900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, sistem tasarımı, ekonomi, bilgisayar, çevre, yaratıcılık. YKS sıralaması: 850000",
+    "output": "TARIM MAKİNELERİ - Ege Ü. (Sıralama: 927900)",
+    "metadata": {
+      "department": "TARIM MAKİNELERİ",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "927900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, tasarım, iletişim. YKS sıralaması: 600000",
+    "output": "SAÇ BAKIMI VE GÜZELLİK HİZMETLERİ - İstanbul Aydın Ü. (Sıralama: 606100)",
+    "metadata": {
+      "department": "SAÇ BAKIMI VE GÜZELLİK HİZMETLERİ",
+      "university": "İstanbul Aydın Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "606100",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, tasarım, sosyal beceiler. YKS sıralaması: 600000",
+    "output": "SAÇ BAKIMI VE GÜZELLİK HİZMETLERİ - İstanbul Aydın Ü. (Sıralama: 606100)",
+    "metadata": {
+      "department": "SAÇ BAKIMI VE GÜZELLİK HİZMETLERİ",
+      "university": "İstanbul Aydın Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "606100",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, IT, tıp, teknik bilim. YKS sıralaması: 100000",
+    "output": "UÇAK TEKNOLOJİSİ - Türk Hava Kurumu Ü. (Sıralama: 104600)",
+    "metadata": {
+      "department": "UÇAK TEKNOLOJİSİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "104600",
+      "target_range": "50000-150000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, tıp, medya. YKS sıralaması: 225000",
+    "output": "SAĞLIK TURİZMİ İŞLETMECİLİĞİ - Ankara Medipol Ü. (Sıralama: 276700)",
+    "metadata": {
+      "department": "SAĞLIK TURİZMİ İŞLETMECİLİĞİ",
+      "university": "Ankara Medipol Ü.",
+      "city": "Ankara",
+      "actual_ranking": "276700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, hasta bakımı, insan ilişkileri. YKS sıralaması: 225000",
+    "output": "SAĞLIK TURİZMİ İŞLETMECİLİĞİ - Ankara Medipol Ü. (Sıralama: 276700)",
+    "metadata": {
+      "department": "SAĞLIK TURİZMİ İŞLETMECİLİĞİ",
+      "university": "Ankara Medipol Ü.",
+      "city": "Ankara",
+      "actual_ranking": "276700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, sosyal beceiler. YKS sıralaması: 850000",
+    "output": "ÇAĞRI MERKEZİ HİZMETLERİ - Gaziantep Ü. (Sıralama: 784600)",
+    "metadata": {
+      "department": "ÇAĞRI MERKEZİ HİZMETLERİ",
+      "university": "Gaziantep Ü.",
+      "city": "Gaziantep",
+      "actual_ranking": "784600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: proje yönetimi, iletişim. YKS sıralaması: 850000",
+    "output": "ÇAĞRI MERKEZİ HİZMETLERİ - Gaziantep Ü. (Sıralama: 784600)",
+    "metadata": {
+      "department": "ÇAĞRI MERKEZİ HİZMETLERİ",
+      "university": "Gaziantep Ü.",
+      "city": "Gaziantep",
+      "actual_ranking": "784600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, sistem tasarımı, kurtarma operasyonları, insan ilişkileri. YKS sıralaması: 850000",
+    "output": "SOSYAL GÜVENLİK (UÖ) - Ankara Ü. (Sıralama: 928000)",
+    "metadata": {
+      "department": "SOSYAL GÜVENLİK (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "928000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, teknik bilim, güvenlik, iletişim. YKS sıralaması: 850000",
+    "output": "SOSYAL GÜVENLİK (UÖ) - Ankara Ü. (Sıralama: 928000)",
+    "metadata": {
+      "department": "SOSYAL GÜVENLİK (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "928000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, yeşil teknoloji, yaratıcılık, mühendislik. YKS sıralaması: 850000",
+    "output": "YEŞİL VE EKOLOJİK BİNA TEKNİKERLİĞİ - İstanbul Nişantaşı Ü. (Sıralama: 811100)",
+    "metadata": {
+      "department": "YEŞİL VE EKOLOJİK BİNA TEKNİKERLİĞİ",
+      "university": "İstanbul Nişantaşı Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "811100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, bilgisayar, tıp, mühendislik. YKS sıralaması: 600000",
+    "output": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ - Üsküdar Ü. (Sıralama: 548400)",
+    "metadata": {
+      "department": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "548400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, IT, sağlık, teknik bilim. YKS sıralaması: 600000",
+    "output": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ - Üsküdar Ü. (Sıralama: 548400)",
+    "metadata": {
+      "department": "SAĞLIK BİLGİ SİSTEMLERİ TEKNİKERLİĞİ",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "548400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "ÇOCUK GELİŞİMİ - Bahçeşehir Ü. (Sıralama: 301700)",
+    "metadata": {
+      "department": "ÇOCUK GELİŞİMİ",
+      "university": "Bahçeşehir Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "301700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "ÇOCUK GELİŞİMİ - Bahçeşehir Ü. (Sıralama: 301700)",
+    "metadata": {
+      "department": "ÇOCUK GELİŞİMİ",
+      "university": "Bahçeşehir Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "301700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medya. YKS sıralaması: 850000",
+    "output": "İLAHİYAT (AÖ) - İstanbul Ü. (Sıralama: 787100)",
+    "metadata": {
+      "department": "İLAHİYAT (AÖ)",
+      "university": "İstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "787100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sosyal beceiler. YKS sıralaması: 850000",
+    "output": "İLAHİYAT (AÖ) - İstanbul Ü. (Sıralama: 787100)",
+    "metadata": {
+      "department": "İLAHİYAT (AÖ)",
+      "university": "İstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "787100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, görsel sanatlar, proje yönetimi. YKS sıralaması: 600000",
+    "output": "ENDÜSTRİYEL KALIPÇILIK - Bursa Uludağ Ü. (Sıralama: 682100)",
+    "metadata": {
+      "department": "ENDÜSTRİYEL KALIPÇILIK",
+      "university": "Bursa Uludağ Ü.",
+      "city": "Bursa",
+      "actual_ranking": "682100",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, sanat, teknik bilim. YKS sıralaması: 600000",
+    "output": "ENDÜSTRİYEL KALIPÇILIK - Bursa Uludağ Ü. (Sıralama: 682100)",
+    "metadata": {
+      "department": "ENDÜSTRİYEL KALIPÇILIK",
+      "university": "Bursa Uludağ Ü.",
+      "city": "Bursa",
+      "actual_ranking": "682100",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematiksel düşünce, estetik, emniyet, proje yönetimi. YKS sıralaması: 400000",
+    "output": "MİMARİ RESTORASYON - Mimar Sinan Güzel Sanatlar Ü. (Sıralama: 314100)",
+    "metadata": {
+      "department": "MİMARİ RESTORASYON",
+      "university": "Mimar Sinan Güzel Sanatlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "314100",
+      "target_range": "300000-500000",
+      "interests": [
+        "matematik",
+        "sanat",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hesaplama, görsel sanatlar, koruma, proje yönetimi. YKS sıralaması: 400000",
+    "output": "MİMARİ RESTORASYON - Mimar Sinan Güzel Sanatlar Ü. (Sıralama: 314100)",
+    "metadata": {
+      "department": "MİMARİ RESTORASYON",
+      "university": "Mimar Sinan Güzel Sanatlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "314100",
+      "target_range": "300000-500000",
+      "interests": [
+        "matematik",
+        "sanat",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "BANKACILIK VE SİGORTACILIK - İzmir Ekonomi Ü. (Sıralama: 350000)",
+    "metadata": {
+      "department": "BANKACILIK VE SİGORTACILIK",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "350000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "BANKACILIK VE SİGORTACILIK - İzmir Ekonomi Ü. (Sıralama: 350000)",
+    "metadata": {
+      "department": "BANKACILIK VE SİGORTACILIK",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "350000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, kurtarma operasyonları, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "SOSYAL GÜVENLİK - Üsküdar Ü. (Sıralama: 649700)",
+    "metadata": {
+      "department": "SOSYAL GÜVENLİK",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "649700",
+      "target_range": "500000-700000",
+      "interests": [
+        "mühendislik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, tasarım, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "ELEKTRONİK TEKNOLOJİSİ - Yeditepe Ü. (Sıralama: 219400)",
+    "metadata": {
+      "department": "ELEKTRONİK TEKNOLOJİSİ",
+      "university": "Yeditepe Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "219400",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, sağlık, yaratıcılık, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "ELEKTRİK - Hacettepe Ü. (Sıralama: 271900)",
+    "metadata": {
+      "department": "ELEKTRİK",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "271900",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, tıp, sanat, proje yönetimi. YKS sıralaması: 225000",
+    "output": "ELEKTRİK - Hacettepe Ü. (Sıralama: 271900)",
+    "metadata": {
+      "department": "ELEKTRİK",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "271900",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, iletişim. YKS sıralaması: 850000",
+    "output": "TURİZM VE OTEL İŞLETMECİLİĞİ (AÖ) - Anadolu Ü. (Sıralama: 884200)",
+    "metadata": {
+      "department": "TURİZM VE OTEL İŞLETMECİLİĞİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "884200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, güvenlik, sosyal beceiler. YKS sıralaması: 600000",
+    "output": "ACİL DURUM VE AFET YÖNETİMİ - Van Yüzüncü Yıl Ü. (Sıralama: 628400)",
+    "metadata": {
+      "department": "ACİL DURUM VE AFET YÖNETİMİ",
+      "university": "Van Yüzüncü Yıl Ü.",
+      "city": "Van",
+      "actual_ranking": "628400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, girişimcilik, bilgisayar, ekoloji, sanat. YKS sıralaması: 400000",
+    "output": "AÇIK DENİZ TABANI UYGULAMALARI TEKNOLOJİSİ - Zonguldak Bülent Ecevit Ü. (Sıralama: 370300)",
+    "metadata": {
+      "department": "AÇIK DENİZ TABANI UYGULAMALARI TEKNOLOJİSİ",
+      "university": "Zonguldak Bülent Ecevit Ü.",
+      "city": "Zonguldak",
+      "actual_ranking": "370300",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "işletme",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, tıp. YKS sıralaması: 400000",
+    "output": "MARİNA VE YAT İŞLETMECİLİĞİ - Piri Reis Ü. (Sıralama: 398600)",
+    "metadata": {
+      "department": "MARİNA VE YAT İŞLETMECİLİĞİ",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "398600",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, sayısal analiz, teknik bilim. YKS sıralaması: 400000",
+    "output": "ÜRETİMDE KALİTE KONTROL - Ostim Teknik Ü. (Sıralama: 461700)",
+    "metadata": {
+      "department": "ÜRETİMDE KALİTE KONTROL",
+      "university": "Ostim Teknik Ü.",
+      "city": "Ankara",
+      "actual_ranking": "461700",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, sayısal analiz, mühendislik. YKS sıralaması: 400000",
+    "output": "ÜRETİMDE KALİTE KONTROL - Ostim Teknik Ü. (Sıralama: 461700)",
+    "metadata": {
+      "department": "ÜRETİMDE KALİTE KONTROL",
+      "university": "Ostim Teknik Ü.",
+      "city": "Ankara",
+      "actual_ranking": "461700",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: mühendislik, hasta bakımı, iletişim. YKS sıralaması: 600000",
+    "output": "YAŞLI BAKIMI - w\nİzmir Ekonomi Ü. (Sıralama: 547100)",
+    "metadata": {
+      "department": "YAŞLI BAKIMI",
+      "university": "w\nİzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "547100",
+      "target_range": "500000-700000",
+      "interests": [
+        "mühendislik",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, ekoloji. YKS sıralaması: 400000",
+    "output": "TIBBİ VE AROMATİK BİTKİLER - Üsküdar Ü. (Sıralama: 400200)",
+    "metadata": {
+      "department": "TIBBİ VE AROMATİK BİTKİLER",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "400200",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, tarım, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "İNSAN KAYNAKLARI YÖNETİMİ - İstanbul Medipol Ü. (Sıralama: 397600)",
+    "metadata": {
+      "department": "İNSAN KAYNAKLARI YÖNETİMİ",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "397600",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, insan ilişkileri. YKS sıralaması: 850000",
+    "output": "İŞLETME YÖNETİMİ (UÖ) - İstanbul Ü.-Cerrahpaşa (Sıralama: 832200)",
+    "metadata": {
+      "department": "İŞLETME YÖNETİMİ (UÖ)",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "Genel",
+      "actual_ranking": "832200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sanat, mühendislik. YKS sıralaması: 100000",
+    "output": "AŞÇILIK - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 120100)",
+    "metadata": {
+      "department": "AŞÇILIK",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "120100",
+      "target_range": "50000-150000",
+      "interests": [
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, mühendislik, bilgisayar, tarım, yaratıcılık. YKS sıralaması: 600000",
+    "output": "LABORATUVAR TEKNOLOJİSİ - Üsküdar Ü. (Sıralama: 610100)",
+    "metadata": {
+      "department": "LABORATUVAR TEKNOLOJİSİ",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "610100",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, tasarım, mühendislik. YKS sıralaması: 600000",
+    "output": "ÇOK BOYUTLU MODELLEME VE ANİMASYON - İstanbul Beykent Ü. (Sıralama: 548100)",
+    "metadata": {
+      "department": "ÇOK BOYUTLU MODELLEME VE ANİMASYON",
+      "university": "İstanbul Beykent Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "548100",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, tıp, mühendislik. YKS sıralaması: 400000",
+    "output": "ELEKTRONÖROFİZYOLOJİ - Hacettepe Ü. (Sıralama: 372100)",
+    "metadata": {
+      "department": "ELEKTRONÖROFİZYOLOJİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "372100",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: mühendislik, yönetim, teknoloji, sosyal beceiler, ekoloji. YKS sıralaması: 850000",
+    "output": "ÇAY TARIMI VE İŞLEME TEKNOLOJİSİ - Recep Tayyip Erdoğan Ü. (Sıralama: 708900)",
+    "metadata": {
+      "department": "ÇAY TARIMI VE İŞLEME TEKNOLOJİSİ",
+      "university": "Recep Tayyip Erdoğan Ü.",
+      "city": "Rize",
+      "actual_ranking": "708900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "iletişim",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, işletme, teknoloji, iletişim, tarım. YKS sıralaması: 850000",
+    "output": "ÇAY TARIMI VE İŞLEME TEKNOLOJİSİ - Recep Tayyip Erdoğan Ü. (Sıralama: 708900)",
+    "metadata": {
+      "department": "ÇAY TARIMI VE İŞLEME TEKNOLOJİSİ",
+      "university": "Recep Tayyip Erdoğan Ü.",
+      "city": "Rize",
+      "actual_ranking": "708900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "iletişim",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, sağlık hizmetleri. YKS sıralaması: 225000",
+    "output": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK - Hacettepe Ü. (Sıralama: 272700)",
+    "metadata": {
+      "department": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "272700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, medikal. YKS sıralaması: 225000",
+    "output": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK - Hacettepe Ü. (Sıralama: 272700)",
+    "metadata": {
+      "department": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "272700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, kurtarma operasyonları, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "SU ALTI KAYNAK TEKNOLOJİSİ - Çanakkale Onsekiz Mart Ü. (Sıralama: 886500)",
+    "metadata": {
+      "department": "SU ALTI KAYNAK TEKNOLOJİSİ",
+      "university": "Çanakkale Onsekiz Mart Ü.",
+      "city": "Çanakkale",
+      "actual_ranking": "886500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, emniyet, proje yönetimi. YKS sıralaması: 400000",
+    "output": "BULUT BİLİŞİM OPERATÖRLÜĞÜ - Eskişehir Teknik Ü. (Sıralama: 420100)",
+    "metadata": {
+      "department": "BULUT BİLİŞİM OPERATÖRLÜĞÜ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "420100",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, kurtarma operasyonları, teknik bilim. YKS sıralaması: 850000",
+    "output": "İŞ MAKİNELERİ OPERATÖRLÜĞÜ - İstanbul Okan Ü. (Sıralama: 711600)",
+    "metadata": {
+      "department": "İŞ MAKİNELERİ OPERATÖRLÜĞÜ",
+      "university": "İstanbul Okan Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "711600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, koruma, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "İŞ MAKİNELERİ OPERATÖRLÜĞÜ - İstanbul Okan Ü. (Sıralama: 711600)",
+    "metadata": {
+      "department": "İŞ MAKİNELERİ OPERATÖRLÜĞÜ",
+      "university": "İstanbul Okan Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "711600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sayısal analiz. YKS sıralaması: 850000",
+    "output": "POLİMER TEKNOLOJİSİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 763600)",
+    "metadata": {
+      "department": "POLİMER TEKNOLOJİSİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "763600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, matematik. YKS sıralaması: 850000",
+    "output": "POLİMER TEKNOLOJİSİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 763600)",
+    "metadata": {
+      "department": "POLİMER TEKNOLOJİSİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "763600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, doğa, kurtarma operasyonları. YKS sıralaması: 850000",
+    "output": "AVCILIK VE YABAN HAYATI - İstanbul Ü.-Cerrahpaşa (Sıralama: 767300)",
+    "metadata": {
+      "department": "AVCILIK VE YABAN HAYATI",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "767300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, doğa, emniyet. YKS sıralaması: 850000",
+    "output": "AVCILIK VE YABAN HAYATI - İstanbul Ü.-Cerrahpaşa (Sıralama: 767300)",
+    "metadata": {
+      "department": "AVCILIK VE YABAN HAYATI",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "767300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, mühendislik, tasarım, iletişim. YKS sıralaması: 600000",
+    "output": "BASIM VE YAYIM TEKNOLOJİLERİ - Marmara Ü. (Sıralama: 629500)",
+    "metadata": {
+      "department": "BASIM VE YAYIM TEKNOLOJİLERİ",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "629500",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "mühendislik",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sistem tasarımı, yaratıcılık, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "BASIM VE YAYIM TEKNOLOJİLERİ - Marmara Ü. (Sıralama: 629500)",
+    "metadata": {
+      "department": "BASIM VE YAYIM TEKNOLOJİLERİ",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "629500",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "mühendislik",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, proje yönetimi, girişimcilik, matematik, güvenlik, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "İŞ SAĞLIĞI VE GÜVENLİĞİ - İzmir Ekonomi Ü. (Sıralama: 334500)",
+    "metadata": {
+      "department": "İŞ SAĞLIĞI VE GÜVENLİĞİ",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "334500",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "matematik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, proje yönetimi, yönetim, matematik, koruma, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "İŞ SAĞLIĞI VE GÜVENLİĞİ - İzmir Ekonomi Ü. (Sıralama: 334500)",
+    "metadata": {
+      "department": "İŞ SAĞLIĞI VE GÜVENLİĞİ",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "334500",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "matematik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, IT, yaratıcılık, iletişim. YKS sıralaması: 400000",
+    "output": "PAZARLAMA - Marmara Ü. (Sıralama: 429300)",
+    "metadata": {
+      "department": "PAZARLAMA",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "429300",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, bilgisayar, tasarım, iletişim. YKS sıralaması: 400000",
+    "output": "PAZARLAMA - Marmara Ü. (Sıralama: 429300)",
+    "metadata": {
+      "department": "PAZARLAMA",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "429300",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sağlık, mühendislik. YKS sıralaması: 600000",
+    "output": "RAYLI SİSTEMLER MAKİNİSTLİĞİ - Eskişehir Teknik Ü. (Sıralama: 505600)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER MAKİNİSTLİĞİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "505600",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, fiziksel aktivite. YKS sıralaması: 225000",
+    "output": "İLK VE ACİL YARDIM - Hacettepe Ü. (Sıralama: 170700)",
+    "metadata": {
+      "department": "İLK VE ACİL YARDIM",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "170700",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "spor"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, mühendislik, kurtarma operasyonları, ekoloji. YKS sıralaması: 850000",
+    "output": "HİDROJEN VE ENERJİ DEPOLAMA TEKNİKERLİĞİ - Eskişehir Teknik Ü. (Sıralama: 880700)",
+    "metadata": {
+      "department": "HİDROJEN VE ENERJİ DEPOLAMA TEKNİKERLİĞİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "880700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "mühendislik",
+        "güvenlik",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: proje yönetimi, sağlık hizmetleri, kurtarma operasyonları, medya. YKS sıralaması: 850000",
+    "output": "w\nÇOCUK KORUMA VE BAKIM HİZMETLERİ - Ankara Yıldırım Beyazıt Ü. (Sıralama: 747900)",
+    "metadata": {
+      "department": "w\nÇOCUK KORUMA VE BAKIM HİZMETLERİ",
+      "university": "Ankara Yıldırım Beyazıt Ü.",
+      "city": "Ankara",
+      "actual_ranking": "747900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "sağlık",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, sağlık hizmetleri, mühendislik, iletişim. YKS sıralaması: 850000",
+    "output": "RAYLI SİSTEMLER İŞLETMECİLİĞİ (UÖ) - Erzincan Binali Yıldırım Ü. (Sıralama: 770600)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER İŞLETMECİLİĞİ (UÖ)",
+      "university": "Erzincan Binali Yıldırım Ü.",
+      "city": "Genel",
+      "actual_ranking": "770600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, doğa, hesaplama, mühendislik. YKS sıralaması: 850000",
+    "output": "KARBON YÖNETİMİ TEKNİKERLİĞİ - Doğuş Ü. (Sıralama: 817800)",
+    "metadata": {
+      "department": "KARBON YÖNETİMİ TEKNİKERLİĞİ",
+      "university": "Doğuş Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "817800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, teknoloji. YKS sıralaması: 600000",
+    "output": "w\nSİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ (AÖ) - İstanbul Ü. (Sıralama: 675900)",
+    "metadata": {
+      "department": "w\nSİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ (AÖ)",
+      "university": "İstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "675900",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, teknoloji. YKS sıralaması: 600000",
+    "output": "w\nSİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ (AÖ) - İstanbul Ü. (Sıralama: 675900)",
+    "metadata": {
+      "department": "w\nSİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ (AÖ)",
+      "university": "İstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "675900",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, bilgisayar, medya. YKS sıralaması: 600000",
+    "output": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI (AÖ) - Anadolu Ü. (Sıralama: 623000)",
+    "metadata": {
+      "department": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "623000",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, teknik bilim. YKS sıralaması: 600000",
+    "output": "DEZENFEKSİYON, STERİLİZASYON VE ANTİSEPSİ TEKNİKERLİĞİ - Hacettepe Ü. (Sıralama: 525200)",
+    "metadata": {
+      "department": "DEZENFEKSİYON, STERİLİZASYON VE ANTİSEPSİ TEKNİKERLİĞİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "525200",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, matematik, iletişim. YKS sıralaması: 600000",
+    "output": "DIŞ TİCARET (UÖ) - Beykoz Ü. (Sıralama: 522700)",
+    "metadata": {
+      "department": "DIŞ TİCARET (UÖ)",
+      "university": "Beykoz Ü.",
+      "city": "Genel",
+      "actual_ranking": "522700",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "matematik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, yazılım, matematik. YKS sıralaması: 850000",
+    "output": "OFİS TEKNOLOJİLERİ VE VERİ YÖNETİMİ - Akdeniz Ü. (Sıralama: 792300)",
+    "metadata": {
+      "department": "OFİS TEKNOLOJİLERİ VE VERİ YÖNETİMİ",
+      "university": "Akdeniz Ü.",
+      "city": "Antalya",
+      "actual_ranking": "792300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, dijital teknoloji, matematik. YKS sıralaması: 850000",
+    "output": "OFİS TEKNOLOJİLERİ VE VERİ YÖNETİMİ - Akdeniz Ü. (Sıralama: 792300)",
+    "metadata": {
+      "department": "OFİS TEKNOLOJİLERİ VE VERİ YÖNETİMİ",
+      "university": "Akdeniz Ü.",
+      "city": "Antalya",
+      "actual_ranking": "792300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, estetik, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "GRAFİK TASARIMI (UÖ) - İstanbul Topkapı Ü. (Sıralama: 494500)",
+    "metadata": {
+      "department": "GRAFİK TASARIMI (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "494500",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sosyal beceiler. YKS sıralaması: 225000",
+    "output": "SİVİL HAVACILIK KABİN HİZMETLERİ - Türk Hava Kurumu Ü. (Sıralama: 207500)",
+    "metadata": {
+      "department": "SİVİL HAVACILIK KABİN HİZMETLERİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "207500",
+      "target_range": "150000-300000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, sağlık hizmetleri, sanat. YKS sıralaması: 225000",
+    "output": "BİYOMEDİKAL CİHAZ TEKNOLOJİSİ (MSB) - Sağlık Bilimleri Ü. (Sıralama: 184400)",
+    "metadata": {
+      "department": "BİYOMEDİKAL CİHAZ TEKNOLOJİSİ (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "184400",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, medya. YKS sıralaması: 225000",
+    "output": "ANESTEZİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 188800)",
+    "metadata": {
+      "department": "ANESTEZİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "188800",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, medya. YKS sıralaması: 225000",
+    "output": "ANESTEZİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 188800)",
+    "metadata": {
+      "department": "ANESTEZİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "188800",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, proje yönetimi, iletişim. YKS sıralaması: 850000",
+    "output": "RADYO VE TELEVİZYON TEKNOLOJİSİ - Eskişehir Teknik Ü. (Sıralama: 829400)",
+    "metadata": {
+      "department": "RADYO VE TELEVİZYON TEKNOLOJİSİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "829400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, medikal, yaratıcılık, sistem tasarımı. YKS sıralaması: 600000",
+    "output": "RAYLI SİSTEMLER MAKİNE TEKNOLOJİSİ - Eskişehir Teknik Ü. (Sıralama: 559600)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER MAKİNE TEKNOLOJİSİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "559600",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, bilgisayar, tıp, çevre. YKS sıralaması: 850000",
+    "output": "DOĞALGAZ VE TESİSATI TEKNOLOJİSİ - Bursa Uludağ Ü. (Sıralama: 975400)",
+    "metadata": {
+      "department": "DOĞALGAZ VE TESİSATI TEKNOLOJİSİ",
+      "university": "Bursa Uludağ Ü.",
+      "city": "Bursa",
+      "actual_ranking": "975400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "teknoloji",
+        "sağlık",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, IT, tıp, sistem tasarımı. YKS sıralaması: 400000",
+    "output": "RAYLI SİSTEMLER ELEKTRİK VE ELEKTRONİK - Eskişehir Teknik Ü. (Sıralama: 471200)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER ELEKTRİK VE ELEKTRONİK",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "471200",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematik, medikal, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "TIBBİ LABORATUVAR TEKNİKLERİ - Hacettepe Ü. (Sıralama: 253100)",
+    "metadata": {
+      "department": "TIBBİ LABORATUVAR TEKNİKLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "253100",
+      "target_range": "150000-300000",
+      "interests": [
+        "matematik",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematiksel düşünce, hasta bakımı, teknik bilim. YKS sıralaması: 225000",
+    "output": "TIBBİ LABORATUVAR TEKNİKLERİ - Hacettepe Ü. (Sıralama: 253100)",
+    "metadata": {
+      "department": "TIBBİ LABORATUVAR TEKNİKLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "253100",
+      "target_range": "150000-300000",
+      "interests": [
+        "matematik",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, bilgisayar, medikal, proje yönetimi. YKS sıralaması: 600000",
+    "output": "RAYLI SİSTEMLER İŞLETMECİLİĞİ - Beykoz Ü. (Sıralama: 551300)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER İŞLETMECİLİĞİ",
+      "university": "Beykoz Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "551300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, dijital teknoloji, hasta bakımı, proje yönetimi. YKS sıralaması: 600000",
+    "output": "RAYLI SİSTEMLER İŞLETMECİLİĞİ - Beykoz Ü. (Sıralama: 551300)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER İŞLETMECİLİĞİ",
+      "university": "Beykoz Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "551300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, estetik. YKS sıralaması: 850000",
+    "output": "EMLAK YÖNETİMİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 743600)",
+    "metadata": {
+      "department": "EMLAK YÖNETİMİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "743600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, görsel sanatlar. YKS sıralaması: 850000",
+    "output": "EMLAK YÖNETİMİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 743600)",
+    "metadata": {
+      "department": "EMLAK YÖNETİMİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "743600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, estetik, mühendislik. YKS sıralaması: 600000",
+    "output": "KUYUMCULUK VE TAKI TASARIMI - İstanbul Aydın Ü. (Sıralama: 549100)",
+    "metadata": {
+      "department": "KUYUMCULUK VE TAKI TASARIMI",
+      "university": "İstanbul Aydın Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "549100",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, teknik bilim, ekonomi, dijital teknoloji, iletişim. YKS sıralaması: 400000",
+    "output": "TELE-SAĞLIK TEKNİKERLİĞİ - Mudanya Ü. (Sıralama: 402000)",
+    "metadata": {
+      "department": "TELE-SAĞLIK TEKNİKERLİĞİ",
+      "university": "Mudanya Ü.",
+      "city": "Bursa",
+      "actual_ranking": "402000",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, çevre, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "ORGANİK TARIM - Akdeniz Ü. (Sıralama: 922000)",
+    "metadata": {
+      "department": "ORGANİK TARIM",
+      "university": "Akdeniz Ü.",
+      "city": "Antalya",
+      "actual_ranking": "922000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, tarım, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "ORGANİK TARIM - Akdeniz Ü. (Sıralama: 922000)",
+    "metadata": {
+      "department": "ORGANİK TARIM",
+      "university": "Akdeniz Ü.",
+      "city": "Antalya",
+      "actual_ranking": "922000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, hasta bakımı, sosyal beceiler. YKS sıralaması: 225000",
+    "output": "OPTİSYENLİK - Bahçeşehir Ü. (Sıralama: 221900)",
+    "metadata": {
+      "department": "OPTİSYENLİK",
+      "university": "Bahçeşehir Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "221900",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, tıp, insan ilişkileri. YKS sıralaması: 225000",
+    "output": "OPTİSYENLİK - Bahçeşehir Ü. (Sıralama: 221900)",
+    "metadata": {
+      "department": "OPTİSYENLİK",
+      "university": "Bahçeşehir Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "221900",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık, sanat, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "ORTOPEDİK PROTEZ VE ORTEZ - Hacettepe Ü. (Sıralama: 445000)",
+    "metadata": {
+      "department": "ORTOPEDİK PROTEZ VE ORTEZ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "445000",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, dijital teknoloji. YKS sıralaması: 225000",
+    "output": "SİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ - Türk Hava Kurumu Ü. (Sıralama: 278500)",
+    "metadata": {
+      "department": "SİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "278500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, teknoloji. YKS sıralaması: 225000",
+    "output": "SİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ - Türk Hava Kurumu Ü. (Sıralama: 278500)",
+    "metadata": {
+      "department": "SİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "278500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, medikal, sanat. YKS sıralaması: 400000",
+    "output": "BİYOMEDİKAL CİHAZ TEKNOLOJİSİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 426300)",
+    "metadata": {
+      "department": "BİYOMEDİKAL CİHAZ TEKNOLOJİSİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "426300",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, tıp, yaratıcılık. YKS sıralaması: 400000",
+    "output": "BİYOMEDİKAL CİHAZ TEKNOLOJİSİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 426300)",
+    "metadata": {
+      "department": "BİYOMEDİKAL CİHAZ TEKNOLOJİSİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "426300",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, mühendislik, ekoloji. YKS sıralaması: 600000",
+    "output": "RAFİNERİ VE PETRO-KİMYA TEKNOLOJİSİ - Ege Ü. (Sıralama: 571100)",
+    "metadata": {
+      "department": "RAFİNERİ VE PETRO-KİMYA TEKNOLOJİSİ",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "571100",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "mühendislik",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: proje yönetimi, girişimcilik, IT, koruma, sanat. YKS sıralaması: 400000",
+    "output": "İNŞAAT TEKNOLOJİSİ - İzmir Ekonomi Ü. (Sıralama: 302500)",
+    "metadata": {
+      "department": "İNŞAAT TEKNOLOJİSİ",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "302500",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "güvenlik",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: proje yönetimi, işletme, teknoloji, koruma, görsel sanatlar. YKS sıralaması: 400000",
+    "output": "İNŞAAT TEKNOLOJİSİ - İzmir Ekonomi Ü. (Sıralama: 302500)",
+    "metadata": {
+      "department": "İNŞAAT TEKNOLOJİSİ",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "302500",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "güvenlik",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp. YKS sıralaması: 400000",
+    "output": "İLK VE ACİL YARDIM (MSB) - Sağlık Bilimleri Ü. (Sıralama: 360900)",
+    "metadata": {
+      "department": "İLK VE ACİL YARDIM (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "360900",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp. YKS sıralaması: 400000",
+    "output": "İLK VE ACİL YARDIM (MSB) - Sağlık Bilimleri Ü. (Sıralama: 360900)",
+    "metadata": {
+      "department": "İLK VE ACİL YARDIM (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "360900",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, çevre, koruma, insan ilişkileri. YKS sıralaması: 850000",
+    "output": "SU VE ATIK YÖNETİMİ TEKNİKERLİĞİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 946700)",
+    "metadata": {
+      "department": "SU VE ATIK YÖNETİMİ TEKNİKERLİĞİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "946700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi. YKS sıralaması: 600000",
+    "output": "TAPU VE KADASTRO - Ankara Hacı Bayram Veli Ü. (Sıralama: 636600)",
+    "metadata": {
+      "department": "TAPU VE KADASTRO",
+      "university": "Ankara Hacı Bayram Veli Ü.",
+      "city": "Ankara",
+      "actual_ranking": "636600",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme. YKS sıralaması: 600000",
+    "output": "TAPU VE KADASTRO - Ankara Hacı Bayram Veli Ü. (Sıralama: 636600)",
+    "metadata": {
+      "department": "TAPU VE KADASTRO",
+      "university": "Ankara Hacı Bayram Veli Ü.",
+      "city": "Ankara",
+      "actual_ranking": "636600",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sanat, sistem tasarımı. YKS sıralaması: 600000",
+    "output": "MAKİNE RESİM VE KONSTRÜKSİYONU - Ege Ü. (Sıralama: 661700)",
+    "metadata": {
+      "department": "MAKİNE RESİM VE KONSTRÜKSİYONU",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "661700",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, sistem tasarımı, yönetim, IT, yaratıcılık. YKS sıralaması: 850000",
+    "output": "YAPI TESİSAT TEKNOLOJİSİ - İstanbul Arel Ü. (Sıralama: 973300)",
+    "metadata": {
+      "department": "YAPI TESİSAT TEKNOLOJİSİ",
+      "university": "İstanbul Arel Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "973300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, teknik bilim, yönetim, IT, yaratıcılık. YKS sıralaması: 850000",
+    "output": "YAPI TESİSAT TEKNOLOJİSİ - İstanbul Arel Ü. (Sıralama: 973300)",
+    "metadata": {
+      "department": "YAPI TESİSAT TEKNOLOJİSİ",
+      "university": "İstanbul Arel Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "973300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, tıp, estetik. YKS sıralaması: 225000",
+    "output": "HİBRİD VE ELEKTRİKLİ TAŞITLAR TEKNOLOJİSİ - Türk Hava Kurumu Ü. (Sıralama: 217600)",
+    "metadata": {
+      "department": "HİBRİD VE ELEKTRİKLİ TAŞITLAR TEKNOLOJİSİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "217600",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, tıp, sanat. YKS sıralaması: 225000",
+    "output": "HİBRİD VE ELEKTRİKLİ TAŞITLAR TEKNOLOJİSİ - Türk Hava Kurumu Ü. (Sıralama: 217600)",
+    "metadata": {
+      "department": "HİBRİD VE ELEKTRİKLİ TAŞITLAR TEKNOLOJİSİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "217600",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sağlık, sanat, mühendislik. YKS sıralaması: 225000",
+    "output": "GEMİ İNŞAATI - Piri Reis Ü. (Sıralama: 261800)",
+    "metadata": {
+      "department": "GEMİ İNŞAATI",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "261800",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, medikal, görsel sanatlar, teknik bilim. YKS sıralaması: 225000",
+    "output": "GEMİ İNŞAATI - Piri Reis Ü. (Sıralama: 261800)",
+    "metadata": {
+      "department": "GEMİ İNŞAATI",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "261800",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, fitness, mühendislik. YKS sıralaması: 600000",
+    "output": "ATÇILIK VE ANTRENÖRLÜĞÜ - İstanbul Ü.-Cerrahpaşa (Sıralama: 603400)",
+    "metadata": {
+      "department": "ATÇILIK VE ANTRENÖRLÜĞÜ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "603400",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "spor",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, fitness, teknik bilim. YKS sıralaması: 600000",
+    "output": "ATÇILIK VE ANTRENÖRLÜĞÜ - İstanbul Ü.-Cerrahpaşa (Sıralama: 603400)",
+    "metadata": {
+      "department": "ATÇILIK VE ANTRENÖRLÜĞÜ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "603400",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "spor",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, mühendislik, teknoloji, sayısal analiz, görsel sanatlar. YKS sıralaması: 600000",
+    "output": "ELEKTRİK ENERJİSİ ÜRETİM, İLETİM VE DAĞITIMI - Gazi Ü. (Sıralama: 513200)",
+    "metadata": {
+      "department": "ELEKTRİK ENERJİSİ ÜRETİM, İLETİM VE DAĞITIMI",
+      "university": "Gazi Ü.",
+      "city": "Ankara",
+      "actual_ranking": "513200",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "matematik",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, sağlık, fitness, sosyal beceiler. YKS sıralaması: 225000",
+    "output": "FİZYOTERAPİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 227400)",
+    "metadata": {
+      "department": "FİZYOTERAPİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "227400",
+      "target_range": "150000-300000",
+      "interests": [
+        "mühendislik",
+        "sağlık",
+        "spor",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, proje yönetimi, insan ilişkileri. YKS sıralaması: 225000",
+    "output": "TURİST REHBERLİĞİ (UÖ) - İstanbul Topkapı Ü. (Sıralama: 165500)",
+    "metadata": {
+      "department": "TURİST REHBERLİĞİ (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "165500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, sanat, iletişim. YKS sıralaması: 225000",
+    "output": "HALKLA İLİŞKİLER VE TANITIM - İstanbul Bilgi Ü. (Sıralama: 277500)",
+    "metadata": {
+      "department": "HALKLA İLİŞKİLER VE TANITIM",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "277500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, yaratıcılık, medya. YKS sıralaması: 225000",
+    "output": "HALKLA İLİŞKİLER VE TANITIM - İstanbul Bilgi Ü. (Sıralama: 277500)",
+    "metadata": {
+      "department": "HALKLA İLİŞKİLER VE TANITIM",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "277500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji. YKS sıralaması: 225000",
+    "output": "UÇUŞ HAREKAT YÖNETİCİLİĞİ - Türk Hava Kurumu Ü. (Sıralama: 196300)",
+    "metadata": {
+      "department": "UÇUŞ HAREKAT YÖNETİCİLİĞİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "196300",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, tarım. YKS sıralaması: 850000",
+    "output": "TARIMSAL İŞLETMECİLİK - Dokuz Eylül Ü. (Sıralama: 953600)",
+    "metadata": {
+      "department": "TARIMSAL İŞLETMECİLİK",
+      "university": "Dokuz Eylül Ü.",
+      "city": "İzmir",
+      "actual_ranking": "953600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, tarım. YKS sıralaması: 850000",
+    "output": "TARIMSAL İŞLETMECİLİK - Dokuz Eylül Ü. (Sıralama: 953600)",
+    "metadata": {
+      "department": "TARIMSAL İŞLETMECİLİK",
+      "university": "Dokuz Eylül Ü.",
+      "city": "İzmir",
+      "actual_ranking": "953600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, estetik, mühendislik. YKS sıralaması: 850000",
+    "output": "MOBİLYA VE DEKORASYON - İstanbul Ü.-Cerrahpaşa (Sıralama: 768400)",
+    "metadata": {
+      "department": "MOBİLYA VE DEKORASYON",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "768400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sayısal analiz, mühendislik. YKS sıralaması: 850000",
+    "output": "AKILLI ALTYAPILAR TEKNİKERLİĞİ - İstanbul Gelişim Ü. (Sıralama: 857800)",
+    "metadata": {
+      "department": "AKILLI ALTYAPILAR TEKNİKERLİĞİ",
+      "university": "İstanbul Gelişim Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "857800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: görsel sanatlar. YKS sıralaması: 850000",
+    "output": "MİMARİ DEKORATİF SANATLAR - Ondokuz Mayıs Ü. (Sıralama: 899800)",
+    "metadata": {
+      "department": "MİMARİ DEKORATİF SANATLAR",
+      "university": "Ondokuz Mayıs Ü.",
+      "city": "Samsun",
+      "actual_ranking": "899800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tasarım. YKS sıralaması: 850000",
+    "output": "MİMARİ DEKORATİF SANATLAR - Ondokuz Mayıs Ü. (Sıralama: 899800)",
+    "metadata": {
+      "department": "MİMARİ DEKORATİF SANATLAR",
+      "university": "Ondokuz Mayıs Ü.",
+      "city": "Samsun",
+      "actual_ranking": "899800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, mühendislik. YKS sıralaması: 600000",
+    "output": "OTOPSİ YARDIMCILIĞI - Üsküdar Ü. (Sıralama: 539800)",
+    "metadata": {
+      "department": "OTOPSİ YARDIMCILIĞI",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "539800",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, insan ilişkileri. YKS sıralaması: 850000",
+    "output": "ACİL DURUM VE AFET YÖNETİMİ (AÖ) - Anadolu Ü. (Sıralama: 859200)",
+    "metadata": {
+      "department": "ACİL DURUM VE AFET YÖNETİMİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "859200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, iletişim. YKS sıralaması: 850000",
+    "output": "ACİL DURUM VE AFET YÖNETİMİ (AÖ) - Anadolu Ü. (Sıralama: 859200)",
+    "metadata": {
+      "department": "ACİL DURUM VE AFET YÖNETİMİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "859200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sanat, proje yönetimi. YKS sıralaması: 600000",
+    "output": "DİJİTAL DÖNÜŞÜM ELEKTRONİĞİ - Mudanya Ü. (Sıralama: 574000)",
+    "metadata": {
+      "department": "DİJİTAL DÖNÜŞÜM ELEKTRONİĞİ",
+      "university": "Mudanya Ü.",
+      "city": "Bursa",
+      "actual_ranking": "574000",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, yaratıcılık, teknik bilim. YKS sıralaması: 600000",
+    "output": "DİJİTAL DÖNÜŞÜM ELEKTRONİĞİ - Mudanya Ü. (Sıralama: 574000)",
+    "metadata": {
+      "department": "DİJİTAL DÖNÜŞÜM ELEKTRONİĞİ",
+      "university": "Mudanya Ü.",
+      "city": "Bursa",
+      "actual_ranking": "574000",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, görsel sanatlar, mühendislik. YKS sıralaması: 400000",
+    "output": "MODA TASARIMI - İstanbul Bilgi Ü. (Sıralama: 330900)",
+    "metadata": {
+      "department": "MODA TASARIMI",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "330900",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, görsel sanatlar, teknik bilim. YKS sıralaması: 400000",
+    "output": "MODA TASARIMI - İstanbul Bilgi Ü. (Sıralama: 330900)",
+    "metadata": {
+      "department": "MODA TASARIMI",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "330900",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, yazılım, görsel sanatlar. YKS sıralaması: 850000",
+    "output": "BİLGİSAYAR PROGRAMCILIĞI (AÖ) - Anadolu Ü. (Sıralama: 927200)",
+    "metadata": {
+      "department": "BİLGİSAYAR PROGRAMCILIĞI (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "927200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, tıp, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "SAĞLIK KURUMLARI İŞLETMECİLİĞİ - İstanbul Medipol Ü. (Sıralama: 575300)",
+    "metadata": {
+      "department": "SAĞLIK KURUMLARI İŞLETMECİLİĞİ",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "575300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, tıp, sosyal beceiler. YKS sıralaması: 600000",
+    "output": "SAĞLIK KURUMLARI İŞLETMECİLİĞİ - İstanbul Medipol Ü. (Sıralama: 575300)",
+    "metadata": {
+      "department": "SAĞLIK KURUMLARI İŞLETMECİLİĞİ",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "575300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, mühendislik. YKS sıralaması: 100000",
+    "output": "İLK VE ACİL YARDIM (İİB) - Sağlık Bilimleri Ü. (Sıralama: 66400)",
+    "metadata": {
+      "department": "İLK VE ACİL YARDIM (İİB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "66400",
+      "target_range": "50000-150000",
+      "interests": [
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, proje yönetimi, koruma, medya. YKS sıralaması: 850000",
+    "output": "ÖZEL GÜVENLİK VE KORUMA - İstanbul Ü.-Cerrahpaşa (Sıralama: 797300)",
+    "metadata": {
+      "department": "ÖZEL GÜVENLİK VE KORUMA",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "797300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, proje yönetimi, emniyet, medya. YKS sıralaması: 850000",
+    "output": "ÖZEL GÜVENLİK VE KORUMA - İstanbul Ü.-Cerrahpaşa (Sıralama: 797300)",
+    "metadata": {
+      "department": "ÖZEL GÜVENLİK VE KORUMA",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "797300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, yaratıcılık, proje yönetimi. YKS sıralaması: 400000",
+    "output": "PASTACILIK VE EKMEKÇİLİK - İstanbul Rumeli Ü. (Sıralama: 334200)",
+    "metadata": {
+      "department": "PASTACILIK VE EKMEKÇİLİK",
+      "university": "İstanbul Rumeli Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "334200",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, dijital teknoloji, mühendislik. YKS sıralaması: 850000",
+    "output": "BİLGİSAYAR OPERATÖRLÜĞÜ - Kütahya Dumlupınar Ü. (Sıralama: 980800)",
+    "metadata": {
+      "department": "BİLGİSAYAR OPERATÖRLÜĞÜ",
+      "university": "Kütahya Dumlupınar Ü.",
+      "city": "Kütahya",
+      "actual_ranking": "980800",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "TURİZM VE OTEL İŞLETMECİLİĞİ - İzmir Ekonomi Ü. (Sıralama: 432000)",
+    "metadata": {
+      "department": "TURİZM VE OTEL İŞLETMECİLİĞİ",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "432000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sistem tasarımı, bilgisayar, sağlık, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "RADYOTERAPİ - Hacettepe Ü. (Sıralama: 387200)",
+    "metadata": {
+      "department": "RADYOTERAPİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "387200",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "teknoloji",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknik bilim, bilgisayar, tıp, medya. YKS sıralaması: 400000",
+    "output": "RADYOTERAPİ - Hacettepe Ü. (Sıralama: 387200)",
+    "metadata": {
+      "department": "RADYOTERAPİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "387200",
+      "target_range": "300000-500000",
+      "interests": [
+        "mühendislik",
+        "teknoloji",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, sağlık hizmetleri, iletişim. YKS sıralaması: 600000",
+    "output": "TIBBİ TANITIM VE PAZARLAMA - Üsküdar Ü. (Sıralama: 687000)",
+    "metadata": {
+      "department": "TIBBİ TANITIM VE PAZARLAMA",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "687000",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, estetik, teknik bilim. YKS sıralaması: 400000",
+    "output": "BİLGİSAYAR DESTEKLİ TASARIM VE ANİMASYON - Yaşar Ü. (Sıralama: 399600)",
+    "metadata": {
+      "department": "BİLGİSAYAR DESTEKLİ TASARIM VE ANİMASYON",
+      "university": "Yaşar Ü.",
+      "city": "İzmir",
+      "actual_ranking": "399600",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, tasarım, proje yönetimi. YKS sıralaması: 400000",
+    "output": "BİLGİSAYAR DESTEKLİ TASARIM VE ANİMASYON - Yaşar Ü. (Sıralama: 399600)",
+    "metadata": {
+      "department": "BİLGİSAYAR DESTEKLİ TASARIM VE ANİMASYON",
+      "university": "Yaşar Ü.",
+      "city": "İzmir",
+      "actual_ranking": "399600",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, medya. YKS sıralaması: 850000",
+    "output": "BANKACILIK VE SİGORTACILIK (UÖ) - İstanbul Ü. (Sıralama: 842400)",
+    "metadata": {
+      "department": "BANKACILIK VE SİGORTACILIK (UÖ)",
+      "university": "İstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "842400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, medya. YKS sıralaması: 850000",
+    "output": "BANKACILIK VE SİGORTACILIK (UÖ) - İstanbul Ü. (Sıralama: 842400)",
+    "metadata": {
+      "department": "BANKACILIK VE SİGORTACILIK (UÖ)",
+      "university": "İstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "842400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, mühendislik. YKS sıralaması: 400000",
+    "output": "PATOLOJİ LABORATUVAR TEKNİKLERİ - Gazi Ü. (Sıralama: 445700)",
+    "metadata": {
+      "department": "PATOLOJİ LABORATUVAR TEKNİKLERİ",
+      "university": "Gazi Ü.",
+      "city": "Ankara",
+      "actual_ranking": "445700",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, teknoloji, hasta bakımı, sosyal beceiler. YKS sıralaması: 600000",
+    "output": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (UÖ) - Ankara Ü. (Sıralama: 571800)",
+    "metadata": {
+      "department": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "571800",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, teknoloji, medikal, iletişim. YKS sıralaması: 600000",
+    "output": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (UÖ) - Ankara Ü. (Sıralama: 571800)",
+    "metadata": {
+      "department": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "571800",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, doğa, teknik bilim. YKS sıralaması: 850000",
+    "output": "ÇEVRE SAĞLIĞI VE ÇEVRESEL RİSK YÖNETİMİ TEKNİKERLİĞİ - İstanbul Atlas Ü. (Sıralama: 701100)",
+    "metadata": {
+      "department": "ÇEVRE SAĞLIĞI VE ÇEVRESEL RİSK YÖNETİMİ TEKNİKERLİĞİ",
+      "university": "İstanbul Atlas Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "701100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme. YKS sıralaması: 400000",
+    "output": "LOJİSTİK - Piri Reis Ü. (Sıralama: 410600)",
+    "metadata": {
+      "department": "LOJİSTİK",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "410600",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, sağlık. YKS sıralaması: 400000",
+    "output": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (AÖ) - w\nAnadolu Ü. (Sıralama: 405100)",
+    "metadata": {
+      "department": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (AÖ)",
+      "university": "w\nAnadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "405100",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, hasta bakımı. YKS sıralaması: 400000",
+    "output": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (AÖ) - w\nAnadolu Ü. (Sıralama: 405100)",
+    "metadata": {
+      "department": "TIBBİ DOKÜMANTASYON VE SEKRETERLİK (AÖ)",
+      "university": "w\nAnadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "405100",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, bilgisayar, iletişim. YKS sıralaması: 400000",
+    "output": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI - Hacettepe Ü. (Sıralama: 478800)",
+    "metadata": {
+      "department": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "478800",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, bilgisayar, sosyal beceiler. YKS sıralaması: 400000",
+    "output": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI - Hacettepe Ü. (Sıralama: 478800)",
+    "metadata": {
+      "department": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "478800",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, dijital teknoloji, estetik. YKS sıralaması: 600000",
+    "output": "MOBİL TEKNOLOJİLERİ - İstanbul Okan Ü. (Sıralama: 508400)",
+    "metadata": {
+      "department": "MOBİL TEKNOLOJİLERİ",
+      "university": "İstanbul Okan Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "508400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, teknoloji, estetik. YKS sıralaması: 600000",
+    "output": "MOBİL TEKNOLOJİLERİ - İstanbul Okan Ü. (Sıralama: 508400)",
+    "metadata": {
+      "department": "MOBİL TEKNOLOJİLERİ",
+      "university": "İstanbul Okan Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "508400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım. YKS sıralaması: 600000",
+    "output": "GIDA TEKNOLOJİSİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 540200)",
+    "metadata": {
+      "department": "GIDA TEKNOLOJİSİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "540200",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar. YKS sıralaması: 600000",
+    "output": "GIDA TEKNOLOJİSİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 540200)",
+    "metadata": {
+      "department": "GIDA TEKNOLOJİSİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "540200",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, sağlık, mühendislik, sosyal beceiler. YKS sıralaması: 225000",
+    "output": "ECZANE HİZMETLERİ (MSB) - Sağlık Bilimleri Ü. (Sıralama: 158700)",
+    "metadata": {
+      "department": "ECZANE HİZMETLERİ (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "158700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, IT, sistem tasarımı. YKS sıralaması: 600000",
+    "output": "KURUMSAL BİLİŞİM UZMANLIĞI - Doğuş Ü. (Sıralama: 594000)",
+    "metadata": {
+      "department": "KURUMSAL BİLİŞİM UZMANLIĞI",
+      "university": "Doğuş Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "594000",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, teknoloji, sistem tasarımı. YKS sıralaması: 600000",
+    "output": "KURUMSAL BİLİŞİM UZMANLIĞI - Doğuş Ü. (Sıralama: 594000)",
+    "metadata": {
+      "department": "KURUMSAL BİLİŞİM UZMANLIĞI",
+      "university": "Doğuş Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "594000",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, sağlık hizmetleri, medya. YKS sıralaması: 600000",
+    "output": "SAĞLIK KURUMLARI İŞLETMECİLİĞİ (AÖ) - Anadolu Ü. (Sıralama: 695000)",
+    "metadata": {
+      "department": "SAĞLIK KURUMLARI İŞLETMECİLİĞİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "695000",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, görsel sanatlar. YKS sıralaması: 600000",
+    "output": "GÖRSEL İLETİŞİM - Fatih Sultan Mehmet Vakıf Ü. (Sıralama: 562200)",
+    "metadata": {
+      "department": "GÖRSEL İLETİŞİM",
+      "university": "Fatih Sultan Mehmet Vakıf Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "562200",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, yaratıcılık. YKS sıralaması: 600000",
+    "output": "GÖRSEL İLETİŞİM - Fatih Sultan Mehmet Vakıf Ü. (Sıralama: 562200)",
+    "metadata": {
+      "department": "GÖRSEL İLETİŞİM",
+      "university": "Fatih Sultan Mehmet Vakıf Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "562200",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, IT, mühendislik, iletişim. YKS sıralaması: 850000",
+    "output": "MEDYA VE İLETİŞİM (UÖ) - w\nİstanbul Ü. (Sıralama: 955000)",
+    "metadata": {
+      "department": "MEDYA VE İLETİŞİM (UÖ)",
+      "university": "w\nİstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "955000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, bilgisayar, sistem tasarımı, sosyal beceiler. YKS sıralaması: 850000",
+    "output": "MEDYA VE İLETİŞİM (UÖ) - w\nİstanbul Ü. (Sıralama: 955000)",
+    "metadata": {
+      "department": "MEDYA VE İLETİŞİM (UÖ)",
+      "university": "w\nİstanbul Ü.",
+      "city": "Genel",
+      "actual_ranking": "955000",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tarım, sağlık hizmetleri, proje yönetimi. YKS sıralaması: 850000",
+    "output": "YENİLENEBİLİR ENERJİ TEKNİKERLİĞİ - Ankara Ü. (Sıralama: 765700)",
+    "metadata": {
+      "department": "YENİLENEBİLİR ENERJİ TEKNİKERLİĞİ",
+      "university": "Ankara Ü.",
+      "city": "Ankara",
+      "actual_ranking": "765700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "doğa",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yeşil teknoloji, medikal, mühendislik. YKS sıralaması: 850000",
+    "output": "YENİLENEBİLİR ENERJİ TEKNİKERLİĞİ - Ankara Ü. (Sıralama: 765700)",
+    "metadata": {
+      "department": "YENİLENEBİLİR ENERJİ TEKNİKERLİĞİ",
+      "university": "Ankara Ü.",
+      "city": "Ankara",
+      "actual_ranking": "765700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "doğa",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, sistem tasarımı, bilgisayar, matematik, güvenlik, tarım, görsel sanatlar. YKS sıralaması: 225000",
+    "output": "İNSANSIZ HAVA ARACI TEKNOLOJİSİ VE OPERATÖRLÜĞÜ - Ankara Bilim Ü. (Sıralama: 230800)",
+    "metadata": {
+      "department": "İNSANSIZ HAVA ARACI TEKNOLOJİSİ VE OPERATÖRLÜĞÜ",
+      "university": "Ankara Bilim Ü.",
+      "city": "Ankara",
+      "actual_ranking": "230800",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "matematik",
+        "güvenlik",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, proje yönetimi, dijital teknoloji, matematik, emniyet, doğa, görsel sanatlar. YKS sıralaması: 225000",
+    "output": "İNSANSIZ HAVA ARACI TEKNOLOJİSİ VE OPERATÖRLÜĞÜ - Ankara Bilim Ü. (Sıralama: 230800)",
+    "metadata": {
+      "department": "İNSANSIZ HAVA ARACI TEKNOLOJİSİ VE OPERATÖRLÜĞÜ",
+      "university": "Ankara Bilim Ü.",
+      "city": "Ankara",
+      "actual_ranking": "230800",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "matematik",
+        "güvenlik",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, medikal, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ (MSB) - Sağlık Bilimleri Ü. (Sıralama: 161400)",
+    "metadata": {
+      "department": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "161400",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, medikal, mühendislik. YKS sıralaması: 225000",
+    "output": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ (MSB) - Sağlık Bilimleri Ü. (Sıralama: 161400)",
+    "metadata": {
+      "department": "TIBBİ GÖRÜNTÜLEME TEKNİKLERİ (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "161400",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: proje yönetimi, yönetim, IT, hesaplama, doğa. YKS sıralaması: 850000",
+    "output": "UZAKTAN ALGILAMA VE COĞRAFİ BİLGİ SİSTEMLERİ - Eskişehir Teknik Ü. (Sıralama: 811600)",
+    "metadata": {
+      "department": "UZAKTAN ALGILAMA VE COĞRAFİ BİLGİ SİSTEMLERİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "811600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "matematik",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: mühendislik, ekonomi, IT, sayısal analiz, ekoloji. YKS sıralaması: 850000",
+    "output": "UZAKTAN ALGILAMA VE COĞRAFİ BİLGİ SİSTEMLERİ - Eskişehir Teknik Ü. (Sıralama: 811600)",
+    "metadata": {
+      "department": "UZAKTAN ALGILAMA VE COĞRAFİ BİLGİ SİSTEMLERİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "811600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "matematik",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal. YKS sıralaması: 600000",
+    "output": "YAŞLI BAKIMI (AÖ) - Anadolu Ü. (Sıralama: 554600)",
+    "metadata": {
+      "department": "YAŞLI BAKIMI (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "554600",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, sistem tasarımı, ticaret, IT, güvenlik. YKS sıralaması: 600000",
+    "output": "İNTERNET VE AĞ TEKNOLOJİLERİ (UÖ) - İstanbul Topkapı Ü. (Sıralama: 549000)",
+    "metadata": {
+      "department": "İNTERNET VE AĞ TEKNOLOJİLERİ (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "549000",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, görsel sanatlar, teknik bilim. YKS sıralaması: 600000",
+    "output": "GELENEKSEL EL SANATLARI - Ankara Müzik ve Güzel Sanatlar Ü. (Sıralama: 615400)",
+    "metadata": {
+      "department": "GELENEKSEL EL SANATLARI",
+      "university": "Ankara Müzik ve Güzel Sanatlar Ü.",
+      "city": "Ankara",
+      "actual_ranking": "615400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: görsel sanatlar, proje yönetimi. YKS sıralaması: 850000",
+    "output": "YAPI DENETİMİ - Akdeniz Ü. (Sıralama: 801900)",
+    "metadata": {
+      "department": "YAPI DENETİMİ",
+      "university": "Akdeniz Ü.",
+      "city": "Antalya",
+      "actual_ranking": "801900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, medya. YKS sıralaması: 850000",
+    "output": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI (UÖ) - Ankara Ü. (Sıralama: 868900)",
+    "metadata": {
+      "department": "BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI (UÖ)",
+      "university": "Ankara Ü.",
+      "city": "Genel",
+      "actual_ranking": "868900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, yazılım. YKS sıralaması: 100000",
+    "output": "DENİZ ULAŞTIRMA VE İŞLETME - Piri Reis Ü. (Sıralama: 130800)",
+    "metadata": {
+      "department": "DENİZ ULAŞTIRMA VE İŞLETME",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "130800",
+      "target_range": "50000-150000",
+      "interests": [
+        "işletme",
+        "teknoloji"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sayısal analiz, IT, sağlık hizmetleri, teknik bilim. YKS sıralaması: 400000",
+    "output": "TIBBİ VERİ İŞLEME TEKNİKERLİĞİ - Çukurova Ü. (Sıralama: 370100)",
+    "metadata": {
+      "department": "TIBBİ VERİ İŞLEME TEKNİKERLİĞİ",
+      "university": "Çukurova Ü.",
+      "city": "Adana",
+      "actual_ranking": "370100",
+      "target_range": "300000-500000",
+      "interests": [
+        "matematik",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sayısal analiz, yazılım, medikal, mühendislik. YKS sıralaması: 400000",
+    "output": "TIBBİ VERİ İŞLEME TEKNİKERLİĞİ - Çukurova Ü. (Sıralama: 370100)",
+    "metadata": {
+      "department": "TIBBİ VERİ İŞLEME TEKNİKERLİĞİ",
+      "university": "Çukurova Ü.",
+      "city": "Adana",
+      "actual_ranking": "370100",
+      "target_range": "300000-500000",
+      "interests": [
+        "matematik",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekoloji, hasta bakımı, kurtarma operasyonları. YKS sıralaması: 850000",
+    "output": "BİTKİ KORUMA - Ege Ü. (Sıralama: 912900)",
+    "metadata": {
+      "department": "BİTKİ KORUMA",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "912900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "doğa",
+        "sağlık",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yaratıcılık. YKS sıralaması: 400000",
+    "output": "WEB TASARIMI VE KODLAMA - Doğuş Ü. (Sıralama: 404600)",
+    "metadata": {
+      "department": "WEB TASARIMI VE KODLAMA",
+      "university": "Doğuş Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "404600",
+      "target_range": "300000-500000",
+      "interests": [
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, sağlık. YKS sıralaması: 400000",
+    "output": "AMELİYATHANE HİZMETLERİ - Hacettepe Ü. (Sıralama: 340500)",
+    "metadata": {
+      "department": "AMELİYATHANE HİZMETLERİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "340500",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, proje yönetimi, işletme, IT, matematik. YKS sıralaması: 400000",
+    "output": "DİJİTAL SAĞLIK SİSTEMLERİ TEKNİKERLİĞİ - Başkent Ü. (Sıralama: 409200)",
+    "metadata": {
+      "department": "DİJİTAL SAĞLIK SİSTEMLERİ TEKNİKERLİĞİ",
+      "university": "Başkent Ü.",
+      "city": "Ankara",
+      "actual_ranking": "409200",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "işletme",
+        "teknoloji",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, sistem tasarımı, insan ilişkileri. YKS sıralaması: 850000",
+    "output": "İŞLETME YÖNETİMİ (AÖ) - Anadolu Ü. (Sıralama: 850400)",
+    "metadata": {
+      "department": "İŞLETME YÖNETİMİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "850400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, proje yönetimi, iletişim. YKS sıralaması: 850000",
+    "output": "İŞLETME YÖNETİMİ (AÖ) - Anadolu Ü. (Sıralama: 850400)",
+    "metadata": {
+      "department": "İŞLETME YÖNETİMİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "850400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, bilgisayar, medikal, teknik bilim. YKS sıralaması: 850000",
+    "output": "İMALAT YÜRÜTME SİSTEMLERİ OPERATÖRLÜĞÜ - Kocaeli Ü. (Sıralama: 896900)",
+    "metadata": {
+      "department": "İMALAT YÜRÜTME SİSTEMLERİ OPERATÖRLÜĞÜ",
+      "university": "Kocaeli Ü.",
+      "city": "Kocaeli",
+      "actual_ranking": "896900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, IT, sağlık, proje yönetimi. YKS sıralaması: 850000",
+    "output": "İMALAT YÜRÜTME SİSTEMLERİ OPERATÖRLÜĞÜ - Kocaeli Ü. (Sıralama: 896900)",
+    "metadata": {
+      "department": "İMALAT YÜRÜTME SİSTEMLERİ OPERATÖRLÜĞÜ",
+      "university": "Kocaeli Ü.",
+      "city": "Kocaeli",
+      "actual_ranking": "896900",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: insan ilişkileri. YKS sıralaması: 850000",
+    "output": "SOSYAL HİZMETLER (AÖ) - Anadolu Ü. (Sıralama: 845300)",
+    "metadata": {
+      "department": "SOSYAL HİZMETLER (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "845300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, teknoloji, proje yönetimi, iletişim. YKS sıralaması: 400000",
+    "output": "MEDYA VE İLETİŞİM - İzmir Ekonomi Ü. (Sıralama: 323000)",
+    "metadata": {
+      "department": "MEDYA VE İLETİŞİM",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "323000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, yazılım, teknik bilim, medya. YKS sıralaması: 400000",
+    "output": "MEDYA VE İLETİŞİM - İzmir Ekonomi Ü. (Sıralama: 323000)",
+    "metadata": {
+      "department": "MEDYA VE İLETİŞİM",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "323000",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, medya. YKS sıralaması: 400000",
+    "output": "PODOLOJİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 438600)",
+    "metadata": {
+      "department": "PODOLOJİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "438600",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: medikal, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "PODOLOJİ - Acıbadem Mehmet Ali Aydınlar Ü. (Sıralama: 438600)",
+    "metadata": {
+      "department": "PODOLOJİ",
+      "university": "Acıbadem Mehmet Ali Aydınlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "438600",
+      "target_range": "300000-500000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık. YKS sıralaması: 850000",
+    "output": "BİYOKİMYA - Çanakkale Onsekiz Mart Ü. (Sıralama: 788200)",
+    "metadata": {
+      "department": "BİYOKİMYA",
+      "university": "Çanakkale Onsekiz Mart Ü.",
+      "city": "Çanakkale",
+      "actual_ranking": "788200",
+      "target_range": "700000-1000000",
+      "interests": [
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sağlık, teknik bilim. YKS sıralaması: 225000",
+    "output": "GEMİ MAKİNELERİ İŞLETMECİLİĞİ - Galatasaray Ü. (Sıralama: 211000)",
+    "metadata": {
+      "department": "GEMİ MAKİNELERİ İŞLETMECİLİĞİ",
+      "university": "Galatasaray Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "211000",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematiksel düşünce, görsel sanatlar, insan ilişkileri. YKS sıralaması: 400000",
+    "output": "BÜYÜK VERİ ANALİSTLİĞİ - İstanbul Bilgi Ü. (Sıralama: 334900)",
+    "metadata": {
+      "department": "BÜYÜK VERİ ANALİSTLİĞİ",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "334900",
+      "target_range": "300000-500000",
+      "interests": [
+        "matematik",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "TURİZM VE SEYAHAT HİZMETLERİ - Marmara Ü. (Sıralama: 523300)",
+    "metadata": {
+      "department": "TURİZM VE SEYAHAT HİZMETLERİ",
+      "university": "Marmara Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "523300",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, medya. YKS sıralaması: 225000",
+    "output": "DENİZ VE LİMAN İŞLETMECİLİĞİ - Piri Reis Ü. (Sıralama: 267700)",
+    "metadata": {
+      "department": "DENİZ VE LİMAN İŞLETMECİLİĞİ",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "267700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, sosyal beceiler. YKS sıralaması: 225000",
+    "output": "DENİZ VE LİMAN İŞLETMECİLİĞİ - Piri Reis Ü. (Sıralama: 267700)",
+    "metadata": {
+      "department": "DENİZ VE LİMAN İŞLETMECİLİĞİ",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "267700",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, matematik, mühendislik. YKS sıralaması: 400000",
+    "output": "KİMYA TEKNOLOJİSİ - Gazi Ü. (Sıralama: 429000)",
+    "metadata": {
+      "department": "KİMYA TEKNOLOJİSİ",
+      "university": "Gazi Ü.",
+      "city": "Ankara",
+      "actual_ranking": "429000",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "matematik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, matematik. YKS sıralaması: 850000",
+    "output": "KOZMETİK TEKNOLOJİSİ - İstanbul Kent Ü. (Sıralama: 786500)",
+    "metadata": {
+      "department": "KOZMETİK TEKNOLOJİSİ",
+      "university": "İstanbul Kent Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "786500",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, bilgisayar, estetik. YKS sıralaması: 600000",
+    "output": "ENDÜSTRİ ÜRÜNLERİ TASARIMI - Hacettepe Ü. (Sıralama: 625200)",
+    "metadata": {
+      "department": "ENDÜSTRİ ÜRÜNLERİ TASARIMI",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "625200",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik, bilgisayar, tasarım. YKS sıralaması: 600000",
+    "output": "ENDÜSTRİ ÜRÜNLERİ TASARIMI - Hacettepe Ü. (Sıralama: 625200)",
+    "metadata": {
+      "department": "ENDÜSTRİ ÜRÜNLERİ TASARIMI",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "625200",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, sanat, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "SU ALTI TEKNOLOJİSİ - Piri Reis Ü. (Sıralama: 256800)",
+    "metadata": {
+      "department": "SU ALTI TEKNOLOJİSİ",
+      "university": "Piri Reis Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "256800",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, sağlık hizmetleri, görsel sanatlar, sistem tasarımı. YKS sıralaması: 400000",
+    "output": "OTONOM SİSTEMLER TEKNİKERLİĞİ - Ege Ü. (Sıralama: 365300)",
+    "metadata": {
+      "department": "OTONOM SİSTEMLER TEKNİKERLİĞİ",
+      "university": "Ege Ü.",
+      "city": "İzmir",
+      "actual_ranking": "365300",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, hasta bakımı, emniyet. YKS sıralaması: 225000",
+    "output": "AÇIK DENİZ SONDAJ TEKNOLOJİSİ - Zonguldak Bülent Ecevit Ü. (Sıralama: 298900)",
+    "metadata": {
+      "department": "AÇIK DENİZ SONDAJ TEKNOLOJİSİ",
+      "university": "Zonguldak Bülent Ecevit Ü.",
+      "city": "Zonguldak",
+      "actual_ranking": "298900",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, medya. YKS sıralaması: 850000",
+    "output": "DIŞ TİCARET (AÖ) - Anadolu Ü. (Sıralama: 838600)",
+    "metadata": {
+      "department": "DIŞ TİCARET (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "838600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, sosyal beceiler. YKS sıralaması: 850000",
+    "output": "DIŞ TİCARET (AÖ) - Anadolu Ü. (Sıralama: 838600)",
+    "metadata": {
+      "department": "DIŞ TİCARET (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "838600",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, sistem tasarımı. YKS sıralaması: 400000",
+    "output": "ARKA-YÜZ YAZILIM GELİŞTİRME - İstanbul Medipol Ü. (Sıralama: 349500)",
+    "metadata": {
+      "department": "ARKA-YÜZ YAZILIM GELİŞTİRME",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "349500",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, medikal, sanat, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "RAYLI SİSTEMLER YOL TEKNOLOJİSİ - Eskişehir Teknik Ü. (Sıralama: 718100)",
+    "metadata": {
+      "department": "RAYLI SİSTEMLER YOL TEKNOLOJİSİ",
+      "university": "Eskişehir Teknik Ü.",
+      "city": "Eskişehir",
+      "actual_ranking": "718100",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: teknoloji, yaratıcılık. YKS sıralaması: 600000",
+    "output": "GİYİM ÜRETİM TEKNOLOJİSİ - Mimar Sinan Güzel Sanatlar Ü. (Sıralama: 514300)",
+    "metadata": {
+      "department": "GİYİM ÜRETİM TEKNOLOJİSİ",
+      "university": "Mimar Sinan Güzel Sanatlar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "514300",
+      "target_range": "500000-700000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, koruma. YKS sıralaması: 225000",
+    "output": "BİLİŞİM GÜVENLİĞİ TEKNOLOJİSİ - İstanbul Bilgi Ü. (Sıralama: 282700)",
+    "metadata": {
+      "department": "BİLİŞİM GÜVENLİĞİ TEKNOLOJİSİ",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "282700",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, proje yönetimi. YKS sıralaması: 400000",
+    "output": "ODYOMETRİ - Hacettepe Ü. (Sıralama: 358300)",
+    "metadata": {
+      "department": "ODYOMETRİ",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "358300",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, teknik bilim. YKS sıralaması: 400000",
+    "output": "HARİTA VE KADASTRO - İstanbul Okan Ü. (Sıralama: 317500)",
+    "metadata": {
+      "department": "HARİTA VE KADASTRO",
+      "university": "İstanbul Okan Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "317500",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yönetim, yazılım, mühendislik. YKS sıralaması: 400000",
+    "output": "BİLGİSAYAR TEKNOLOJİSİ - Haliç Ü. (Sıralama: 367300)",
+    "metadata": {
+      "department": "BİLGİSAYAR TEKNOLOJİSİ",
+      "university": "Haliç Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "367300",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme",
+        "teknoloji",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hesaplama, sağlık hizmetleri, sistem tasarımı. YKS sıralaması: 225000",
+    "output": "TIBBİ LABORATUVAR TEKNİKLERİ (MSB) - Sağlık Bilimleri Ü. (Sıralama: 179100)",
+    "metadata": {
+      "department": "TIBBİ LABORATUVAR TEKNİKLERİ (MSB)",
+      "university": "Sağlık Bilimleri Ü.",
+      "city": "Ankara",
+      "actual_ranking": "179100",
+      "target_range": "150000-300000",
+      "interests": [
+        "matematik",
+        "sağlık",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, sağlık hizmetleri, görsel sanatlar, teknik bilim. YKS sıralaması: 850000",
+    "output": "İKLİMLENDİRME VE SOĞUTMA TEKNOLOJİSİ - İstanbul Kültür Ü. (Sıralama: 719700)",
+    "metadata": {
+      "department": "İKLİMLENDİRME VE SOĞUTMA TEKNOLOJİSİ",
+      "university": "İstanbul Kültür Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "719700",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "sağlık",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: IT, yaratıcılık, iletişim. YKS sıralaması: 225000",
+    "output": "GRAFİK TASARIMI - İzmir Ekonomi Ü. (Sıralama: 273400)",
+    "metadata": {
+      "department": "GRAFİK TASARIMI",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "273400",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, sanat, insan ilişkileri. YKS sıralaması: 225000",
+    "output": "GRAFİK TASARIMI - İzmir Ekonomi Ü. (Sıralama: 273400)",
+    "metadata": {
+      "department": "GRAFİK TASARIMI",
+      "university": "İzmir Ekonomi Ü.",
+      "city": "İzmir",
+      "actual_ranking": "273400",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "sanat",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sağlık hizmetleri, iletişim. YKS sıralaması: 225000",
+    "output": "AĞIZ VE DİŞ SAĞLIĞI - Hacettepe Ü. (Sıralama: 231900)",
+    "metadata": {
+      "department": "AĞIZ VE DİŞ SAĞLIĞI",
+      "university": "Hacettepe Ü.",
+      "city": "Ankara",
+      "actual_ranking": "231900",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: tıp, proje yönetimi, bilgisayar, yeşil teknoloji, görsel sanatlar. YKS sıralaması: 600000",
+    "output": "ALTERNATİF ENERJİ KAYNAKLARI TEKNOLOJİSİ - İstanbul Kültür Ü. (Sıralama: 521900)",
+    "metadata": {
+      "department": "ALTERNATİF ENERJİ KAYNAKLARI TEKNOLOJİSİ",
+      "university": "İstanbul Kültür Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "521900",
+      "target_range": "500000-700000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "doğa",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, çevre, iletişim. YKS sıralaması: 600000",
+    "output": "ORMANCILIK VE ORMAN ÜRÜNLERİ - Muğla Sıtkı Koçman Ü. (Sıralama: 545500)",
+    "metadata": {
+      "department": "ORMANCILIK VE ORMAN ÜRÜNLERİ",
+      "university": "Muğla Sıtkı Koçman Ü.",
+      "city": "Muğla",
+      "actual_ranking": "545500",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, çevre, iletişim. YKS sıralaması: 600000",
+    "output": "ORMANCILIK VE ORMAN ÜRÜNLERİ - Muğla Sıtkı Koçman Ü. (Sıralama: 545500)",
+    "metadata": {
+      "department": "ORMANCILIK VE ORMAN ÜRÜNLERİ",
+      "university": "Muğla Sıtkı Koçman Ü.",
+      "city": "Muğla",
+      "actual_ranking": "545500",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: girişimcilik. YKS sıralaması: 400000",
+    "output": "SİVİL SAVUNMA VE İTFAİYECİLİK - Akdeniz Ü. (Sıralama: 488100)",
+    "metadata": {
+      "department": "SİVİL SAVUNMA VE İTFAİYECİLİK",
+      "university": "Akdeniz Ü.",
+      "city": "Antalya",
+      "actual_ranking": "488100",
+      "target_range": "300000-500000",
+      "interests": [
+        "işletme"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: sayısal analiz, bilgisayar, medikal. YKS sıralaması: 600000",
+    "output": "DİJİTAL FABRİKA TEKNOLOJİLERİ - Ankara Ü. (Sıralama: 649100)",
+    "metadata": {
+      "department": "DİJİTAL FABRİKA TEKNOLOJİLERİ",
+      "university": "Ankara Ü.",
+      "city": "Ankara",
+      "actual_ranking": "649100",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "teknoloji",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: matematik, teknoloji, hasta bakımı. YKS sıralaması: 600000",
+    "output": "DİJİTAL FABRİKA TEKNOLOJİLERİ - Ankara Ü. (Sıralama: 649100)",
+    "metadata": {
+      "department": "DİJİTAL FABRİKA TEKNOLOJİLERİ",
+      "university": "Ankara Ü.",
+      "city": "Ankara",
+      "actual_ranking": "649100",
+      "target_range": "500000-700000",
+      "interests": [
+        "matematik",
+        "teknoloji",
+        "sağlık"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: hasta bakımı, sistem tasarımı, IT, medya, estetik. YKS sıralaması: 225000",
+    "output": "HAVA ARACI İMALAT TEKNOLOJİLERİ - Türk Hava Kurumu Ü. (Sıralama: 196000)",
+    "metadata": {
+      "department": "HAVA ARACI İMALAT TEKNOLOJİLERİ",
+      "university": "Türk Hava Kurumu Ü.",
+      "city": "Ankara",
+      "actual_ranking": "196000",
+      "target_range": "150000-300000",
+      "interests": [
+        "sağlık",
+        "mühendislik",
+        "teknoloji",
+        "iletişim",
+        "sanat"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, iletişim. YKS sıralaması: 225000",
+    "output": "DIŞ TİCARET - İstanbul Bilgi Ü. (Sıralama: 258500)",
+    "metadata": {
+      "department": "DIŞ TİCARET",
+      "university": "İstanbul Bilgi Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "258500",
+      "target_range": "150000-300000",
+      "interests": [
+        "işletme",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: bilgisayar, doğa. YKS sıralaması: 850000",
+    "output": "ENDÜSTRİYEL HAMMADDELER İŞLEME TEKNOLOJİSİ - Başkent Ü. (Sıralama: 776400)",
+    "metadata": {
+      "department": "ENDÜSTRİYEL HAMMADDELER İŞLEME TEKNOLOJİSİ",
+      "university": "Başkent Ü.",
+      "city": "Ankara",
+      "actual_ranking": "776400",
+      "target_range": "700000-1000000",
+      "interests": [
+        "teknoloji",
+        "doğa"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ticaret, emniyet, mühendislik. YKS sıralaması: 600000",
+    "output": "CEZA İNFAZ VE GÜVENLİK HİZMETLERİ - İstanbul Ü. (Sıralama: 618400)",
+    "metadata": {
+      "department": "CEZA İNFAZ VE GÜVENLİK HİZMETLERİ",
+      "university": "İstanbul Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "618400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, kurtarma operasyonları, teknik bilim. YKS sıralaması: 600000",
+    "output": "CEZA İNFAZ VE GÜVENLİK HİZMETLERİ - İstanbul Ü. (Sıralama: 618400)",
+    "metadata": {
+      "department": "CEZA İNFAZ VE GÜVENLİK HİZMETLERİ",
+      "university": "İstanbul Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "618400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, matematik. YKS sıralaması: 600000",
+    "output": "MALİYE - İstanbul Medipol Ü. (Sıralama: 528400)",
+    "metadata": {
+      "department": "MALİYE",
+      "university": "İstanbul Medipol Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "528400",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "matematik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: kurtarma operasyonları, insan ilişkileri. YKS sıralaması: 600000",
+    "output": "İŞ SAĞLIĞI VE GÜVENLİĞİ (AÖ) - Anadolu Ü. (Sıralama: 605800)",
+    "metadata": {
+      "department": "İŞ SAĞLIĞI VE GÜVENLİĞİ (AÖ)",
+      "university": "Anadolu Ü.",
+      "city": "Genel",
+      "actual_ranking": "605800",
+      "target_range": "500000-700000",
+      "interests": [
+        "güvenlik",
+        "iletişim"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, estetik, sistem tasarımı. YKS sıralaması: 850000",
+    "output": "AYAKKABI TASARIM VE ÜRETİMİ - İstanbul Ü.-Cerrahpaşa (Sıralama: 882300)",
+    "metadata": {
+      "department": "AYAKKABI TASARIM VE ÜRETİMİ",
+      "university": "İstanbul Ü.-Cerrahpaşa",
+      "city": "İstanbul",
+      "actual_ranking": "882300",
+      "target_range": "700000-1000000",
+      "interests": [
+        "işletme",
+        "sanat",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, hesaplama, emniyet. YKS sıralaması: 100000",
+    "output": "SİBER GÜVENLİK ANALİSTLİĞİ VE OPERATÖRLÜĞÜ - İstanbul Teknik Ü. (Sıralama: 63000)",
+    "metadata": {
+      "department": "SİBER GÜVENLİK ANALİSTLİĞİ VE OPERATÖRLÜĞÜ",
+      "university": "İstanbul Teknik Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "63000",
+      "target_range": "50000-150000",
+      "interests": [
+        "teknoloji",
+        "matematik",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: yazılım, güvenlik, mühendislik. YKS sıralaması: 225000",
+    "output": "SİBER GÜVENLİK - İstanbul Ticaret Ü. (Sıralama: 184700)",
+    "metadata": {
+      "department": "SİBER GÜVENLİK",
+      "university": "İstanbul Ticaret Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "184700",
+      "target_range": "150000-300000",
+      "interests": [
+        "teknoloji",
+        "güvenlik",
+        "mühendislik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: işletme, doğa, koruma. YKS sıralaması: 600000",
+    "output": "ÇEVRE SAĞLIĞI - Üsküdar Ü. (Sıralama: 665500)",
+    "metadata": {
+      "department": "ÇEVRE SAĞLIĞI",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "665500",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: ekonomi, doğa, güvenlik. YKS sıralaması: 600000",
+    "output": "ÇEVRE SAĞLIĞI - Üsküdar Ü. (Sıralama: 665500)",
+    "metadata": {
+      "department": "ÇEVRE SAĞLIĞI",
+      "university": "Üsküdar Ü.",
+      "city": "İstanbul",
+      "actual_ranking": "665500",
+      "target_range": "500000-700000",
+      "interests": [
+        "işletme",
+        "doğa",
+        "güvenlik"
+      ]
+    }
+  },
+  {
+    "input": "İlgi alanlarım: dijital teknoloji, estetik. YKS sıralaması: 400000",
+    "output": "BİLGİSAYAR DESTEKLİ TASARIM VE ANİMASYON (UÖ) - İstanbul Topkapı Ü. (Sıralama: 358700)",
+    "metadata": {
+      "department": "BİLGİSAYAR DESTEKLİ TASARIM VE ANİMASYON (UÖ)",
+      "university": "İstanbul Topkapı Ü.",
+      "city": "Genel",
+      "actual_ranking": "358700",
+      "target_range": "300000-500000",
+      "interests": [
+        "teknoloji",
+        "sanat"
+      ]
+    }
+  }
+]
