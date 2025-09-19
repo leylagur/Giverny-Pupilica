@@ -88,106 +88,137 @@ class HybridRecommendationEngine:
         return ', '.join(interests_keywords), ranking
     
     def extract_career_interests(self, text: str):
-        """Extract career interests and keywords from natural language"""
+        """Extract career interests and keywords from natural language with negative filtering"""
         import re
         
         text_lower = text.lower()
         extracted_interests = set()
+        excluded_interests = set()  # Bu satır eksikti
         
-        # Career intention patterns
+        # Negative patterns - önce bunları kontrol et
+        negative_patterns = {
+            'teknoloji': [
+                r'teknoloji.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum|olmasın|alakalı.*?olsun.*?istemiyorum)',
+                r'(?:sevmiyorum|istemiyorum|ilgilenmiyorum).*?teknoloji',
+                r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)'
+            ],
+            'sağlık': [
+                r'sağlık.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum)',
+                r'(?:sevmiyorum|istemiyorum).*?sağlık'
+            ],
+            'matematik': [
+                r'matematik.*?(?:sevmiyorum|kötüyüm|zor)',
+                r'(?:sevmiyorum|kötüyüm).*?matematik'
+            ]
+        }
+        
+        # Check negative patterns first
+        for category, patterns in negative_patterns.items():
+            for pattern in patterns:
+                if re.search(pattern, text_lower):
+                    excluded_interests.add(category)
+                    break
+        
+        # Career intention patterns (pozitif)
         career_patterns = {
             'sağlık': [
                 r'sağlık.*?(?:sektör|alan|çalış)',
                 r'hasta.*?bakım',
-                r'tıp.*?alan',
-                r'sağlık.*?hizmet',
-                r'medikal.*?alan'
+                r'tıp.*?alan'
+            ],
+            'sanat': [
+                r'(?:yaratıcı|sanat).*?(?:iş|alan|çalış)',
+                r'tasarım.*?(?:yapma|alan)',
+                r'görsel.*?(?:sanat|tasarım)'
             ],
             'teknoloji': [
                 r'teknoloji.*?(?:sektör|alan|çalış)',
                 r'yazılım.*?(?:geliştir|alan)',
-                r'bilgisayar.*?(?:program|alan)',
-                r'IT.*?(?:sektör|alan)',
-                r'dijital.*?(?:dünya|alan)'
-            ],
-            'sanat': [
-                r'sanat.*?(?:alan|çalış)',
-                r'tasarım.*?(?:yapma|alan)',
-                r'yaratıcı.*?(?:iş|alan)',
-                r'görsel.*?(?:sanat|tasarım)'
+                r'bilgisayar.*?(?:program|alan)'
             ],
             'spor': [
                 r'spor.*?(?:alan|aktivite|sektör)',
-                r'fitness.*?(?:aktivite|merkez)',
-                r'antrenör.*?(?:olma|çalış)',
-                r'sporcu.*?(?:olma|çalış)'
-            ],
-            'işletme': [
-                r'işletme.*?(?:alan|çalış)',
-                r'yönetici.*?(?:olma|pozisyon)',
-                r'girişimci.*?(?:olma|çalış)',
-                r'ticaret.*?(?:yapma|alan)'
-            ],
-            'mühendislik': [
-                r'mühendis.*?(?:olma|çalış)',
-                r'teknik.*?(?:alan|çalış)',
-                r'inşaat.*?(?:sektör|alan)',
-                r'proje.*?(?:yönet|geliştir)'
+                r'antrenör.*?(?:olma|çalış)'
             ]
         }
         
-        # Check career intention patterns
+        # Check positive career patterns
         for category, patterns in career_patterns.items():
-            for pattern in patterns:
-                if re.search(pattern, text_lower):
-                    extracted_interests.add(category)
-                    break
+            if category not in excluded_interests:  # Sadece exclude edilmemişleri ekle
+                for pattern in patterns:
+                    if re.search(pattern, text_lower):
+                        extracted_interests.add(category)
+                        break
         
-        # Direct keyword matching with context
+        # Direct keyword matching
         context_keywords = {
-            'sağlık': ['sağlık', 'hasta', 'tedavi', 'tıp', 'hemşire', 'doktor', 'klinik', 'hastane'],
-            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım', 'program', 'kod', 'web', 'app'],
-            'sanat': ['sanat', 'tasarım', 'yaratıcı', 'görsel', 'grafik', 'müzik', 'resim'],
-            'spor': ['spor', 'fitness', 'antrenör', 'egzersiz', 'atletik', 'futbol'],
-            'matematik': ['matematik', 'hesap', 'analiz', 'sayısal', 'istatistik'],
-            'iletişim': ['iletişim', 'sosyal', 'medya', 'gazetecilik', 'halkla'],
-            'işletme': ['işletme', 'yönetim', 'pazarlama', 'satış', 'ticaret'],
-            'mühendislik': ['mühendislik', 'teknik', 'inşaat', 'makine', 'elektrik']
+            'sağlık': ['sağlık', 'hasta', 'tedavi', 'tıp', 'hemşire'],
+            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım', 'program'],
+            'sanat': ['sanat', 'tasarım', 'yaratıcı', 'görsel', 'grafik'],
+            'spor': ['spor', 'fitness', 'antrenör', 'egzersiz']
         }
         
         for category, keywords in context_keywords.items():
-            for keyword in keywords:
-                if keyword in text_lower:
-                    extracted_interests.add(category)
+            if category not in excluded_interests:  # Exclude edilmemişleri kontrol et
+                for keyword in keywords:
+                    if keyword in text_lower:
+                        extracted_interests.add(category)
+                        break
+        
+        # Return final interests excluding negatives
+        final_interests = extracted_interests - excluded_interests
+        return list(final_interests) if final_interests else ['genel']
+    
+    def filter_negative_interests(self, results: list, user_input: str):
+        """Remove departments that match negative interests"""
+        import re
+        
+        user_lower = user_input.lower()
+        filtered_results = []
+        
+        # Define negative patterns and corresponding keywords to filter
+        negative_filters = {
+            'teknoloji': {
+                'patterns': [
+                    r'teknoloji.*?(?:istemiyorum|sevmiyorum|olmasın)',
+                    r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)',
+                    r'bilgisayar.*?(?:istemiyorum|sevmiyorum)'
+                ],
+                'filter_keywords': ['bilgisayar', 'teknoloji', 'yazılım', 'programlama', 'oyun', 'web', 'dijital', 'sistem']
+            },
+            'sağlık': {
+                'patterns': [r'sağlık.*?(?:istemiyorum|sevmiyorum)'],
+                'filter_keywords': ['sağlık', 'hasta', 'tıp', 'hemşire']
+            }
+        }
+        
+        # Check which categories to filter out
+        categories_to_filter = set()
+        for category, config in negative_filters.items():
+            for pattern in config['patterns']:
+                if re.search(pattern, user_lower):
+                    categories_to_filter.add(category)
                     break
         
-        # Extract explicit mentions
-        interest_phrases = [
-            r'(?:ilgi\s*alanlarım|ilgi\s*alanları|sevdiğim\s*konular|hobiler):?\s*([^.!?]+)',
-            r'(?:seviyorum|ilgileniyorum|hoşlanıyorum)\s*([^.!?]+)',
-            r'(?:çalışmak\s*istiyorum|kariyer\s*yapmak\s*istiyorum).*?([^.!?]+)'
-        ]
+        # Filter results
+        for result in results:
+            idx = result['index']
+            dept_row = self.departments_df.iloc[idx]
+            dept_text = (dept_row['bolum_adi'] + ' ' + dept_row['Aciklama']).lower()
+            
+            # Check if department should be filtered out
+            should_filter = False
+            for category in categories_to_filter:
+                filter_keywords = negative_filters[category]['filter_keywords']
+                if any(keyword in dept_text for keyword in filter_keywords):
+                    should_filter = True
+                    logger.info(f"Filtered out: {dept_row['bolum_adi']} (contains {category} keywords)")
+                    break
+            
+            if not should_filter:
+                filtered_results.append(result)
         
-        for phrase_pattern in interest_phrases:
-            matches = re.finditer(phrase_pattern, text_lower, re.IGNORECASE)
-            for match in matches:
-                phrase = match.group(1)
-                # Extract keywords from the phrase
-                for category, keywords in context_keywords.items():
-                    for keyword in keywords:
-                        if keyword in phrase:
-                            extracted_interests.add(category)
-        
-        # If no interests found, extract all meaningful words
-        if not extracted_interests:
-            # Remove common words and extract potential interests
-            meaningful_words = re.findall(r'\b(?:teknoloji|sağlık|sanat|spor|matematik|bilgisayar|tasarım|fitness|program|yazılım)\b', text_lower)
-            for word in meaningful_words:
-                for category, keywords in context_keywords.items():
-                    if word in keywords:
-                        extracted_interests.add(category)
-        
-        return list(extracted_interests) if extracted_interests else ['genel']
+        return filtered_results    
     
     def filter_by_ranking(self, ranking: int, tolerance: int = 50000):
         """Filter departments by ranking range"""
@@ -196,12 +227,12 @@ class HybridRecommendationEngine:
             
         min_rank = max(1, ranking - tolerance)
         max_rank = ranking + tolerance
-        
+            
         filtered_indices = self.departments_df[
             (self.departments_df['ranking_2025'] >= min_rank) & 
             (self.departments_df['ranking_2025'] <= max_rank)
         ].index.tolist()
-        
+            
         logger.info(f"Filtered to {len(filtered_indices)} departments in ranking range {min_rank}-{max_rank}")
         return filtered_indices
     
@@ -230,21 +261,36 @@ class HybridRecommendationEngine:
         return results
     
     def boost_keyword_matches(self, interests: str, results: list):
-        """Boost scores for exact keyword matches"""
+        """Boost scores for exact keyword matches with expanded keywords"""
         interests_lower = interests.lower()
-        keywords = [word.strip() for word in interests_lower.split(',')]
         
+        # Genişletilmiş keyword mappings
+        expanded_mappings = {
+            'sanat': ['sanat', 'tasarım', 'grafik', 'görsel', 'yaratıcı', 'müzik', 'sinema', 'fotoğraf', 'animasyon', 'oyun', 'medya', 'reklam'],
+            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım', 'programlama', 'web', 'mobil', 'veri', 'sistem'],
+            'sağlık': ['sağlık', 'tıp', 'hasta', 'tedavi', 'hemşire', 'diyetisyen'],
+            'spor': ['spor', 'fitness', 'antrenör', 'egzersiz', 'atletik']
+        }
+        
+        # Keywords belirle
+        all_keywords = set()
+        for word in interests_lower.split(','):
+            word = word.strip()
+            for category, expanded_keywords in expanded_mappings.items():
+                if word in expanded_keywords[:3]:
+                    all_keywords.update(expanded_keywords)
+                    break
+        
+        # Keyword boost hesapla
         for result in results:
             idx = result['index']
             dept_row = self.departments_df.iloc[idx]
-            
-            # Check for keyword matches in department name and description
             dept_text = (dept_row['bolum_adi'] + ' ' + dept_row['Aciklama']).lower()
             
             keyword_boost = 0
-            for keyword in keywords:
+            for keyword in all_keywords:
                 if keyword in dept_text:
-                    keyword_boost += 0.1  # Boost score by 0.1 for each keyword match
+                    keyword_boost += 0.1
                     
             result['similarity_score'] += keyword_boost
             result['keyword_boost'] = keyword_boost
@@ -252,7 +298,7 @@ class HybridRecommendationEngine:
         return results
     
     def recommend(self, user_input: str, top_k: int = 10):
-        """Main recommendation function"""
+        """Main recommendation function with diversification"""
         logger.info(f"Processing recommendation for: {user_input}")
         
         # Parse input
@@ -270,13 +316,18 @@ class HybridRecommendationEngine:
         
         # Boost keyword matches
         results = self.boost_keyword_matches(interests, results)
+
+        
         
         # Sort by score
         results.sort(key=lambda x: x['similarity_score'], reverse=True)
         
+        # Apply diversification
+        results = self.diversify_by_department_type(results, top_k)
+        
         # Prepare final recommendations
         recommendations = []
-        for result in results[:top_k]:
+        for result in results:
             idx = result['index']
             dept_row = self.departments_df.iloc[idx]
             
@@ -307,35 +358,73 @@ class HybridRecommendationEngine:
         Açıklama: {recommendation['description_preview']}
         """
         return explanation.strip()
-
+    
+    def diversify_by_department_type(self, results, top_k=6):
+        """Farklı bölüm türlerinden seç"""
+        diverse_results = []
+        used_dept_names = {}  # Dict ile count tutalım
+        
+        for result in results:
+            idx = result['index']
+            dept_name = self.departments_df.iloc[idx]['bolum_adi']
+            
+            # Bölüm adının temel kısmını al
+            dept_base = dept_name.split('(')[0].split('-')[0].strip().upper()
+            
+            # Bu bölüm türünden kaç tane aldık kontrol et
+            current_count = used_dept_names.get(dept_base, 0)
+            
+            # Aynı bölüm türünden maksimum 2 tane al
+            if current_count < 2:
+                diverse_results.append(result)
+                used_dept_names[dept_base] = current_count + 1
+                
+                logger.info(f"Added: {dept_base} (Count: {current_count + 1})")
+            else:
+                logger.info(f"Skipped: {dept_base} (Already have {current_count})")
+                
+            if len(diverse_results) >= top_k:
+                break
+        
+        return diverse_results
 def main():
     """Test the recommendation engine"""
     
     # Initialize engine
-    dataset_path = "/Users/ardaerdegirmenci/Desktop/u/Dataset_creation/Datasets/2yillik_Bolumler_aciklamali_yeni.csv"
+    dataset_path = "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv"
     engine = HybridRecommendationEngine(dataset_path)
+    
+    # DEBUG: Sanat bölümlerini kontrol et
+    print("=== SANAT BÖLÜMLERİ KONTROLÜ ===")
+    art_keywords = ['sanat', 'tasarım', 'grafik', 'müzik', 'sinema', 'video', 'animasyon', 'oyun', 'fotoğraf', 'medya']
+    art_departments = []
+    
+    for idx, row in engine.departments_df.iterrows():
+        dept_text = (row['bolum_adi'] + ' ' + row['Aciklama']).lower()
+        if any(keyword in dept_text for keyword in art_keywords):
+            art_departments.append(row['bolum_adi'])
+    
+    unique_art_depts = list(set(art_departments))
+    print(f"Dataset'te bulunan sanat bölümleri ({len(unique_art_depts)} adet):")
+    for dept in unique_art_depts:
+        print(f"  - {dept}")
+    print("===============================\n")
     
     # Test cases
     test_cases = [
-        "İlgi alanlarım: teknoloji, matematik, programlama. YKS sıralaması: 200000",
-        "Ben sağlık sektöründe çalışmak istiyorum aynı zamanda spor ve fitness aktivitelerini de seviyorum sıralamam 650000",
-        "Teknoloji alanında kariyer yapmak istiyorum, özellikle yazılım geliştirme ilgimi çekiyor. 300k sıralama yaptım",
-        "Sanat ve tasarım konularını seviyorum, yaratıcı işler yapmak istiyorum. Sıralama: 450000",
-        "Spor antrenörü olmak istiyorum, fitness ve atletik aktivitelerde çalışmayı planlıyorum. 800000 sıralama"
+        "yaratıcı işler yapmak istiyorum fakat teknoloji ile alakalı olsun istemiyorum Sıralama: 450000"
     ]
     
     for i, test_case in enumerate(test_cases, 1):
-        print(f"\n{'='*80}")
         print(f"TEST {i}: {test_case}")
         print('='*80)
         
-        recommendations = engine.recommend(test_case, top_k=6, diversify=True)
+        recommendations = engine.recommend(test_case, top_k=6)
         
         for j, rec in enumerate(recommendations, 1):
-            print(f"\n{j}. {rec['bolum_adi']} - {rec['universite']}")
+            print(f"{j}. {rec['bolum_adi']} - {rec['universite']}")
             print(f"   Sıralama: {rec['ranking_2025']}")
-            print(f"   Benzerlik: {rec['similarity_score']:.4f} (Boost: {rec['keyword_boost']:.4f})")
-            print(f"   Açıklama: {rec['description_preview']}")
-            print(f"   💡 Neden: {rec['match_reason']}")
+            print(f"   Benzerlik: {rec['similarity_score']:.4f}")
+
 if __name__ == "__main__":
     main()
