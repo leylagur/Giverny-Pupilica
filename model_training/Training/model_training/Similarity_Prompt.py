@@ -317,7 +317,7 @@ class HybridRecommendationEngine:
         # Boost keyword matches
         results = self.boost_keyword_matches(interests, results)
 
-        
+        results = self.filter_negative_interests(results, user_input)
         
         # Sort by score
         results.sort(key=lambda x: x['similarity_score'], reverse=True)
@@ -393,22 +393,6 @@ def main():
     # Initialize engine
     dataset_path = "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv"
     engine = HybridRecommendationEngine(dataset_path)
-    
-    # DEBUG: Sanat bölümlerini kontrol et
-    print("=== SANAT BÖLÜMLERİ KONTROLÜ ===")
-    art_keywords = ['sanat', 'tasarım', 'grafik', 'müzik', 'sinema', 'video', 'animasyon', 'oyun', 'fotoğraf', 'medya']
-    art_departments = []
-    
-    for idx, row in engine.departments_df.iterrows():
-        dept_text = (row['bolum_adi'] + ' ' + row['Aciklama']).lower()
-        if any(keyword in dept_text for keyword in art_keywords):
-            art_departments.append(row['bolum_adi'])
-    
-    unique_art_depts = list(set(art_departments))
-    print(f"Dataset'te bulunan sanat bölümleri ({len(unique_art_depts)} adet):")
-    for dept in unique_art_depts:
-        print(f"  - {dept}")
-    print("===============================\n")
     
     # Test cases
     test_cases = [
