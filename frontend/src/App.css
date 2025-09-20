@@ -72,6 +72,48 @@ body {
   margin-bottom: 0.8rem;
 }
 
+/* Program Selector Styles */
+.program-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.program-option {
+  position: relative;
+}
+
+.program-option input[type="radio"] {
+  display: none;
+}
+
+.program-label {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border: 2px solid #e1e8ed;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #495057;
+}
+
+.program-label:hover {
+  background: #e9ecef;
+  border-color: #4facfe;
+  transform: translateY(-2px);
+}
+
+.program-option input[type="radio"]:checked + .program-label {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border-color: #4facfe;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
 textarea {
   width: 100%;
   padding: 1.2rem;
@@ -174,9 +216,34 @@ textarea.error {
 .results-section h2 {
   font-size: 1.8rem;
   color: #2c3e50;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   font-weight: 700;
+}
+
+.results-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #4facfe;
+}
+
+.program-badge {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.result-count {
+  color: #6c757d;
+  font-weight: 500;
 }
 
 .results-grid {
@@ -276,6 +343,10 @@ textarea.error {
   font-size: 0.9rem;
 }
 
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -305,6 +376,10 @@ textarea.error {
     padding: 2rem 1.5rem;
   }
   
+  .program-selector {
+    grid-template-columns: 1fr;
+  }
+  
   .result-content {
     flex-direction: column;
     align-items: flex-start;
@@ -322,5 +397,11 @@ textarea.error {
   
   .button-group {
     flex-direction: column;
+  }
+  
+  .results-info {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 }

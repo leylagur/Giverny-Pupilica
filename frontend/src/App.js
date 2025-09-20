@@ -7,6 +7,14 @@ function App() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [selectedProgram, setSelectedProgram] = useState('sayisal');
+
+  const programTypes = {
+    'onyillik': '2 Yıllık Önlisans',
+    'sayisal': '4 Yıllık Sayısal',
+    'sozel': '4 Yıllık Sözel',
+    'esit_agirlik': '4 Yıllık Eşit Ağırlık'
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +29,8 @@ function App() {
 
     try {
       const response = await axios.post('http://127.0.0.1:8000/predict', {
-        keywords: keywords.trim()
+        keywords: keywords.trim(),
+        program_type: selectedProgram
       });
 
       if (response.data.success) {
@@ -43,6 +52,10 @@ function App() {
     setError('');
   };
 
+  const getResultTitle = () => {
+    return `${programTypes[selectedProgram]} Bölümleri`;
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -53,6 +66,29 @@ function App() {
 
         <main className="main-content">
           <form onSubmit={handleSubmit} className="input-form">
+            {/* Program Seçimi */}
+            <div className="input-group">
+              <label>Program Türü Seçin</label>
+              <div className="program-selector">
+                {Object.entries(programTypes).map(([key, label]) => (
+                  <div key={key} className="program-option">
+                    <input
+                      type="radio"
+                      id={key}
+                      name="program"
+                      value={key}
+                      checked={selectedProgram === key}
+                      onChange={(e) => setSelectedProgram(e.target.value)}
+                    />
+                    <label htmlFor={key} className="program-label">
+                      {label}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Kelime Girişi */}
             <div className="input-group">
               <label htmlFor="keywords">İlgi Alanlarınız</label>
               <textarea
@@ -88,7 +124,11 @@ function App() {
 
           {results.length > 0 && (
             <div className="results-section">
-              <h2>📋 Önerilen Bölümler</h2>
+              <h2>📋 {getResultTitle()}</h2>
+              <div className="results-info">
+                <span className="program-badge">{programTypes[selectedProgram]}</span>
+                <span className="result-count">{results.length} sonuç bulundu</span>
+              </div>
               <div className="results-grid">
                 {results.map((result, index) => (
                   <div key={index} className="result-card">
@@ -115,13 +155,14 @@ function App() {
 
           {results.length === 0 && !loading && keywords && !error && (
             <div className="no-results">
-              <p>🤔 Bu anahtar kelimeler için öneri bulunamadı. Farklı kelimeler deneyin!</p>
+              <p>🤔 Bu anahtar kelimeler için {programTypes[selectedProgram].toLowerCase()} bölümü bulunamadı. Farklı kelimeler deneyin!</p>
             </div>
           )}
         </main>
 
         <footer className="footer">
           <p>💡 Daha iyi sonuçlar için spesifik kelimeler kullanın</p>
+          <p>📊 Seçili: {programTypes[selectedProgram]}</p>
         </footer>
       </div>
     </div>
