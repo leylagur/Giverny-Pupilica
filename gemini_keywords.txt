@@ -1,0 +1,21 @@
+```python
+positive_mappings = {
+    'teknoloji': ['bilgisayar', 'yazılım', 'programlama', 'web', 'oyun', 'dijital', 'sistem', 'kodlama', 'geliştirme', 'uygulama', 'veri', 'yapay zeka', 'robotik', 'siber güvenlik'],
+    'sağlık': ['sağlık', 'tıp', 'hemşire', 'hasta', 'tedavi', 'anestezi', 'veteriner', 'diş', 'fizyoterapi', 'tıbbi', 'biyoloji', 'eczacılık', 'tıbbi görüntüleme'],
+    'sanat': ['sanat', 'tasarım', 'grafik', 'müzik', 'sinema', 'fotoğraf', 'görsel', 'yaratıcı', 'illüstrasyon', 'heykel', 'resim', 'seramik', 'tasarım', 'moda'],
+    'spor': ['spor', 'antrenör', 'fitness', 'egzersiz', 'rekreasyon', 'beden', 'atletik', 'hareket', 'yüzme', 'basketbol', 'futbol', 'tenis', 'spor yönetimi'],
+    'işletme': ['işletme', 'pazarlama', 'muhasebe', 'ticaret', 'yönetim', 'ekonomi', 'finans', 'satış', 'finansal', 'strateji', 'iş geliştirme', 'girişimcilik', 'ticaret', 'lojistik', 'insan kaynakları'],
+    'gastronomi': ['gastronomi', 'mutfak sanatları', 'yemek', 'aşçılık', 'pasta', 'şef', 'fırıncılık', 'gıda', 'restoran'],
+    'eğitim': ['öğretmen', 'eğitim', 'öğretim', 'ders', 'okul', 'çocuk', 'akademik', 'öğrenci', 'pedagoji', 'psikoloji', 'rehberlik']
+}
+
+negative_keywords = {
+    'teknoloji': ['teknoloji', 'bilgisayar', 'matematik', 'sayısal', 'programlama', 'kodlama', 'karmaşık', 'zor', 'anlaşılmaz'],
+    'sağlık': ['sağlık', 'hasta', 'kan', 'tıp', 'ameliyat', 'hastalık', 'ölüm', 'acı', 'korkutucu'],
+    'matematik': ['matematik', 'hesap', 'sayı', 'formül', 'problem', 'çözüm', 'karmaşık', 'zor'],
+    'sosyal': ['tarih', 'edebiyat', 'ezber', 'okuma', 'yazma', 'analiz', 'sıkıcı', 'yorucu'],
+    'spor': ['tembel', 'pasif', 'hareketsiz'],
+    'işletme': ['sıkıcı', 'karmaşık', 'zor', 'stresli'],
+    'eğitim': ['sıkıcı', 'zor', 'yorucu', 'stresli', 'ezber']
+}
+```

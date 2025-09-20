@@ -63,11 +63,12 @@ class HybridRecommendationEngine:
         
         # Enhanced ranking patterns
         ranking_patterns = [
-            r'(?:YKS sıralaması|sıralama|sıralamam):?\s*(\d+)',
-            r'sıralamam\s+(\d+)',
-            r'(\d+)\s*sıralama',
-            r'(\d+\.?\d*k?)\s*(?:sıralama|puan)',
-            r'sıralama.*?(\d+)'
+            r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d+)?k?)',
+            r'sıralamam\s+(\d+(?:\.\d+)?k?)',
+            r'(\d+(?:\.\d+)?k?)\s*sıralama',
+            r'(\d{1,3}(?:\.\d{3})+)',  # 500.000 format
+            r'(\d{4,7})',  # 500000 format
+            r'sıralama.*?(\d+(?:\.\d+)?k?)'
         ]
         
         ranking = None
@@ -80,7 +81,14 @@ class HybridRecommendationEngine:
                     ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
                 else:
                     ranking = int(float(rank_str))
-                break
+
+                # YENİ:
+                if 'k' in rank_str.lower():
+                    ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
+                elif '.' in rank_str and len(rank_str) > 4:
+                    ranking = int(rank_str.replace('.', ''))  # 500.000 -> 500000
+                else:
+                    ranking = int(float(rank_str))
         
         # Extract career intentions and interests using NLP patterns
         interests_keywords = self.extract_career_interests(user_input)
@@ -176,19 +184,79 @@ class HybridRecommendationEngine:
         user_lower = user_input.lower()
         filtered_results = []
         
+        # Gemini AI tarafından oluşturulan negative keywords
+        negative_keywords = {
+            'teknoloji': ['teknoloji', 'bilgisayar', 'matematik', 'sayısal', 'programlama', 'kodlama', 'karmaşık', 'zor', 'anlaşılmaz'],
+            'sağlık': ['sağlık', 'hasta', 'kan', 'tıp', 'ameliyat', 'hastalık', 'ölüm', 'acı', 'korkutucu'],
+            'matematik': ['matematik', 'hesap', 'sayı', 'formül', 'problem', 'çözüm', 'karmaşık', 'zor'],
+            'sosyal': ['tarih', 'edebiyat', 'ezber', 'okuma', 'yazma', 'analiz', 'sıkıcı', 'yorucu'],
+            'spor': ['tembel', 'pasif', 'hareketsiz'],
+            'işletme': ['sıkıcı', 'karmaşık', 'zor', 'stresli'],
+            'eğitim': ['sıkıcı', 'zor', 'yorucu', 'stresli', 'ezber']
+        }
+        
         # Define negative patterns and corresponding keywords to filter
         negative_filters = {
             'teknoloji': {
                 'patterns': [
                     r'teknoloji.*?(?:istemiyorum|sevmiyorum|olmasın)',
                     r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)',
-                    r'bilgisayar.*?(?:istemiyorum|sevmiyorum)'
+                    r'bilgisayar.*?(?:istemiyorum|sevmiyorum)',
+                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor).*?(?:teknoloji|bilgisayar)',
+                    r'programlama.*?(?:sevmiyorum|istemiyorum|zor)'
                 ],
-                'filter_keywords': ['bilgisayar', 'teknoloji', 'yazılım', 'programlama', 'oyun', 'web', 'dijital', 'sistem']
+                'filter_keywords': negative_keywords['teknoloji']  # Gemini'den gelen keywords
             },
             'sağlık': {
-                'patterns': [r'sağlık.*?(?:istemiyorum|sevmiyorum)'],
-                'filter_keywords': ['sağlık', 'hasta', 'tıp', 'hemşire']
+                'patterns': [
+                    r'sağlık.*?(?:istemiyorum|sevmiyorum)',
+                    r'kan.*?(?:görmek.*?istemiyorum|korkuyorum)',
+                    r'hasta.*?(?:görmek.*?istemiyorum|ilgilenmiyorum)',
+                    r'ameliyat.*?(?:korkuyorum|istemiyorum)'
+                ],
+                'filter_keywords': negative_keywords['sağlık']
+            },
+            'matematik': {
+                'patterns': [
+                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor|anlayamıyorum)',
+                    r'sayısal.*?(?:kötüyüm|zor|başarısızım)',
+                    r'hesap.*?(?:yapmak.*?zor|sevmiyorum)'
+                ],
+                'filter_keywords': negative_keywords['matematik']
+            },
+            'sosyal': {
+                'patterns': [
+                    r'tarih.*?(?:sevmiyorum|sıkıcı|ezberleme)',
+                    r'edebiyat.*?(?:sevmiyorum|sıkıcı)',
+                    r'ezberleme.*?(?:sevmiyorum|zor)',
+                    r'sosyal.*?(?:sevmiyorum|istemiyorum)'
+                ],
+                'filter_keywords': negative_keywords['sosyal']
+            },
+            'spor': {
+                'patterns': [
+                    r'spor.*?(?:sevmiyorum|istemiyorum|yapmam)',
+                    r'fiziksel.*?aktivite.*?(?:sevmiyorum|istemiyorum)',
+                    r'egzersiz.*?(?:sevmiyorum|yapmam)',
+                    r'tembel.*?(?:im|sayılırım)'
+                ],
+                'filter_keywords': negative_keywords['spor']
+            },
+            'işletme': {
+                'patterns': [
+                    r'işletme.*?(?:sevmiyorum|istemiyorum|sıkıcı)',
+                    r'pazarlama.*?(?:sevmiyorum|istemiyorum)',
+                    r'muhasebe.*?(?:sevmiyorum|zor)'
+                ],
+                'filter_keywords': negative_keywords['işletme']
+            },
+            'eğitim': {
+                'patterns': [
+                    r'öğretmen.*?(?:olmak.*?istemiyorum|sevmiyorum)',
+                    r'eğitim.*?(?:sevmiyorum|istemiyorum|sıkıcı)',
+                    r'çocuk.*?(?:sevmiyorum|ilgilenmiyorum)'
+                ],
+                'filter_keywords': negative_keywords['eğitim']
             }
         }
         
@@ -198,6 +266,7 @@ class HybridRecommendationEngine:
             for pattern in config['patterns']:
                 if re.search(pattern, user_lower):
                     categories_to_filter.add(category)
+                    logger.info(f"🚫 Detected negative interest: {category}")
                     break
         
         # Filter results
@@ -210,14 +279,17 @@ class HybridRecommendationEngine:
             should_filter = False
             for category in categories_to_filter:
                 filter_keywords = negative_filters[category]['filter_keywords']
-                if any(keyword in dept_text for keyword in filter_keywords):
+                matching_keywords = [kw for kw in filter_keywords if kw in dept_text]
+                
+                if matching_keywords:
                     should_filter = True
-                    logger.info(f"Filtered out: {dept_row['bolum_adi']} (contains {category} keywords)")
+                    logger.info(f"❌ Filtered out: {dept_row['bolum_adi']} (negative: {category}, keywords: {matching_keywords})")
                     break
             
             if not should_filter:
                 filtered_results.append(result)
         
+        logger.info(f"🔍 Filtered from {len(results)} to {len(filtered_results)} departments")
         return filtered_results    
     
     def filter_by_ranking(self, ranking: int, tolerance: int = 50000):
@@ -266,10 +338,13 @@ class HybridRecommendationEngine:
         
         # Genişletilmiş keyword mappings
         expanded_mappings = {
-            'sanat': ['sanat', 'tasarım', 'grafik', 'görsel', 'yaratıcı', 'müzik', 'sinema', 'fotoğraf', 'animasyon', 'oyun', 'medya', 'reklam'],
-            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım', 'programlama', 'web', 'mobil', 'veri', 'sistem'],
-            'sağlık': ['sağlık', 'tıp', 'hasta', 'tedavi', 'hemşire', 'diyetisyen'],
-            'spor': ['spor', 'fitness', 'antrenör', 'egzersiz', 'atletik']
+                'teknoloji': ['bilgisayar', 'yazılım', 'programlama', 'web', 'oyun', 'dijital', 'sistem', 'kodlama', 'geliştirme', 'uygulama', 'veri', 'yapay zeka', 'robotik', 'siber güvenlik'],
+        'sağlık': ['sağlık', 'tıp', 'hemşire', 'hasta', 'tedavi', 'anestezi', 'veteriner', 'diş', 'fizyoterapi', 'tıbbi', 'biyoloji', 'eczacılık', 'tıbbi görüntüleme'],
+        'sanat': ['sanat', 'tasarım', 'grafik', 'müzik', 'sinema', 'fotoğraf', 'görsel', 'yaratıcı', 'illüstrasyon', 'heykel', 'resim', 'seramik', 'tasarım', 'moda'],
+        'spor': ['spor', 'antrenör', 'fitness', 'egzersiz', 'rekreasyon', 'beden', 'atletik', 'hareket', 'yüzme', 'basketbol', 'futbol', 'tenis', 'spor yönetimi'],
+        'işletme': ['işletme', 'pazarlama', 'muhasebe', 'ticaret', 'yönetim', 'ekonomi', 'finans', 'satış', 'finansal', 'strateji', 'iş geliştirme', 'girişimcilik', 'ticaret', 'lojistik', 'insan kaynakları'],
+        'gastronomi': ['gastronomi', 'mutfak sanatları', 'yemek', 'aşçılık', 'pasta', 'şef', 'fırıncılık', 'gıda', 'restoran'],
+        'eğitim': ['öğretmen', 'eğitim', 'öğretim', 'ders', 'okul', 'çocuk', 'akademik', 'öğrenci', 'pedagoji', 'psikoloji', 'rehberlik']
         }
         
         # Keywords belirle
@@ -396,7 +471,7 @@ def main():
     
     # Test cases
     test_cases = [
-        "yaratıcı işler yapmak istiyorum fakat teknoloji ile alakalı olsun istemiyorum Sıralama: 450000"
+        "sağlık alanında çalışmak istiyorum ama sayısal iyi değilim içinde teknolojik bir şey olmasın sıralamam 500.000"
     ]
     
     for i, test_case in enumerate(test_cases, 1):
