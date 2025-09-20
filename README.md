@@ -186,7 +186,7 @@ keywords → TF-IDF Matrix → Similarity Scores → Ranking
 
 ## Takım
 
-**Hackathon Projesi 2024**
+**Hackathon Projesi 2025**
 - Frontend Development: React, UI/UX Design
 - Backend Development: Python, ML Engineering
 - Data Science: Model optimization, Analysis
