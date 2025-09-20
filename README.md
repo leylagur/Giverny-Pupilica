@@ -197,7 +197,7 @@ Bu proje eğitim amaçlı geliştirilmiştir. Kesin kararlar için resmi kaynakl
 
 ## İletişim
 
-Proje hakkında sorularınız için hackathon ekibiyle iletişime geçebilirsiniz.
+Proje hakkında sorularınız için repository'nin katkı sağlayıcılarıyla iletişime geçebilirsiniz.
 
 ---
 

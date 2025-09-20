@@ -16,25 +16,21 @@ def predict():
     try:
         data = request.json
         keywords = data.get('keywords', '')
+        program_type = data.get('program_type', 'sayisal')
         
-        # Senin similarity model fonksiyonunu buraya çağır
-        # Örnek format:
-        predictions = your_similarity_function(keywords)
-        
-        # Sonucu frontend için formatla
-        recommendations = [
-            {
-                "department": dept_name,
-                "score": similarity_score
-            }
-            for dept_name, similarity_score in predictions
+        # Geçici mock response - gerçek ML model buraya gelecek
+        mock_results = [
+            {"department": "Bilgisayar Mühendisliği", "score": 0.95},
+            {"department": "Yazılım Mühendisliği", "score": 0.92},
+            {"department": "Endüstri Mühendisliği", "score": 0.88}
         ]
         
         return jsonify({
             'success': True,
-            'recommendations': recommendations
+            'recommendations': mock_results
         })
-        
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
     except Exception as e:
         return jsonify({
             'success': False,
