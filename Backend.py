@@ -1,42 +1,83 @@
-#print("ily")
-#print("cko seviom")
-
-# Backend.py dosyasının başına
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import json
+import os
+import sys
+
+# Similarity_Prompt.py'yi import et
+sys.path.append('./model_training/Training/model_training')
+from Similarity_Prompt import HybridRecommendationEngine
 
 app = Flask(__name__)
-CORS(app)  # Frontend erişimi için
+CORS(app)
 
-# Senin mevcut model loading kodu...
+class SimpleRecommendationAPI:
+    def __init__(self):
+        self.dataset_paths = {
+            "2_yillik": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv",
+            "sayisal": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/Sayisal_Bolumler_Aciklamali.csv", 
+            "sozel": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/Sozel_Bolumler_aciklamali.csv",
+            "esit_agirlik": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/Esit_Agirlik_Aciklamali.csv"
+        }
+        self.engines = {}
+    
+    def get_engine(self, dataset_type):
+        if dataset_type not in self.engines:
+            dataset_path = self.dataset_paths.get(dataset_type)
+            if not dataset_path or not os.path.exists(dataset_path):
+                return None
+            
+            print(f"Loading AI model for {dataset_type}...")
+            self.engines[dataset_type] = HybridRecommendationEngine(dataset_path)
+        
+        return self.engines[dataset_type]
 
-@app.route('/predict', methods=['POST'])
-def predict():
+recommendation_api = SimpleRecommendationAPI()
+
+@app.route('/api/recommend', methods=['POST'])
+def get_recommendations():
     try:
         data = request.json
-        keywords = data.get('keywords', '')
-        program_type = data.get('program_type', 'sayisal')
+        user_input = data.get('user_input', '')
+        dataset_type = data.get('dataset_type', 'sayisal')
         
-        # Geçici mock response - gerçek ML model buraya gelecek
-        mock_results = [
-            {"department": "Bilgisayar Mühendisliği", "score": 0.95},
-            {"department": "Yazılım Mühendisliği", "score": 0.92},
-            {"department": "Endüstri Mühendisliği", "score": 0.88}
-        ]
+        print(f"Request: {user_input}, Dataset: {dataset_type}")
+        
+        engine = recommendation_api.get_engine(dataset_type)
+        if not engine:
+            return jsonify({'success': False, 'error': f'Dataset bulunamadı: {dataset_type}'}), 404
+        
+        recommendations = engine.recommend(user_input, top_k=6)
+        print(f"AI generated {len(recommendations)} recommendations")
+        
+        # JSON serializable olduğundan emin ol
+        clean_recommendations = []
+        for rec in recommendations:
+            clean_rec = {
+                'bolum_adi': str(rec.get('bolum_adi', '')),
+                'universite': str(rec.get('universite', '')),
+                'sehir': str(rec.get('sehir', '')),
+                'ranking_2025': int(rec.get('ranking_2025', 0)),
+                'similarity_score': float(rec.get('similarity_score', 0)),
+                'description_preview': str(rec.get('description_preview', ''))
+            }
+            clean_recommendations.append(clean_rec)
         
         return jsonify({
             'success': True,
-            'recommendations': mock_results
+            'recommendations': clean_recommendations,
+            'total_found': len(clean_recommendations)
         })
+        
     except Exception as e:
+        print(f"ERROR: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({'success': False, 'error': str(e)}), 500
-    except Exception as e:
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
+
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    return jsonify({'status': 'healthy'})
 
 if __name__ == '__main__':
+    print("AI Backend başlatılıyor...")
     app.run(debug=True, host='0.0.0.0', port=8000)
-    

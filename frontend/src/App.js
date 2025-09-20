@@ -8,7 +8,7 @@ function App() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [selectedProgram, setSelectedProgram] = useState('sayisal');
+  const [selectedProgram, setSelectedProgram] = useState('2_yillik');
   const [isTyping, setIsTyping] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
@@ -18,7 +18,7 @@ function App() {
   };
 
   const programTypes = {
-    'onyillik': '2 Yıllık Önlisans',
+    '2_yillik': '2 Yıllık Önlisans',
     'sayisal': '4 Yıllık Sayısal',
     'sozel': '4 Yıllık Sözel',
     'esit_agirlik': '4 Yıllık Eşit Ağırlık'
@@ -35,14 +35,27 @@ function App() {
     setError('');
     setResults([]);
 
-    try {
-      const response = await axios.post('http://127.0.0.1:8000/predict', {
-        keywords: keywords.trim(),
-        program_type: selectedProgram
+     try {
+      // YENİ endpoint ve format
+      const response = await axios.post('http://127.0.0.1:8000/api/recommend', {
+        user_input: keywords.trim(),
+        dataset_type: selectedProgram,
+        top_k: 6
       });
 
       if (response.data.success) {
-        setResults(response.data.recommendations || []);
+        // Backend'den gelen format: bolum_adi, universite, similarity_score vs.
+        // Frontend'in beklediği format: department, score
+        const formattedResults = response.data.recommendations.map(rec => ({
+          department: rec.bolum_adi,
+          university: rec.universite,
+          city: rec.sehir,
+          ranking: rec.ranking_2025,
+          score: rec.similarity_score,
+          description: rec.description_preview
+        }));
+        
+        setResults(formattedResults);
       } else {
         setError(response.data.error || 'Bir hata oluştu');
       }
