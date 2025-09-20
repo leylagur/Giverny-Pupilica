@@ -13,10 +13,10 @@ CORS(app)
 class SimpleRecommendationAPI:
     def __init__(self):
         self.dataset_paths = {
-            "2_yillik": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv",
-            "sayisal": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/Sayisal_Bolumler_Aciklamali.csv", 
-            "sozel": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/Sozel_Bolumler_aciklamali.csv",
-            "esit_agirlik": "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/Esit_Agirlik_Aciklamali.csv"
+            "2_yillik": "./Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv",
+            "sayisal": "./Backend/Data/Sayisal_Bolumler_Aciklamali.csv", 
+            "sozel": "./Backend/Data/Sozel_Bolumler_aciklamali.csv",
+            "esit_agirlik": "./Backend/Data/Esit_Agirlik_Aciklamali.csv"
         }
         self.engines = {}
     
