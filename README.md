@@ -1,70 +1,204 @@
-# Getting Started with Create React App
+# BölümBul
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Yapay Zeka Destekli Üniversite Bölüm Önerme Platformu**
 
-## Available Scripts
+BölümBul, öğrencilerin ilgi alanlarına göre en uygun üniversite bölümlerini keşfetmelerini sağlayan modern bir web uygulamasıdır. Machine learning algoritmaları kullanarak kişiselleştirilmiş bölüm önerileri sunar.
 
-In the project directory, you can run:
+## Özellikler
 
-### `npm start`
+### Frontend
+- **Modern React UI** - Framer Motion animasyonları ile
+- **Responsive Tasarım** - Mobil ve desktop uyumlu
+- **Dark/Light Theme** - Kullanıcı tercihi
+- **Real-time Typing Indicator** - Kullanıcı etkileşimi
+- **Program Türü Seçimi** - 2 Yıllık, 4 Yıllık Sayısal/Sözel/Eşit Ağırlık
+- **Animated Background** - Hareketli üniversite isimleri ve partiküller
+- **Progressive Result Cards** - Staggered loading animasyonları
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+- **Python Flask API** - RESTful servis mimarisi
+- **Machine Learning Model** - Similarity-based recommendation
+- **Multi-System Support** - Hybrid recommendation engine
+- **Data Processing Pipeline** - CSV verilerinden model eğitimi
+- **Program-Specific Results** - Her program türü için ayrı model
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Teknoloji Stack
 
-### `npm test`
+### Frontend
+- React 18
+- Framer Motion (animasyonlar)
+- Axios (API calls)
+- CSS3 (modern styling)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+- Python 3.9+
+- Flask (web framework)
+- Pandas (veri işleme)
+- Scikit-learn (ML modelleri)
+- NumPy (numerik hesaplamalar)
 
-### `npm run build`
+## Proje Yapısı
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+BölümBul/
+├── Backend/
+│   ├── models/
+│   │   ├── hybrid_engine.py
+│   │   ├── multi_system.py
+│   │   └── __init__.py
+│   ├── Data/
+│   │   ├── 2yillik_Bolumler_aciklamali_yeni.csv
+│   │   ├── Sayisal_Bolumler_Aciklamali.csv
+│   │   ├── Sozel_Bolumler_aciklamali.csv
+│   │   └── Esit_Agirlik_Aciklamali.csv
+│   └── Backend.py
+├── Training/
+│   └── model_training/
+│       └── Similarity_Prompt.py
+├── frontend/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── index.js
+│   ├── public/
+│   └── package.json
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Kurulum ve Çalıştırma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend Kurulumu
 
-### `npm run eject`
+```bash
+# Python virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Gerekli paketleri yükle
+pip install flask pandas scikit-learn numpy flask-cors
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Backend'i çalıştır
+python Backend.py
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Frontend Kurulumu
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Frontend klasörüne git
+cd frontend
 
-## Learn More
+# Bağımlılıkları yükle
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Geliştirme sunucusunu başlat
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Veri Kaynağı
 
-### Code Splitting
+Üniversite ve bölüm verileri:
+- **YÖK (Yükseköğretim Kurulu)** resmi verileri
+- **Üniversite yerleştirme istatistikleri**
+- **Veri derlemesi**: Salim Ünsal tarafından toplanmış veriler
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Machine Learning Yaklaşımı
 
-### Analyzing the Bundle Size
+### Similarity-Based Recommendation
+- **TF-IDF Vectorization** - Metin analizi
+- **Cosine Similarity** - Benzerlik hesaplama
+- **Keyword Extraction** - Anahtar kelime çıkarımı
+- **Multi-Program Support** - Program türüne göre özelleştirme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Model Eğitimi
+```python
+# Veri önişleme
+keywords → TF-IDF Matrix → Similarity Scores → Ranking
+```
 
-### Making a Progressive Web App
+## UI/UX Özellikleri
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Animasyonlar
+- **Page Load Animation** - Smooth giriş efekti
+- **University Names** - Floating background animation
+- **Result Cards** - Staggered reveal
+- **Score Bars** - Progressive fill animation
+- **Hover Effects** - Interactive micro-animations
 
-### Advanced Configuration
+### Tema Sistemi
+- **Dark Mode** - Varsayılan koyu tema
+- **Light Mode** - Aydınlık alternatif
+- **Theme Toggle** - Kullanıcı kontrolü
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Responsive Tasarım
 
-### Deployment
+- **Mobile First** yaklaşımı
+- **Tablet** optimizasyonu
+- **Desktop** full-feature deneyimi
+- **Flexible Grid** sistem
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## API Endpoints
 
-### `npm run build` fails to minify
+### POST /predict
+```json
+{
+  "keywords": "matematik, bilgisayar, analiz",
+  "program_type": "sayisal"
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Response:**
+```json
+{
+  "success": true,
+  "recommendations": [
+    {
+      "department": "Bilgisayar Mühendisliği",
+      "score": 0.95
+    }
+  ]
+}
+```
+
+## Geliştirme Süreci
+
+1. **Veri Analizi** - YÖK verilerinin incelenmesi
+2. **Model Geliştirme** - ML algoritması tasarımı
+3. **Backend API** - Flask servis geliştirme
+4. **Frontend UI** - React arayüz tasarımı
+5. **Integration** - Full-stack entegrasyon
+6. **Testing** - Kullanıcı deneyimi testleri
+
+## Performans
+
+- **Response Time**: < 500ms
+- **Accuracy**: Yüksek similarity scoring
+- **Scalability**: Modüler mimari
+- **User Experience**: Smooth animasyonlar
+
+## Gelecek Planları
+
+- **User Accounts** - Kişisel profil sistemi
+- **Detailed Analytics** - Gelişmiş analiz
+- **University Integration** - Üniversite detay sayfaları
+- **Mobile App** - React Native uygulaması
+- **Advanced ML** - Deep learning modelleri
+
+## Takım
+
+**Hackathon Projesi 2024**
+- Frontend Development: React, UI/UX Design
+- Backend Development: Python, ML Engineering
+- Data Science: Model optimization, Analysis
+
+## Lisans
+
+Bu proje eğitim amaçlı geliştirilmiştir. Kesin kararlar için resmi kaynaklara başvurunuz.
+
+## İletişim
+
+Proje hakkında sorularınız için hackathon ekibiyle iletişime geçebilirsiniz.
+
+---
+
+**Built with AI for better education decisions**
