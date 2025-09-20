@@ -6,7 +6,7 @@ def ask_gemini_for_keywords():
     """Gemini'ye keyword sistemi oluşturmasını sor"""
     
     # API key'ini buraya koy
-    GEMINI_API_KEY = "AIzaSyBa_8CSBPWTzhp2zSKJMXLXCLWUzI6sT5k"  # Buraya kendi API key'ini koy
+    GEMINI_API_KEY = "# Buraya kendi API key "  
     
     genai.configure(api_key=GEMINI_API_KEY)
     

@@ -4,7 +4,7 @@ import pandas as pd
 import google.generativeai as genai
 
 # 🔑 API Key
-genai.configure(api_key="AIzaSyBMGMxcT9KgK2yPa7NdhShSyX7gsUXmYn8")
+genai.configure(api_key="apı key gelecek")
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
