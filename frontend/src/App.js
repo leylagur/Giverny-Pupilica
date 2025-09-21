@@ -346,17 +346,25 @@ function App() {
                         <span className="city-name">{result.sehir}</span>
                       </div>
                       
-                      {result.ranking_2025 && (
-                        <div className="ranking-info">
-                          <span className="ranking-label">2025 Sıralaması:</span>
-                          <span className="ranking-value">{result.ranking_2025.toLocaleString('tr-TR')}</span>
-                        </div>
-                      )}
-                    </div>
+                     {result.ranking_2025 && (
+                      <div className="ranking-info">
+                        <span className="ranking-label">2025 Sıralaması:</span>
+                        <span className="ranking-value">{result.ranking_2025.toLocaleString('tr-TR')}</span>
+                      </div>
+                    )}
 
+                    {result.taban_puan && (
+                      <div className="ranking-info">
+                        <span className="ranking-label">Taban Puan:</span>
+                        <span className="taban-puan-value">{result.taban_puan}</span>
+                      </div>
+                    )}
+
+                    </div>
+                    
                     <div className="result-score">
                       <div className="score-bar">
-                        <motion.div 
+                        <motion.div
                           className="score-fill"
                           initial={{ width: 0 }}
                           animate={{ width: `${result.similarity_score * 100}%` }}

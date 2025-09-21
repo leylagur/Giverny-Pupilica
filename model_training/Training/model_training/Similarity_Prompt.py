@@ -18,38 +18,71 @@ class HybridRecommendationEngine:
         self.model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')  # Multilingual model
         self.departments_df = None
         self.department_embeddings = None
-        
-        # Load and prepare data
+
         self.load_dataset(dataset_path)
         self.prepare_embeddings()
         
     def load_dataset(self, dataset_path: str):
-        """Load department dataset"""
+        """Load department dataset - simple approach with error catching"""
         logger.info(f"Loading dataset from {dataset_path}")
-    
-        # Load CSV
-        df = pd.read_csv(dataset_path)
-    
+
+        # Load CSV with ALL columns as string
+        df = pd.read_csv(dataset_path, dtype=str)
+        
         # Clean and prepare data
         df = df.dropna(subset=['Aciklama', 'bolum_adi'])
-        df['ranking_2025'] = pd.to_numeric(df['2025_Taban_Sıralama'], errors='coerce')
-    
-        # Remove invalid rankings
-        df = df.dropna(subset=['ranking_2025'])
-    
-        # ÖNEMLİ: Index'leri sıfırla
-        df = df.reset_index(drop=True)
-    
-        self.departments_df = df
-        logger.info(f"Loaded {len(df)} departments")
         
-        df = df.reset_index(drop=True)
+        # Manual ranking conversion with comprehensive error handling
+        rankings = []
+        valid_rows = []
+        
+        for idx, row in df.iterrows():
+            ranking_value = row['2025_Taban_Sıralama']
+            
+            try:
+                # Skip if NaN or empty
+                if pd.isna(ranking_value) or ranking_value == '':
+                    continue
+                    
+                ranking_str = str(ranking_value).strip()
+                
+                # Skip any value containing comma
+                if ',' in ranking_str:
+                    continue
+                    
+                # Convert clean values
+                if '.' in ranking_str:
+                    clean_value = ranking_str.replace('.', '')
+                else:
+                    clean_value = ranking_str
+                    
+                ranking_int = int(clean_value)
+                
+                # Add to valid data
+                rankings.append(ranking_int)
+                valid_rows.append(idx)
+                
+            except:
+                # Skip any problematic row silently
+                continue
+        
+        # Create clean dataframe
+        df_clean = df.iloc[valid_rows].copy()
+        df_clean['ranking_2025'] = rankings
+        df_clean = df_clean.reset_index(drop=True)
+        
+        self.departments_df = df_clean
+        logger.info(f"Loaded {len(df_clean)} clean departments")
+        
+        if len(rankings) > 0:
+            logger.info(f"Ranking range: {min(rankings)} - {max(rankings)}")
+        
+        return df_clean
         
     def prepare_embeddings(self):
         """Create embeddings for all department descriptions"""
         logger.info("Creating embeddings for department descriptions...")
     
-        # ÖNEMLİ: Index'lerin sıfır olduğundan emin ol
         self.departments_df = self.departments_df.reset_index(drop=True)
     
         descriptions = self.departments_df['Aciklama'].tolist()
@@ -57,18 +90,20 @@ class HybridRecommendationEngine:
     
         logger.info("Embeddings created successfully")
     
+    #
+
     def extract_interests_and_ranking(self, user_input: str):
         """Parse user input to extract interests and ranking with NLP"""
         import re
         
-        # Enhanced ranking patterns
+        # Enhanced ranking patterns - sadece geçerli formatları kabul et
         ranking_patterns = [
-            r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d+)?k?)',
-            r'sıralamam\s+(\d+(?:\.\d+)?k?)',
-            r'(\d+(?:\.\d+)?k?)\s*sıralama',
-            r'(\d{1,3}(?:\.\d{3})+)',  # 500.000 format
-            r'(\d{4,7})',  # 500000 format
-            r'sıralama.*?(\d+(?:\.\d+)?k?)'
+            r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d{3})*k?)',  # 32.000 veya 32k
+            r'sıralamam\s+(\d+(?:\.\d{3})*k?)',  # sıralamam 32000
+            r'(\d+k?)\s*sıralama',  # 32000 sıralama veya 32k sıralama
+            r'(\d{1,3}(?:\.\d{3})+)',  # 32.000 format
+            r'(\d{4,7})',  # 32000 format (4-7 digit numbers only)
+            r'sıralama.*?(\d+(?:\.\d{3})*k?)'  # sıralama ... 32000
         ]
         
         ranking = None
@@ -76,19 +111,28 @@ class HybridRecommendationEngine:
             ranking_match = re.search(pattern, user_input, re.IGNORECASE)
             if ranking_match:
                 rank_str = ranking_match.group(1)
-                # Handle 'k' notation (650k = 650000)
-                if 'k' in rank_str.lower():
-                    ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
-                else:
-                    ranking = int(float(rank_str))
-
-                # YENİ:
-                if 'k' in rank_str.lower():
-                    ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
-                elif '.' in rank_str and len(rank_str) > 4:
-                    ranking = int(rank_str.replace('.', ''))  # 500.000 -> 500000
-                else:
-                    ranking = int(float(rank_str))
+                
+                try:
+                    # SADECE GEÇERLİ FORMATLARI İŞLE
+                    # Virgül içeren formatları IGNORE ET
+                    if ',' in rank_str:
+                        continue  # Bu formatı atla, sonraki pattern'i dene
+                    
+                    # Handle 'k' notation (32k = 32000)
+                    if 'k' in rank_str.lower():
+                        ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
+                    elif '.' in rank_str and len(rank_str) > 4:
+                        ranking = int(rank_str.replace('.', ''))  # 32.000 -> 32000
+                    else:
+                        ranking = int(rank_str)
+                    
+                    # Geçerli ranking bulundu, döngüden çık
+                    if ranking:
+                        break
+                        
+                except (ValueError, TypeError):
+                    # Bu pattern çalışmazsa sonrakini dene
+                    continue
         
         # Extract career intentions and interests using NLP patterns
         interests_keywords = self.extract_career_interests(user_input)
@@ -101,7 +145,7 @@ class HybridRecommendationEngine:
         
         text_lower = text.lower()
         extracted_interests = set()
-        excluded_interests = set()  # Bu satır eksikti
+        excluded_interests = set()  
         
         # Negative patterns - önce bunları kontrol et
         negative_patterns = {
@@ -184,18 +228,7 @@ class HybridRecommendationEngine:
         user_lower = user_input.lower()
         filtered_results = []
         
-        # Gemini AI tarafından oluşturulan negative keywords
-        negative_keywords = {
-            'teknoloji': ['teknoloji', 'bilgisayar', 'matematik', 'sayısal', 'programlama', 'kodlama', 'karmaşık', 'zor', 'anlaşılmaz'],
-            'sağlık': ['sağlık', 'hasta', 'kan', 'tıp', 'ameliyat', 'hastalık', 'ölüm', 'acı', 'korkutucu'],
-            'matematik': ['matematik', 'hesap', 'sayı', 'formül', 'problem', 'çözüm', 'karmaşık', 'zor'],
-            'sosyal': ['tarih', 'edebiyat', 'ezber', 'okuma', 'yazma', 'analiz', 'sıkıcı', 'yorucu'],
-            'spor': ['tembel', 'pasif', 'hareketsiz'],
-            'işletme': ['sıkıcı', 'karmaşık', 'zor', 'stresli'],
-            'eğitim': ['sıkıcı', 'zor', 'yorucu', 'stresli', 'ezber']
-        }
-        
-        # Define negative patterns and corresponding keywords to filter
+        # negatif ve pozitif keywordler gemini modeline sorgu atarak oluşturulmuştur Keyword_ask.py klasöründe yazmaktadır
         negative_filters = {
             'teknoloji': {
                 'patterns': [
@@ -205,7 +238,7 @@ class HybridRecommendationEngine:
                     r'matematik.*?(?:sevmiyorum|kötüyüm|zor|sevmem).*?(?:teknoloji|bilgisayar)',
                     r'programlama.*?(?:sevmiyorum|istemiyorum|zor|sevmem)'
                 ],
-                # ...
+                'filter_keywords': ['teknoloji', 'bilgisayar', 'yazılım', 'programlama', 'kodlama', 'matematik', 'sayısal', 'karmaşık', 'zor', 'anlaşılmaz']
             },
             'sağlık': {
                 'patterns': [
@@ -214,7 +247,7 @@ class HybridRecommendationEngine:
                     r'hasta.*?(?:görmek.*?istemiyorum|ilgilenmiyorum|sevmem)',
                     r'ameliyat.*?(?:korkuyorum|istemiyorum|sevmem)'
                 ],
-                # ...
+                'filter_keywords': ['sağlık', 'hasta', 'kan', 'tıp', 'ameliyat', 'hastalık', 'ölüm', 'acı', 'korkutucu']
             },
             'matematik': {
                 'patterns': [
@@ -222,7 +255,7 @@ class HybridRecommendationEngine:
                     r'sayısal.*?(?:kötüyüm|zor|başarısızım|sevmem)',
                     r'hesap.*?(?:yapmak.*?zor|sevmiyorum|sevmem)'
                 ],
-                # ...
+                'filter_keywords': ['matematik', 'hesap', 'sayı', 'formül', 'problem', 'çözüm', 'karmaşık', 'zor']
             },
             'sosyal': {
                 'patterns': [
@@ -231,7 +264,7 @@ class HybridRecommendationEngine:
                     r'ezberleme.*?(?:sevmiyorum|zor|sevmem)',
                     r'sosyal.*?(?:sevmiyorum|istemiyorum|sevmem)'
                 ],
-                # ...
+                'filter_keywords': ['tarih', 'edebiyat', 'ezber', 'okuma', 'yazma', 'analiz', 'sıkıcı', 'yorucu']
             },
             'spor': {
                 'patterns': [
@@ -240,7 +273,7 @@ class HybridRecommendationEngine:
                     r'egzersiz.*?(?:sevmiyorum|yapmam|sevmem)',
                     r'tembel.*?(?:im|sayılırım)'
                 ],
-                # ...
+                'filter_keywords': ['spor', 'fitness', 'egzersiz', 'tembel', 'pasif', 'hareketsiz']
             },
             'işletme': {
                 'patterns': [
@@ -248,7 +281,7 @@ class HybridRecommendationEngine:
                     r'pazarlama.*?(?:sevmiyorum|istemiyorum|sevmem)',
                     r'muhasebe.*?(?:sevmiyorum|zor|sevmem)'
                 ],
-                # ...
+                'filter_keywords': ['işletme', 'pazarlama', 'muhasebe', 'sıkıcı', 'karmaşık', 'zor', 'stresli']
             },
             'eğitim': {
                 'patterns': [
@@ -256,7 +289,7 @@ class HybridRecommendationEngine:
                     r'eğitim.*?(?:sevmiyorum|istemiyorum|sıkıcı|sevmem)',
                     r'çocuk.*?(?:sevmiyorum|ilgilenmiyorum|sevmem)'
                 ],
-                # ...
+                'filter_keywords': ['öğretmen', 'eğitim', 'çocuk', 'sıkıcı', 'zor', 'yorucu', 'stresli', 'ezber']
             }
         }
         
@@ -292,20 +325,25 @@ class HybridRecommendationEngine:
         logger.info(f"🔍 Filtered from {len(results)} to {len(filtered_results)} departments")
         return filtered_results    
     
-    def filter_by_ranking(self, ranking: int, tolerance: int = 50000):
-        """Filter departments by ranking range"""
+    def filter_by_ranking(self, ranking: int, tolerance_percent: float = 0.20):
+        """Filter departments by ranking range with percentage-based tolerance"""
         if ranking is None:
             return self.departments_df.index.tolist()
-            
-        min_rank = max(1, ranking - tolerance)
-        max_rank = ranking + tolerance
+        
+        # Yüzde bazlı tolerance hesaplama yapılarak tutarlı sonuç sağlanır
+        tolerance_value = int(ranking * tolerance_percent)
+        
+        min_rank = max(1, ranking - tolerance_value)
+        max_rank = ranking + tolerance_value
             
         filtered_indices = self.departments_df[
             (self.departments_df['ranking_2025'] >= min_rank) & 
             (self.departments_df['ranking_2025'] <= max_rank)
         ].index.tolist()
-            
-        logger.info(f"Filtered to {len(filtered_indices)} departments in ranking range {min_rank}-{max_rank}")
+        
+        logger.info(f"Ranking: {ranking}, Tolerance: %{tolerance_percent*100} = ±{tolerance_value}")
+        logger.info(f"Range: {min_rank} - {max_rank}")
+        logger.info(f"Filtered to {len(filtered_indices)} departments")
         return filtered_indices
     
     def compute_semantic_similarity(self, interests: str, candidate_indices: list):
@@ -347,7 +385,7 @@ class HybridRecommendationEngine:
         'eğitim': ['öğretmen', 'eğitim', 'öğretim', 'ders', 'okul', 'çocuk', 'akademik', 'öğrenci', 'pedagoji', 'psikoloji', 'rehberlik']
         }
         
-        # Keywords belirle
+        
         all_keywords = set()
         for word in interests_lower.split(','):
             word = word.strip()
@@ -372,16 +410,26 @@ class HybridRecommendationEngine:
             
         return results
     
-    def recommend(self, user_input: str, top_k: int = 10):
-        """Main recommendation function with diversification"""
+    def recommend(self, user_input: str, top_k: int = 10, tolerance_percent: float = 0.20):
+        """Main recommendation function with percentage-based ranking tolerance"""
         logger.info(f"Processing recommendation for: {user_input}")
-        
+        def safe_taban_puan(value):
+            if pd.isna(value):
+                return None
+            try:
+                str_val = str(value)
+                if ',' in str_val:
+                    return None  # Virgüllü değerleri skip et
+                return float(str_val.replace('.', ''))
+            except:
+                return None
+
         # Parse input
         interests, ranking = self.extract_interests_and_ranking(user_input)
         logger.info(f"Extracted interests: '{interests}', ranking: {ranking}")
         
-        # Filter by ranking
-        candidate_indices = self.filter_by_ranking(ranking)
+        # Filter by ranking with percentage tolerance
+        candidate_indices = self.filter_by_ranking(ranking, tolerance_percent)
         
         if not candidate_indices:
             return []
@@ -392,6 +440,7 @@ class HybridRecommendationEngine:
         # Boost keyword matches
         results = self.boost_keyword_matches(interests, results)
 
+        # Filter negative interests
         results = self.filter_negative_interests(results, user_input)
         
         # Sort by score
@@ -406,11 +455,14 @@ class HybridRecommendationEngine:
             idx = result['index']
             dept_row = self.departments_df.iloc[idx]
             
+            # Similarity_Prompt.py'de recommend fonksiyonunda
+
             recommendation = {
                 'bolum_adi': dept_row['bolum_adi'],
                 'universite': dept_row['Universite'],
                 'sehir': dept_row['Sehir'],
-                'ranking_2025': int(dept_row['ranking_2025']),
+                'ranking_2025': int(dept_row['ranking_2025']),  # Mevcut - değiştirme
+                'taban_puan': None,  
                 'similarity_score': round(result['similarity_score'], 4),
                 'keyword_boost': round(result.get('keyword_boost', 0), 4),
                 'description_preview': dept_row['Aciklama'][:150] + '...'
@@ -419,7 +471,7 @@ class HybridRecommendationEngine:
             
         logger.info(f"Generated {len(recommendations)} recommendations")
         return recommendations
-    
+        
     def explain_recommendation(self, recommendation: dict):
         """Explain why this recommendation was made"""
         explanation = f"""

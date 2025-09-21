@@ -54,7 +54,7 @@ def get_recommendations():
                 'universite': str(rec.get('universite', '')),
                 'sehir': str(rec.get('sehir', '')),
                 'ranking_2025': int(rec.get('ranking_2025', 0)),
-                'similarity_score': float(rec.get('similarity_score', 0)),  # float32 -> float
+                'similarity_score': float(rec.get('similarity_score', 0)),
                 'description_preview': str(rec.get('description_preview', ''))
             }
             clean_recommendations.append(clean_rec)
