@@ -273,7 +273,7 @@ function App() {
           </motion.div>
         </section>
 
-        {/* Results Section */}
+        {/* Results Secton */}
         <AnimatePresence mode="wait">
           {results.length > 0 && (
             <motion.section 

@@ -76,6 +76,12 @@ class HybridRecommendationEngine:
         
         if len(rankings) > 0:
             logger.info(f"Ranking range: {min(rankings)} - {max(rankings)}")
+        print("CSV'den okunan ilk 5 ranking değeri:")
+        print(df['2025_Taban_Sıralama'].head().tolist())
+        
+        # Manual ranking conversion kısmında da debug ekle:
+        print(f"İlk 5 converted ranking: {rankings[:5]}")
+        print(f"41 değeri nasıl convert ediliyor: {df[df['2025_Taban_Sıralama']=='41']['2025_Taban_Sıralama'].iloc[0] if len(df[df['2025_Taban_Sıralama']=='41']) > 0 else 'Yok'}")
         
         return df_clean
         
@@ -90,20 +96,19 @@ class HybridRecommendationEngine:
     
         logger.info("Embeddings created successfully")
     
-    #
-
     def extract_interests_and_ranking(self, user_input: str):
         """Parse user input to extract interests and ranking with NLP"""
         import re
         
         # Enhanced ranking patterns - sadece geçerli formatları kabul et
         ranking_patterns = [
-            r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d{3})*k?)',  # 32.000 veya 32k
-            r'sıralamam\s+(\d+(?:\.\d{3})*k?)',  # sıralamam 32000
-            r'(\d+k?)\s*sıralama',  # 32000 sıralama veya 32k sıralama
-            r'(\d{1,3}(?:\.\d{3})+)',  # 32.000 format
-            r'(\d{4,7})',  # 32000 format (4-7 digit numbers only)
-            r'sıralama.*?(\d+(?:\.\d{3})*k?)'  # sıralama ... 32000
+            r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d{3})*k?)',
+            r'sıralamam\s+(\d+(?:\.\d{3})*k?)',
+            r'(\d+)\s*bin',  # BU SATIRI EKLE - "19 bin" yakalamak için
+            r'(\d+k?)\s*sıralama',
+            r'(\d{1,3}(?:\.\d{3})+)',
+            r'(\d{4,7})',
+            r'sıralama.*?(\d+(?:\.\d{3})*k?)'
         ]
         
         ranking = None

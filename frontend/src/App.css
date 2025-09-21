@@ -611,8 +611,8 @@ body {
 }
 
 .university-name {
-  font-size: 18px;           /* 16px'den 18px'e çıkar */
-  font-weight: 700;          /* 600'den 700'e çıkar (daha kalın) */
+  font-size: 18px;           
+  font-weight: 700;          
   color: #f1f5f9;           /* #e2e8f0'den daha açık renge */
   margin-bottom: 3px;        /* Alt boşluk ekle */
   text-transform: uppercase; /* Büyük harfle yaz */

@@ -3,7 +3,6 @@ from flask_cors import CORS
 import os
 import sys
 
-# Similarity_Prompt.py'yi import et
 sys.path.append('./model_training/Training/model_training')
 from Similarity_Prompt import HybridRecommendationEngine
 
