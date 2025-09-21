@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 import sys
+import gc
 
 sys.path.append('./model_training/Training/model_training')
 from Similarity_Prompt import HybridRecommendationEngine
@@ -67,6 +68,11 @@ def get_recommendations():
     except Exception as e:
         print(f"ERROR: {str(e)}")
         return jsonify({'success': False, 'error': str(e)}), 500
+    
+    finally:
+        # Her istekten sonra hafıza temizliği
+        gc.collect()
+        print("Memory cleared after request")
 
 @app.route('/api/health', methods=['GET'])
 def health_check():

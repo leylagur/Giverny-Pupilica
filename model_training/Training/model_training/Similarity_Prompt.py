@@ -97,14 +97,14 @@ class HybridRecommendationEngine:
         logger.info("Embeddings created successfully")
     
     def extract_interests_and_ranking(self, user_input: str):
-        """Parse user input to extract interests and ranking with NLP"""
+        
         import re
         
         # Enhanced ranking patterns - sadece geçerli formatları kabul et
         ranking_patterns = [
             r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d{3})*k?)',
             r'sıralamam\s+(\d+(?:\.\d{3})*k?)',
-            r'(\d+)\s*bin',  # BU SATIRI EKLE - "19 bin" yakalamak için
+            r'(\d+)\s*bin',  # "19 bin" yakalamak için
             r'(\d+k?)\s*sıralama',
             r'(\d{1,3}(?:\.\d{3})+)',
             r'(\d{4,7})',
@@ -123,8 +123,11 @@ class HybridRecommendationEngine:
                     if ',' in rank_str:
                         continue  # Bu formatı atla, sonraki pattern'i dene
                     
+                    # Handle 'bin' notation (42 bin = 42000)
+                    if 'bin' in user_input.lower() and not 'k' in rank_str:
+                        ranking = int(rank_str) * 1000
                     # Handle 'k' notation (32k = 32000)
-                    if 'k' in rank_str.lower():
+                    elif 'k' in rank_str.lower():
                         ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
                     elif '.' in rank_str and len(rank_str) > 4:
                         ranking = int(rank_str.replace('.', ''))  # 32.000 -> 32000
@@ -227,108 +230,34 @@ class HybridRecommendationEngine:
         return list(final_interests) if final_interests else ['genel']
     
     def filter_negative_interests(self, results: list, user_input: str):
-        """Remove departments that match negative interests"""
-        import re
-        
         user_lower = user_input.lower()
-        filtered_results = []
         
-        # negatif ve pozitif keywordler gemini modeline sorgu atarak oluşturulmuştur Keyword_ask.py klasöründe yazmaktadır
-        negative_filters = {
-            'teknoloji': {
-                'patterns': [
-                    r'teknoloji.*?(?:istemiyorum|sevmiyorum|olmasın|sevmem)',
-                    r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)',
-                    r'bilgisayar.*?(?:istemiyorum|sevmiyorum|sevmem)',
-                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor|sevmem).*?(?:teknoloji|bilgisayar)',
-                    r'programlama.*?(?:sevmiyorum|istemiyorum|zor|sevmem)'
-                ],
-                'filter_keywords': ['teknoloji', 'bilgisayar', 'yazılım', 'programlama', 'kodlama', 'matematik', 'sayısal', 'karmaşık', 'zor', 'anlaşılmaz']
-            },
-            'sağlık': {
-                'patterns': [
-                    r'sağlık.*?(?:istemiyorum|sevmiyorum|sevmem)',
-                    r'kan.*?(?:görmek.*?istemiyorum|korkuyorum|sevmem)',
-                    r'hasta.*?(?:görmek.*?istemiyorum|ilgilenmiyorum|sevmem)',
-                    r'ameliyat.*?(?:korkuyorum|istemiyorum|sevmem)'
-                ],
-                'filter_keywords': ['sağlık', 'hasta', 'kan', 'tıp', 'ameliyat', 'hastalık', 'ölüm', 'acı', 'korkutucu']
-            },
-            'matematik': {
-                'patterns': [
-                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor|anlayamıyorum|sevmem)',
-                    r'sayısal.*?(?:kötüyüm|zor|başarısızım|sevmem)',
-                    r'hesap.*?(?:yapmak.*?zor|sevmiyorum|sevmem)'
-                ],
-                'filter_keywords': ['matematik', 'hesap', 'sayı', 'formül', 'problem', 'çözüm', 'karmaşık', 'zor']
-            },
-            'sosyal': {
-                'patterns': [
-                    r'tarih.*?(?:sevmiyorum|sıkıcı|ezberleme|sevmem)',
-                    r'edebiyat.*?(?:sevmiyorum|sıkıcı|sevmem)',
-                    r'ezberleme.*?(?:sevmiyorum|zor|sevmem)',
-                    r'sosyal.*?(?:sevmiyorum|istemiyorum|sevmem)'
-                ],
-                'filter_keywords': ['tarih', 'edebiyat', 'ezber', 'okuma', 'yazma', 'analiz', 'sıkıcı', 'yorucu']
-            },
-            'spor': {
-                'patterns': [
-                    r'spor.*?(?:sevmiyorum|istemiyorum|yapmam|sevmem)',
-                    r'fiziksel.*?aktivite.*?(?:sevmiyorum|istemiyorum|sevmem)',
-                    r'egzersiz.*?(?:sevmiyorum|yapmam|sevmem)',
-                    r'tembel.*?(?:im|sayılırım)'
-                ],
-                'filter_keywords': ['spor', 'fitness', 'egzersiz', 'tembel', 'pasif', 'hareketsiz']
-            },
-            'işletme': {
-                'patterns': [
-                    r'işletme.*?(?:sevmiyorum|istemiyorum|sıkıcı|sevmem)',
-                    r'pazarlama.*?(?:sevmiyorum|istemiyorum|sevmem)',
-                    r'muhasebe.*?(?:sevmiyorum|zor|sevmem)'
-                ],
-                'filter_keywords': ['işletme', 'pazarlama', 'muhasebe', 'sıkıcı', 'karmaşık', 'zor', 'stresli']
-            },
-            'eğitim': {
-                'patterns': [
-                    r'öğretmen.*?(?:olmak.*?istemiyorum|sevmiyorum|sevmem)',
-                    r'eğitim.*?(?:sevmiyorum|istemiyorum|sıkıcı|sevmem)',
-                    r'çocuk.*?(?:sevmiyorum|ilgilenmiyorum|sevmem)'
-                ],
-                'filter_keywords': ['öğretmen', 'eğitim', 'çocuk', 'sıkıcı', 'zor', 'yorucu', 'stresli', 'ezber']
-            }
+        negative_categories = {
+            'mühendislik': ['mühendislik', 'mühendis'],
+            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım'],
+            'sağlık': ['sağlık', 'tıp', 'hemşire', 'diş'],
+            'matematik': ['matematik', 'hesap'],
+            'spor': ['spor', 'fitness'],
+            'işletme': ['işletme', 'pazarlama'],
+            'eğitim': ['öğretmen', 'eğitim'],
+            'hukuk': ['hukuk', 'avukat'],
+            'finans': ['finans', 'banka']
         }
         
-        # Check which categories to filter out
-        categories_to_filter = set()
-        for category, config in negative_filters.items():
-            for pattern in config['patterns']:
-                if re.search(pattern, user_lower):
-                    categories_to_filter.add(category)
-                    logger.info(f"🚫 Detected negative interest: {category}")
-                    break
+        negative_words = ['istemiyorum', 'sevmiyorum', 'sevmem', 'olmasın']
         
-        # Filter results
-        for result in results:
-            idx = result['index']
-            dept_row = self.departments_df.iloc[idx]
-            dept_text = (dept_row['bolum_adi'] + ' ' + dept_row['Aciklama']).lower()
-            
-            # Check if department should be filtered out
-            should_filter = False
-            for category in categories_to_filter:
-                filter_keywords = negative_filters[category]['filter_keywords']
-                matching_keywords = [kw for kw in filter_keywords if kw in dept_text]
-                
-                if matching_keywords:
-                    should_filter = True
-                    logger.info(f"❌ Filtered out: {dept_row['bolum_adi']} (negative: {category}, keywords: {matching_keywords})")
-                    break
-            
-            if not should_filter:
-                filtered_results.append(result)
+        for category, keywords in negative_categories.items():
+            for keyword in keywords:
+                for neg_word in negative_words:
+                    pattern1 = f"{keyword} {neg_word}"
+                    pattern2 = f"{neg_word} {keyword}"
+                    
+                    if pattern1 in user_lower or pattern2 in user_lower:
+                        print(f"DEBUG: {category} kategorisi filtreleniyor")
+                        results = [r for r in results if not any(kw in self.departments_df.iloc[r['index']]['bolum_adi'].lower() for kw in keywords)]
+                        break
         
-        logger.info(f"🔍 Filtered from {len(results)} to {len(filtered_results)} departments")
-        return filtered_results    
+        return results 
     
     def filter_by_ranking(self, ranking: int, tolerance_percent: float = 0.20):
         """Filter departments by ranking range with percentage-based tolerance"""
@@ -381,13 +310,18 @@ class HybridRecommendationEngine:
         
         # Genişletilmiş keyword mappings
         expanded_mappings = {
-                'teknoloji': ['bilgisayar', 'yazılım', 'programlama', 'web', 'oyun', 'dijital', 'sistem', 'kodlama', 'geliştirme', 'uygulama', 'veri', 'yapay zeka', 'robotik', 'siber güvenlik'],
-        'sağlık': ['sağlık', 'tıp', 'hemşire', 'hasta', 'tedavi', 'anestezi', 'veteriner', 'diş', 'fizyoterapi', 'tıbbi', 'biyoloji', 'eczacılık', 'tıbbi görüntüleme'],
-        'sanat': ['sanat', 'tasarım', 'grafik', 'müzik', 'sinema', 'fotoğraf', 'görsel', 'yaratıcı', 'illüstrasyon', 'heykel', 'resim', 'seramik', 'tasarım', 'moda'],
-        'spor': ['spor', 'antrenör', 'fitness', 'egzersiz', 'rekreasyon', 'beden', 'atletik', 'hareket', 'yüzme', 'basketbol', 'futbol', 'tenis', 'spor yönetimi'],
-        'işletme': ['işletme', 'pazarlama', 'muhasebe', 'ticaret', 'yönetim', 'ekonomi', 'finans', 'satış', 'finansal', 'strateji', 'iş geliştirme', 'girişimcilik', 'ticaret', 'lojistik', 'insan kaynakları'],
-        'gastronomi': ['gastronomi', 'mutfak sanatları', 'yemek', 'aşçılık', 'pasta', 'şef', 'fırıncılık', 'gıda', 'restoran'],
-        'eğitim': ['öğretmen', 'eğitim', 'öğretim', 'ders', 'okul', 'çocuk', 'akademik', 'öğrenci', 'pedagoji', 'psikoloji', 'rehberlik']
+            'teknoloji': ['bilgisayar', 'yazılım', 'programlama', 'web', 'oyun', 'dijital', 'sistem', 'kodlama', 'algoritma', 'veri', 'yapay zeka', 'robotik'],
+            'sağlık': ['sağlık', 'tıp', 'hemşire', 'hasta', 'tedavi', 'anestezi', 'veteriner', 'diş', 'fizyoterapi', 'biyoloji', 'eczacılık', 'laboratuvar'],
+            'sanat': ['sanat', 'tasarım', 'grafik', 'müzik', 'sinema', 'fotoğraf', 'görsel', 'yaratıcı', 'moda', 'animasyon', 'illüstrasyon', 'estetik'],
+            'spor': ['spor', 'antrenör', 'fitness', 'egzersiz', 'rekreasyon', 'beden', 'atletik', 'kondisyon', 'performans', 'müsabaka', 'takım', 'saha'],
+            'işletme': ['işletme', 'pazarlama', 'muhasebe', 'ticaret', 'yönetim', 'ekonomi', 'finans', 'satış', 'girişimcilik', 'lojistik', 'insan kaynakları', 'strateji'],
+            'gastronomi': ['gastronomi', 'mutfak', 'yemek', 'aşçılık', 'pasta', 'şef', 'fırıncılık', 'gıda', 'restoran', 'menü', 'lezzet', 'sunum'],
+            'eğitim': ['öğretmen', 'eğitim', 'öğretim', 'ders', 'okul', 'çocuk', 'akademik', 'öğrenci', 'pedagoji', 'psikoloji', 'rehberlik', 'müfredat'],
+            'mühendislik': ['mühendislik', 'mühendis', 'teknik', 'endüstri', 'makina', 'elektrik', 'inşaat', 'çevre', 'proje', 'tasarım', 'analiz', 'yapı'],
+            'hukuk': ['hukuk', 'avukat', 'mahkeme', 'dava', 'kanun', 'yasa', 'adalet', 'hâkim', 'savcı', 'anayasa', 'ceza', 'medeni'],
+            'finans': ['finans', 'banka', 'borsa', 'yatırım', 'kredi', 'sigorta', 'muhasebe', 'vergi', 'ekonomi', 'para', 'döviz', 'risk'],
+            'medya': ['medya', 'gazete', 'televizyon', 'radyo', 'haber', 'basın', 'yayın', 'sosyal medya', 'reklam', 'pazarlama', 'içerik', 'editör'],
+            'turizm': ['turizm', 'otel', 'seyahat', 'rehber', 'konaklama', 'resepsiyon', 'acenta', 'rezervasyon', 'müze', 'kültür', 'tatil', 'gezi']
         }
         
         
