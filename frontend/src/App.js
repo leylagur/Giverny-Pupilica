@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import ChatWidget from './ChatWidget';
 
 function App() {
   const [keywords, setKeywords] = useState('');
@@ -210,7 +211,7 @@ function App() {
                     type="text"
                     value={keywords}
                     onChange={handleInputChange}
-                    placeholder="İlgi alanlarınızı yazın... (matematik, tasarım, teknoloji)"
+                    placeholder="Sıralamanızı ve ilgi alanlarınızı yazın, doğru bölümleri bulalım..."
                     className="search-input"
                   />
                   
@@ -421,6 +422,7 @@ function App() {
               </div>
             </div>
           </footer>
+          <ChatWidget />
       </motion.div>
     </div>
   );
