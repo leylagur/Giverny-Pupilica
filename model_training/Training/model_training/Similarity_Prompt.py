@@ -106,17 +106,17 @@ class HybridRecommendationEngine:
         # Negative patterns - önce bunları kontrol et
         negative_patterns = {
             'teknoloji': [
-                r'teknoloji.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum|olmasın|alakalı.*?olsun.*?istemiyorum)',
-                r'(?:sevmiyorum|istemiyorum|ilgilenmiyorum).*?teknoloji',
+                r'teknoloji.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum|olmasın|sevmem|alakalı.*?olsun.*?istemiyorum)',
+                r'(?:sevmiyorum|istemiyorum|ilgilenmiyorum|sevmem).*?teknoloji',
                 r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)'
             ],
             'sağlık': [
-                r'sağlık.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum)',
-                r'(?:sevmiyorum|istemiyorum).*?sağlık'
+                r'sağlık.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum|sevmem)',
+                r'(?:sevmiyorum|istemiyorum|sevmem).*?sağlık'
             ],
             'matematik': [
-                r'matematik.*?(?:sevmiyorum|kötüyüm|zor)',
-                r'(?:sevmiyorum|kötüyüm).*?matematik'
+                r'matematik.*?(?:sevmiyorum|kötüyüm|zor|sevmem)',
+                r'(?:sevmiyorum|kötüyüm|sevmem).*?matematik'
             ]
         }
         
@@ -199,64 +199,64 @@ class HybridRecommendationEngine:
         negative_filters = {
             'teknoloji': {
                 'patterns': [
-                    r'teknoloji.*?(?:istemiyorum|sevmiyorum|olmasın)',
+                    r'teknoloji.*?(?:istemiyorum|sevmiyorum|olmasın|sevmem)',
                     r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)',
-                    r'bilgisayar.*?(?:istemiyorum|sevmiyorum)',
-                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor).*?(?:teknoloji|bilgisayar)',
-                    r'programlama.*?(?:sevmiyorum|istemiyorum|zor)'
+                    r'bilgisayar.*?(?:istemiyorum|sevmiyorum|sevmem)',
+                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor|sevmem).*?(?:teknoloji|bilgisayar)',
+                    r'programlama.*?(?:sevmiyorum|istemiyorum|zor|sevmem)'
                 ],
-                'filter_keywords': negative_keywords['teknoloji']  # Gemini'den gelen keywords
+                # ...
             },
             'sağlık': {
                 'patterns': [
-                    r'sağlık.*?(?:istemiyorum|sevmiyorum)',
-                    r'kan.*?(?:görmek.*?istemiyorum|korkuyorum)',
-                    r'hasta.*?(?:görmek.*?istemiyorum|ilgilenmiyorum)',
-                    r'ameliyat.*?(?:korkuyorum|istemiyorum)'
+                    r'sağlık.*?(?:istemiyorum|sevmiyorum|sevmem)',
+                    r'kan.*?(?:görmek.*?istemiyorum|korkuyorum|sevmem)',
+                    r'hasta.*?(?:görmek.*?istemiyorum|ilgilenmiyorum|sevmem)',
+                    r'ameliyat.*?(?:korkuyorum|istemiyorum|sevmem)'
                 ],
-                'filter_keywords': negative_keywords['sağlık']
+                # ...
             },
             'matematik': {
                 'patterns': [
-                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor|anlayamıyorum)',
-                    r'sayısal.*?(?:kötüyüm|zor|başarısızım)',
-                    r'hesap.*?(?:yapmak.*?zor|sevmiyorum)'
+                    r'matematik.*?(?:sevmiyorum|kötüyüm|zor|anlayamıyorum|sevmem)',
+                    r'sayısal.*?(?:kötüyüm|zor|başarısızım|sevmem)',
+                    r'hesap.*?(?:yapmak.*?zor|sevmiyorum|sevmem)'
                 ],
-                'filter_keywords': negative_keywords['matematik']
+                # ...
             },
             'sosyal': {
                 'patterns': [
-                    r'tarih.*?(?:sevmiyorum|sıkıcı|ezberleme)',
-                    r'edebiyat.*?(?:sevmiyorum|sıkıcı)',
-                    r'ezberleme.*?(?:sevmiyorum|zor)',
-                    r'sosyal.*?(?:sevmiyorum|istemiyorum)'
+                    r'tarih.*?(?:sevmiyorum|sıkıcı|ezberleme|sevmem)',
+                    r'edebiyat.*?(?:sevmiyorum|sıkıcı|sevmem)',
+                    r'ezberleme.*?(?:sevmiyorum|zor|sevmem)',
+                    r'sosyal.*?(?:sevmiyorum|istemiyorum|sevmem)'
                 ],
-                'filter_keywords': negative_keywords['sosyal']
+                # ...
             },
             'spor': {
                 'patterns': [
-                    r'spor.*?(?:sevmiyorum|istemiyorum|yapmam)',
-                    r'fiziksel.*?aktivite.*?(?:sevmiyorum|istemiyorum)',
-                    r'egzersiz.*?(?:sevmiyorum|yapmam)',
+                    r'spor.*?(?:sevmiyorum|istemiyorum|yapmam|sevmem)',
+                    r'fiziksel.*?aktivite.*?(?:sevmiyorum|istemiyorum|sevmem)',
+                    r'egzersiz.*?(?:sevmiyorum|yapmam|sevmem)',
                     r'tembel.*?(?:im|sayılırım)'
                 ],
-                'filter_keywords': negative_keywords['spor']
+                # ...
             },
             'işletme': {
                 'patterns': [
-                    r'işletme.*?(?:sevmiyorum|istemiyorum|sıkıcı)',
-                    r'pazarlama.*?(?:sevmiyorum|istemiyorum)',
-                    r'muhasebe.*?(?:sevmiyorum|zor)'
+                    r'işletme.*?(?:sevmiyorum|istemiyorum|sıkıcı|sevmem)',
+                    r'pazarlama.*?(?:sevmiyorum|istemiyorum|sevmem)',
+                    r'muhasebe.*?(?:sevmiyorum|zor|sevmem)'
                 ],
-                'filter_keywords': negative_keywords['işletme']
+                # ...
             },
             'eğitim': {
                 'patterns': [
-                    r'öğretmen.*?(?:olmak.*?istemiyorum|sevmiyorum)',
-                    r'eğitim.*?(?:sevmiyorum|istemiyorum|sıkıcı)',
-                    r'çocuk.*?(?:sevmiyorum|ilgilenmiyorum)'
+                    r'öğretmen.*?(?:olmak.*?istemiyorum|sevmiyorum|sevmem)',
+                    r'eğitim.*?(?:sevmiyorum|istemiyorum|sıkıcı|sevmem)',
+                    r'çocuk.*?(?:sevmiyorum|ilgilenmiyorum|sevmem)'
                 ],
-                'filter_keywords': negative_keywords['eğitim']
+                # ...
             }
         }
         
@@ -466,7 +466,7 @@ def main():
     """Test the recommendation engine"""
     
     # Initialize engine
-    dataset_path = "/Users/ardaerdegirmenci/Desktop/u/Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv"
+    dataset_path = "./Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv"
     engine = HybridRecommendationEngine(dataset_path)
     
     # Test cases

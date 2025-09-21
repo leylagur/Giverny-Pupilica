@@ -8,7 +8,7 @@ function App() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [selectedProgram, setSelectedProgram] = useState('2_yillik');
+  const [selectedProgram, setSelectedProgram] = useState('sayisal');
   const [isTyping, setIsTyping] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
@@ -35,8 +35,7 @@ function App() {
     setError('');
     setResults([]);
 
-     try {
-      // YENİ endpoint ve format
+    try {
       const response = await axios.post('http://127.0.0.1:8000/api/recommend', {
         user_input: keywords.trim(),
         dataset_type: selectedProgram,
@@ -44,18 +43,7 @@ function App() {
       });
 
       if (response.data.success) {
-        // Backend'den gelen format: bolum_adi, universite, similarity_score vs.
-        // Frontend'in beklediği format: department, score
-        const formattedResults = response.data.recommendations.map(rec => ({
-          department: rec.bolum_adi,
-          university: rec.universite,
-          city: rec.sehir,
-          ranking: rec.ranking_2025,
-          score: rec.similarity_score,
-          description: rec.description_preview
-        }));
-        
-        setResults(formattedResults);
+        setResults(response.data.recommendations || []);
       } else {
         setError(response.data.error || 'Bir hata oluştu');
       }
@@ -112,48 +100,47 @@ function App() {
           ))}
           
           {/* University Names */}
-          <div className="university-names">
-            {[
-              'İTÜ', 'ODTÜ', 'Boğaziçi', 'YTÜ', 'Bilkent', 'Koç', 'Sabancı',
-              'Hacettepe', 'Ankara', 'Gazi', 'Marmara', 'İstanbul', 'Ege', 
-              'Dokuz Eylül', 'YTÜ','Çukurova', 'Erciyes', 'Akdeniz', 'Hitit',
-              'İTÜ', 'ODTÜ', 'Boğaziçi', 'YTÜ', 'Bilkent', 'Koç', 'Sabancı',
-              'Selçuk','YTÜ', 'Atatürk', 'Fırat', 'İnönü', 'Mersin', 'Pamukkale',
-              'Boğaziçi', 'YTÜ', 'Bilkent', 'Koç', 'Sabancı',
-            ].map((uni, index) => (
-              <motion.span
-                key={uni}
-                className="university-name"
-                animate={{
-                  x: [0, Math.sin(index * 0.5) * 40, 0],
-                  y: [0, Math.cos(index * 0.3) * 30, 0],
-                  opacity: [0.15, 0.35, 0.15],
-                  scale: [0.95, 1.05, 0.95],
-                  rotateZ: [0, 5, 0, -5, 0]
-                }}
-                transition={{
-                  duration: 12 + (index % 5) * 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.3
-                }}
-                style={{
-                  position: 'absolute',
-                  left: `${(index % 6) * 16 + 5}%`,
-                  top: `${Math.floor(index / 6) * 20 + 15}%`,
-                  fontSize: `${1.8 + Math.random() * 0.6}rem`,
-                  color: '#64748b',
-                  opacity: 0.25,
-                  fontWeight: '300',
-                  transform: `rotate(${(Math.random() - 0.5) * 15}deg)`,
-                  userSelect: 'none',
-                  pointerEvents: 'none'
-                }}
-              >
-                {uni}
-              </motion.span>
-            ))}
-          </div>
+            <div className="university-names">
+              {[
+                'İTÜ', 'ODTÜ', 'Boğaziçi', 'YTÜ', 'Bilkent', 'Koç', 'Sabancı',
+                'Hacettepe', 'Ankara', 'Gazi', 'Marmara', 'İstanbul', 'Ege', 
+                'Dokuz Eylül', 'Çukurova', 'Erciyes', 'Akdeniz', 'Hitit',
+                'Selçuk', 'Atatürk', 'Fırat', 'İnönü', 'Mersin', 'Pamukkale',
+                'Karadeniz Teknik', 'Uludağ', 'Anadolu', 'Eskişehir Osmangazi'
+              ].map((uni, index) => (
+                <motion.span
+                  key={`university-${index}`}
+                  className="university-name"
+                  animate={{
+                    x: [0, Math.sin(index * 0.5) * 40, 0],
+                    y: [0, Math.cos(index * 0.3) * 30, 0],
+                    opacity: [0.15, 0.35, 0.15],
+                    scale: [0.95, 1.05, 0.95],
+                    rotateZ: [0, 5, 0, -5, 0]
+                  }}
+                  transition={{
+                    duration: 12 + (index % 5) * 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.3
+                  }}
+                  style={{
+                    position: 'absolute',
+                    left: `${(index % 6) * 16 + 5}%`,
+                    top: `${Math.floor(index / 6) * 20 + 15}%`,
+                    fontSize: `${1.8 + Math.random() * 0.6}rem`,
+                    color: '#64748b',
+                    opacity: 0.25,
+                    fontWeight: '300',
+                    transform: `rotate(${(Math.random() - 0.5) * 15}deg)`,
+                    userSelect: 'none',
+                    pointerEvents: 'none'
+                  }}
+                >
+                  {uni}
+                </motion.span>
+              ))}
+            </div>
         </div>
           {/* Hero Section */}
           <section className="hero">
@@ -329,7 +316,7 @@ function App() {
               >
                 {results.map((result, index) => (
                   <motion.div
-                    key={index}
+                    key={`${result.bolum_adi}-${index}`}
                     className="result-card"
                     variants={{
                       hidden: { opacity: 0, y: 30, scale: 0.9 },
@@ -350,13 +337,29 @@ function App() {
                     >
                       #{index + 1}
                     </motion.div>
-                    <h3 className="result-title">{result.department}</h3>
+
+                    <h3 className="result-title">{result.bolum_adi}</h3>
+
+                    <div className="result-details">
+                      <div className="university-info">
+                        <span className="university-name">{result.universite}</span>
+                        <span className="city-name">{result.sehir}</span>
+                      </div>
+                      
+                      {result.ranking_2025 && (
+                        <div className="ranking-info">
+                          <span className="ranking-label">2025 Sıralaması:</span>
+                          <span className="ranking-value">{result.ranking_2025.toLocaleString('tr-TR')}</span>
+                        </div>
+                      )}
+                    </div>
+
                     <div className="result-score">
                       <div className="score-bar">
                         <motion.div 
                           className="score-fill"
                           initial={{ width: 0 }}
-                          animate={{ width: `${result.score * 100}%` }}
+                          animate={{ width: `${result.similarity_score * 100}%` }}
                           transition={{ 
                             duration: 1.5, 
                             delay: 0.5 + index * 0.1,
@@ -370,7 +373,7 @@ function App() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1 + index * 0.1 }}
                       >
-                        {(result.score * 100).toFixed(0)}% uyum
+                        {(result.similarity_score * 100).toFixed(0)}% uyum
                       </motion.span>
                     </div>
                   </motion.div>

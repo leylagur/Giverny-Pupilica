@@ -598,3 +598,50 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.05);
 }
+
+.result-details {
+  margin: 15px 0;
+}
+
+.university-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.university-name {
+  font-size: 18px;           /* 16px'den 18px'e çıkar */
+  font-weight: 700;          /* 600'den 700'e çıkar (daha kalın) */
+  color: #f1f5f9;           /* #e2e8f0'den daha açık renge */
+  margin-bottom: 3px;        /* Alt boşluk ekle */
+  text-transform: uppercase; /* Büyük harfle yaz */
+  letter-spacing: 0.5px;     /* Harf arası boşluk */
+}
+
+.city-name {
+  font-size: 15px;          /* 14px'den 15px'e çıkar */
+  color: #cbd5e1;           /* #94a3b8'den daha açık renge */
+  font-weight: 500;         
+}
+
+.ranking-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #6366f1;
+}
+
+.ranking-label {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.ranking-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6366f1;
+}

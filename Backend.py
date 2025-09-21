@@ -40,16 +40,13 @@ def get_recommendations():
         user_input = data.get('user_input', '')
         dataset_type = data.get('dataset_type', 'sayisal')
         
-        print(f"Request: {user_input}, Dataset: {dataset_type}")
-        
         engine = recommendation_api.get_engine(dataset_type)
         if not engine:
             return jsonify({'success': False, 'error': f'Dataset bulunamadı: {dataset_type}'}), 404
         
         recommendations = engine.recommend(user_input, top_k=6)
-        print(f"AI generated {len(recommendations)} recommendations")
         
-        # JSON serializable olduğundan emin ol
+        # float32 ve diğer NumPy tiplerini Python tipine çevir
         clean_recommendations = []
         for rec in recommendations:
             clean_rec = {
@@ -57,7 +54,7 @@ def get_recommendations():
                 'universite': str(rec.get('universite', '')),
                 'sehir': str(rec.get('sehir', '')),
                 'ranking_2025': int(rec.get('ranking_2025', 0)),
-                'similarity_score': float(rec.get('similarity_score', 0)),
+                'similarity_score': float(rec.get('similarity_score', 0)),  # float32 -> float
                 'description_preview': str(rec.get('description_preview', ''))
             }
             clean_recommendations.append(clean_rec)
@@ -70,8 +67,6 @@ def get_recommendations():
         
     except Exception as e:
         print(f"ERROR: {str(e)}")
-        import traceback
-        traceback.print_exc()
         return jsonify({'success': False, 'error': str(e)}), 500
 
 @app.route('/api/health', methods=['GET'])
