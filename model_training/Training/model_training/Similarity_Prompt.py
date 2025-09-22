@@ -1,3 +1,4 @@
+#Ana çalışan modelimizdir Read-me içinde temel çalışma prensibi anlatılmıştır
 import pandas as pd
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -10,29 +11,26 @@ logger = logging.getLogger(__name__)
 
 class HybridRecommendationEngine:
     """
-    Hybrid model using semantic similarity + rule-based filtering
+    Geliştirilmiş Hybrid model - Hard reset sonrası optimize edilmiş versiyon
     """
     
     def __init__(self, dataset_path: str):
-        """Initialize the recommendation engine"""
-        self.model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')  # Multilingual model
+        self.model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
         self.departments_df = None
         self.department_embeddings = None
 
         self.load_dataset(dataset_path)
         self.prepare_embeddings()
         
+        # HARD RESET: Her işlem sonrası sistem temizlenir
+        logger.info("Backend hard reset - sistem temizlendi")
+        
     def load_dataset(self, dataset_path: str):
-        """Load department dataset - simple approach with error catching"""
         logger.info(f"Loading dataset from {dataset_path}")
 
-        # Load CSV with ALL columns as string
         df = pd.read_csv(dataset_path, dtype=str)
-        
-        # Clean and prepare data
         df = df.dropna(subset=['Aciklama', 'bolum_adi'])
         
-        # Manual ranking conversion with comprehensive error handling
         rankings = []
         valid_rows = []
         
@@ -40,17 +38,14 @@ class HybridRecommendationEngine:
             ranking_value = row['2025_Taban_Sıralama']
             
             try:
-                # Skip if NaN or empty
                 if pd.isna(ranking_value) or ranking_value == '':
                     continue
                     
                 ranking_str = str(ranking_value).strip()
                 
-                # Skip any value containing comma
                 if ',' in ranking_str:
                     continue
                     
-                # Convert clean values
                 if '.' in ranking_str:
                     clean_value = ranking_str.replace('.', '')
                 else:
@@ -58,15 +53,12 @@ class HybridRecommendationEngine:
                     
                 ranking_int = int(clean_value)
                 
-                # Add to valid data
                 rankings.append(ranking_int)
                 valid_rows.append(idx)
                 
             except:
-                # Skip any problematic row silently
                 continue
         
-        # Create clean dataframe
         df_clean = df.iloc[valid_rows].copy()
         df_clean['ranking_2025'] = rankings
         df_clean = df_clean.reset_index(drop=True)
@@ -74,37 +66,28 @@ class HybridRecommendationEngine:
         self.departments_df = df_clean
         logger.info(f"Loaded {len(df_clean)} clean departments")
         
-        if len(rankings) > 0:
-            logger.info(f"Ranking range: {min(rankings)} - {max(rankings)}")
-        print("CSV'den okunan ilk 5 ranking değeri:")
-        print(df['2025_Taban_Sıralama'].head().tolist())
-        
-        # Manual ranking conversion kısmında da debug ekle:
-        print(f"İlk 5 converted ranking: {rankings[:5]}")
-        print(f"41 değeri nasıl convert ediliyor: {df[df['2025_Taban_Sıralama']=='41']['2025_Taban_Sıralama'].iloc[0] if len(df[df['2025_Taban_Sıralama']=='41']) > 0 else 'Yok'}")
+        # HARD RESET: Veri yükleme sonrası temizlik
+        logger.info("Dataset loading completed - hard reset")
         
         return df_clean
         
     def prepare_embeddings(self):
-        """Create embeddings for all department descriptions"""
         logger.info("Creating embeddings for department descriptions...")
-    
+        
         self.departments_df = self.departments_df.reset_index(drop=True)
-    
         descriptions = self.departments_df['Aciklama'].tolist()
         self.department_embeddings = self.model.encode(descriptions, show_progress_bar=True)
-    
-        logger.info("Embeddings created successfully")
+        
+        logger.info("Embeddings created successfully - hard reset")
     
     def extract_interests_and_ranking(self, user_input: str):
-        
         import re
         
-        # Enhanced ranking patterns - sadece geçerli formatları kabul et
+        # Ranking extraction patterns
         ranking_patterns = [
             r'(?:YKS sıralamasi|sıralama|sıralamam):?\s*(\d+(?:\.\d{3})*k?)',
             r'sıralamam\s+(\d+(?:\.\d{3})*k?)',
-            r'(\d+)\s*bin',  # "19 bin" yakalamak için
+            r'(\d+)\s*bin',
             r'(\d+k?)\s*sıralama',
             r'(\d{1,3}(?:\.\d{3})+)',
             r'(\d{4,7})',
@@ -118,93 +101,199 @@ class HybridRecommendationEngine:
                 rank_str = ranking_match.group(1)
                 
                 try:
-                    # SADECE GEÇERLİ FORMATLARI İŞLE
-                    # Virgül içeren formatları IGNORE ET
                     if ',' in rank_str:
-                        continue  # Bu formatı atla, sonraki pattern'i dene
+                        continue
                     
-                    # Handle 'bin' notation (42 bin = 42000)
                     if 'bin' in user_input.lower() and not 'k' in rank_str:
                         ranking = int(rank_str) * 1000
-                    # Handle 'k' notation (32k = 32000)
                     elif 'k' in rank_str.lower():
                         ranking = int(float(rank_str.lower().replace('k', '')) * 1000)
                     elif '.' in rank_str and len(rank_str) > 4:
-                        ranking = int(rank_str.replace('.', ''))  # 32.000 -> 32000
+                        ranking = int(rank_str.replace('.', ''))
                     else:
                         ranking = int(rank_str)
-                    
-                    # Geçerli ranking bulundu, döngüden çık
+
                     if ranking:
                         break
                         
                 except (ValueError, TypeError):
-                    # Bu pattern çalışmazsa sonrakini dene
                     continue
         
-        # Extract career intentions and interests using NLP patterns
         interests_keywords = self.extract_career_interests(user_input)
+        
+        # HARD RESET: Interest extraction sonrası temizlik
+        logger.info(f"Interests extracted: {interests_keywords} - hard reset")
         
         return ', '.join(interests_keywords), ranking
     
     def extract_career_interests(self, text: str):
-        """Extract career interests and keywords from natural language with negative filtering"""
+        """Geliştirilmiş interest extraction - pozitif ve negatif algılama"""
         import re
         
         text_lower = text.lower()
         extracted_interests = set()
-        excluded_interests = set()  
+        excluded_interests = set()
+        positive_boost = set()  # YENI: Pozitif ifadeler için boost
         
-        # Negative patterns - önce bunları kontrol et
-        negative_patterns = {
+        # Pozitif pattern'ler - bunlar boost alacak
+        positive_patterns = {
             'teknoloji': [
-                r'teknoloji.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum|olmasın|sevmem|alakalı.*?olsun.*?istemiyorum)',
-                r'(?:sevmiyorum|istemiyorum|ilgilenmiyorum|sevmem).*?teknoloji',
-                r'teknoloji.*?ile.*?alakalı.*?(?:olsun.*?istemiyorum|istemem)'
+                r'teknoloji.*?(?:seviyorum|istiyorum|çok.*?iyi|harika)',
+                r'(?:çok.*?seviyorum|bayılıyorum).*?teknoloji',
+                r'bilgisayar.*?(?:seviyorum|çok.*?iyi|harika)'
             ],
             'sağlık': [
-                r'sağlık.*?(?:sevmiyorum|istemiyorum|ilgilenmiyorum|sevmem)',
-                r'(?:sevmiyorum|istemiyorum|sevmem).*?sağlık'
+                r'sağlık.*?(?:seviyorum|istiyorum|çok.*?önemli)',
+                r'(?:çok.*?seviyorum|bayılıyorum).*?sağlık',
+                r'hasta.*?(?:yardım.*?seviyorum|seviyorum)'
             ],
-            'matematik': [
-                r'matematik.*?(?:sevmiyorum|kötüyüm|zor|sevmem)',
-                r'(?:sevmiyorum|kötüyüm|sevmem).*?matematik'
+            'sanat': [
+                r'sanat.*?(?:seviyorum|istiyorum|çok.*?yaratıcı)',
+                r'(?:çok.*?seviyorum|bayılıyorum).*?sanat',
+                r'tasarım.*?(?:seviyorum|çok.*?iyi)'
+            ],
+            'mühendislik': [
+                r'mühendislik.*?(?:seviyorum|istiyorum|çok.*?iyi)',
+                r'(?:çok.*?seviyorum|bayılıyorum).*?mühendislik'
+            ],
+            'hukuk': [
+                r'hukuk.*?(?:seviyorum|istiyorum|çok.*?iyi)',
+                r'avukat.*?(?:seviyorum|çok.*?istiyorum)'
             ]
         }
         
-        # Check negative patterns first
+        # Negatif pattern'ler - bunlar exclude edilecek
+        negative_patterns = {
+            'teknoloji': [
+                r'teknoloji.*?(?:sevmiyorum|istemiyorum|olmasın)',
+                r'(?:sevmiyorum|istemiyorum).*?teknoloji',
+                r'bilgisayar.*?(?:sevmiyorum|kötüyüm)'
+            ],
+            'sağlık': [
+                r'sağlık.*?(?:sevmiyorum|istemiyorum)',
+                r'tıp.*?(?:sevmiyorum|zor|istemiyorum)',
+                r'kan.*?(?:korkuyorum|sevmiyorum)'
+            ],
+            'matematik': [
+                r'matematik.*?(?:sevmiyorum|kötüyüm|zor)',
+                r'sayısal.*?(?:kötüyüm|sevmem)'
+            ],
+            'mühendislik': [
+                r'mühendislik.*?(?:sevmiyorum|istemiyorum)',
+                r'teknik.*?(?:sevmiyorum|zor)'
+            ],
+            'hukuk': [
+                r'hukuk.*?(?:sevmiyorum|istemiyorum|sıkıcı)',
+                r'avukat.*?(?:sevmiyorum|istemiyorum)'
+            ]
+        }
+        
+        # Check positive patterns first (BOOST)
+        for category, patterns in positive_patterns.items():
+            for pattern in patterns:
+                if re.search(pattern, text_lower):
+                    positive_boost.add(category)
+                    extracted_interests.add(category)
+                    break
+        
+        # Check negative patterns (EXCLUDE)
         for category, patterns in negative_patterns.items():
             for pattern in patterns:
                 if re.search(pattern, text_lower):
                     excluded_interests.add(category)
                     break
         
-        # Career intention patterns (pozitif)
+        # Normal career patterns
         career_patterns = {
             'sağlık': [
-                r'sağlık.*?(?:sektör|alan|çalış)',
-                r'hasta.*?bakım',
-                r'tıp.*?alan'
+                r'(?:doktor|hekim|tıp).*?(?:olmak|istiyorum)',
+                r'sağlık.*?(?:sektör|alan|çalışmak)',
+                r'hasta.*?(?:bakım|tedavi)',
+                r'(?:hemşire|eczacı|veteriner).*?(?:olmak|çalış)',
+                r'tıbbi.*?(?:cihaz|teknoloji|analiz)'
             ],
             'sanat': [
-                r'(?:yaratıcı|sanat).*?(?:iş|alan|çalış)',
-                r'tasarım.*?(?:yapma|alan)',
+                r'(?:sanat|tasarım).*?(?:yapmak|alan)',
+                r'grafik.*?(?:tasarım|yapmak)',
+                r'yaratıcı.*?(?:iş|alan)',
+                r'(?:müzik|sinema|fotoğraf).*?(?:yapmak|alan)',
                 r'görsel.*?(?:sanat|tasarım)'
             ],
             'teknoloji': [
-                r'teknoloji.*?(?:sektör|alan|çalış)',
-                r'yazılım.*?(?:geliştir|alan)',
-                r'bilgisayar.*?(?:program|alan)'
+                r'(?:programcı|developer).*?(?:olmak|istiyorum)',
+                r'yazılım.*?(?:geliştir|yapmak)',
+                r'bilgisayar.*?(?:program|mühendis)',
+                r'web.*?(?:site|tasarım|geliştir)',
+                r'(?:oyun|mobil).*?(?:geliştir|yapmak)'
+            ],
+            'mühendislik': [
+                r'(?:mühendis|mühendislik).*?(?:olmak|istiyorum)',
+                r'(?:makina|elektrik|inşaat).*?mühendis',
+                r'teknik.*?(?:çalışmak|alan)',
+                r'proje.*?(?:yapmak|geliştir)',
+                r'sistem.*?(?:tasarım|geliştir)'
+            ],
+            'hukuk': [
+                r'(?:avukat|hukuk).*?(?:olmak|istiyorum)',
+                r'hukuk.*?(?:alan|okunak|çalışmak|bölüm)',
+                r'adalet.*?(?:sistem|alan)',
+                r'dava.*?(?:takip|savunma)',
+                r'(?:hâkim|savcı).*?(?:olmak|istiyorum)'
+            ],
+            'finans': [
+                r'(?:bankacı|banker).*?(?:olmak|çalış)',
+                r'finans.*?(?:sektör|alan|uzman)',
+                r'borsa.*?(?:çalış|analiz)',
+                r'muhasebe.*?(?:yapmak|çalış)',
+                r'yatırım.*?(?:uzman|danışman)'
+            ],
+            'işletme': [
+                r'işletme.*?(?:çalış|yönetim)',
+                r'pazarlama.*?(?:yapmak|çalış)',
+                r'yönetici.*?(?:olmak|çalış)',
+                r'girişimci.*?(?:olmak|iş.*?kurmak)',
+                r'satış.*?(?:yapmak|uzman)'
+            ],
+            'eğitim': [
+                r'öğretmen.*?(?:olmak|istiyorum)',
+                r'eğitim.*?(?:vermek|çalışmak)',
+                r'ders.*?(?:vermek|anlatmak)',
+                r'çocuk.*?(?:gelişim|eğitim)',
+                r'akademisyen.*?(?:olmak|çalış)'
             ],
             'spor': [
-                r'spor.*?(?:alan|aktivite|sektör)',
-                r'antrenör.*?(?:olma|çalış)'
+                r'antrenör.*?(?:olmak|çalış)',
+                r'spor.*?(?:alan|yapmak)',
+                r'fitness.*?(?:antrenör|çalış)',
+                r'beden.*?eğitim.*?(?:öğretmen|çalış)',
+                r'egzersiz.*?(?:uzman|çalış)'
+            ],
+            'gastronomi': [
+                r'aşçı.*?(?:olmak|çalış)',
+                r'mutfak.*?(?:çalış|şef)',
+                r'yemek.*?(?:yapmak|pişirmek)',
+                r'gastronomi.*?(?:çalış|alan)',
+                r'restoran.*?(?:açmak|yönetim)'
+            ],
+            'medya': [
+                r'gazeteci.*?(?:olmak|çalış)',
+                r'medya.*?(?:çalış|sektör)',
+                r'televizyon.*?(?:çalış|program)',
+                r'sosyal.*?medya.*?(?:uzman|çalış)',
+                r'reklam.*?(?:yapmak|çalış)'
+            ],
+            'turizm': [
+                r'turizm.*?(?:çalış|rehber)',
+                r'otel.*?(?:çalış|yönetim)',
+                r'seyahat.*?(?:acenta|rehber)',
+                r'tur.*?(?:rehber|operatör)',
+                r'konaklama.*?(?:çalış|yönetim)'
             ]
         }
         
-        # Check positive career patterns
+        # Check normal career patterns
         for category, patterns in career_patterns.items():
-            if category not in excluded_interests:  # Sadece exclude edilmemişleri ekle
+            if category not in excluded_interests:
                 for pattern in patterns:
                     if re.search(pattern, text_lower):
                         extracted_interests.add(category)
@@ -212,61 +301,44 @@ class HybridRecommendationEngine:
         
         # Direct keyword matching
         context_keywords = {
-            'sağlık': ['sağlık', 'hasta', 'tedavi', 'tıp', 'hemşire'],
-            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım', 'program'],
-            'sanat': ['sanat', 'tasarım', 'yaratıcı', 'görsel', 'grafik'],
-            'spor': ['spor', 'fitness', 'antrenör', 'egzersiz']
+            'sağlık': ['sağlık', 'doktor', 'hemşire', 'tıp'],
+            'teknoloji': ['teknoloji', 'yazılım', 'program', 'kod'],
+            'sanat': ['sanat', 'tasarım', 'yaratıcı', 'grafik'],
+            'spor': ['spor', 'antrenör', 'fitness'],
+            'hukuk': ['hukuk', 'avukat', 'mahkeme', 'dava'],
+            'finans': ['finans', 'banka', 'muhasebe'],
+            'işletme': ['işletme', 'pazarlama', 'yönetim'],
+            'eğitim': ['öğretmen', 'eğitim', 'ders'],
+            'gastronomi': ['aşçı', 'mutfak', 'yemek'],
+            'turizm': ['turizm', 'otel', 'seyahat'],
+            'mühendislik': ['mühendislik', 'mühendis', 'teknik'],
+            'güvenlik': ['güvenlik', 'polis', 'asker'],
+            'tarım': ['tarım', 'ziraat', 'hayvancılık'],
+            'medya': ['medya', 'gazete', 'haber']
         }
         
         for category, keywords in context_keywords.items():
-            if category not in excluded_interests:  # Exclude edilmemişleri kontrol et
+            if category not in excluded_interests:
                 for keyword in keywords:
                     if keyword in text_lower:
                         extracted_interests.add(category)
                         break
         
-        # Return final interests excluding negatives
         final_interests = extracted_interests - excluded_interests
-        return list(final_interests) if final_interests else ['genel']
-    
-    def filter_negative_interests(self, results: list, user_input: str):
-        user_lower = user_input.lower()
         
-        negative_categories = {
-            'mühendislik': ['mühendislik', 'mühendis'],
-            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım'],
-            'sağlık': ['sağlık', 'tıp', 'hemşire', 'diş'],
-            'matematik': ['matematik', 'hesap'],
-            'spor': ['spor', 'fitness'],
-            'işletme': ['işletme', 'pazarlama'],
-            'eğitim': ['öğretmen', 'eğitim'],
-            'hukuk': ['hukuk', 'avukat'],
-            'finans': ['finans', 'banka']
-        }
+        # Return interests with positive boost info
+        result = list(final_interests) if final_interests else ['genel']
         
-        negative_words = ['istemiyorum', 'sevmiyorum', 'sevmem', 'olmasın']
+        # Store positive boost for later use
+        self.positive_boost_categories = positive_boost
         
-        for category, keywords in negative_categories.items():
-            for keyword in keywords:
-                for neg_word in negative_words:
-                    pattern1 = f"{keyword} {neg_word}"
-                    pattern2 = f"{neg_word} {keyword}"
-                    
-                    if pattern1 in user_lower or pattern2 in user_lower:
-                        print(f"DEBUG: {category} kategorisi filtreleniyor")
-                        results = [r for r in results if not any(kw in self.departments_df.iloc[r['index']]['bolum_adi'].lower() for kw in keywords)]
-                        break
-        
-        return results 
+        return result
     
     def filter_by_ranking(self, ranking: int, tolerance_percent: float = 0.20):
-        """Filter departments by ranking range with percentage-based tolerance"""
         if ranking is None:
             return self.departments_df.index.tolist()
         
-        # Yüzde bazlı tolerance hesaplama yapılarak tutarlı sonuç sağlanır
         tolerance_value = int(ranking * tolerance_percent)
-        
         min_rank = max(1, ranking - tolerance_value)
         max_rank = ranking + tolerance_value
             
@@ -278,37 +350,37 @@ class HybridRecommendationEngine:
         logger.info(f"Ranking: {ranking}, Tolerance: %{tolerance_percent*100} = ±{tolerance_value}")
         logger.info(f"Range: {min_rank} - {max_rank}")
         logger.info(f"Filtered to {len(filtered_indices)} departments")
+        
+        # HARD RESET: Ranking filtreleme sonrası
+        logger.info("Ranking filtering completed - hard reset")
+        
         return filtered_indices
     
     def compute_semantic_similarity(self, interests: str, candidate_indices: list):
-        """Compute semantic similarity between interests and candidate departments"""
         if not interests.strip():
             return []
             
-        # Encode user interests
         interest_embedding = self.model.encode([interests])
-        
-        # Get embeddings for candidate departments
         candidate_embeddings = self.department_embeddings[candidate_indices]
-        
-        # Compute cosine similarity
         similarities = cosine_similarity(interest_embedding, candidate_embeddings)[0]
         
-        # Create results with indices and scores
         results = []
         for i, idx in enumerate(candidate_indices):
             results.append({
                 'index': idx,
                 'similarity_score': similarities[i]
             })
-            
+        
+        # HARD RESET: Similarity hesaplama sonrası
+        logger.info("Similarity computation completed - hard reset")
+        
         return results
     
     def boost_keyword_matches(self, interests: str, results: list):
-        """Boost scores for exact keyword matches with expanded keywords"""
+        """Geliştirilmiş keyword boost - pozitif ifadeler ekstra boost alır"""
         interests_lower = interests.lower()
         
-        # Genişletilmiş keyword mappings
+        # Expanded mappings - düzeltilmiş versiyon
         expanded_mappings = {
             'teknoloji': ['bilgisayar', 'yazılım', 'programlama', 'web', 'oyun', 'dijital', 'sistem', 'kodlama', 'algoritma', 'veri', 'yapay zeka', 'robotik'],
             'sağlık': ['sağlık', 'tıp', 'hemşire', 'hasta', 'tedavi', 'anestezi', 'veteriner', 'diş', 'fizyoterapi', 'biyoloji', 'eczacılık', 'laboratuvar'],
@@ -324,16 +396,15 @@ class HybridRecommendationEngine:
             'turizm': ['turizm', 'otel', 'seyahat', 'rehber', 'konaklama', 'resepsiyon', 'acenta', 'rezervasyon', 'müze', 'kültür', 'tatil', 'gezi']
         }
         
-        
         all_keywords = set()
         for word in interests_lower.split(','):
             word = word.strip()
             for category, expanded_keywords in expanded_mappings.items():
-                if word in expanded_keywords[:3]:
+                # DÜZELTME: [:3] kaldırıldı - tüm keyword'leri kontrol et
+                if word in expanded_keywords:
                     all_keywords.update(expanded_keywords)
                     break
         
-        # Keyword boost hesapla
         for result in results:
             idx = result['index']
             dept_row = self.departments_df.iloc[idx]
@@ -342,127 +413,138 @@ class HybridRecommendationEngine:
             keyword_boost = 0
             for keyword in all_keywords:
                 if keyword in dept_text:
-                    keyword_boost += 0.1
+                    # ARTTIRILMIŞ BOOST: 0.1'den 0.3'e çıkarıldı
+                    base_boost = 0.3
+                    
+                    # Pozitif ifadeler ekstra boost alır
+                    if hasattr(self, 'positive_boost_categories'):
+                        for boost_category in self.positive_boost_categories:
+                            if keyword in expanded_mappings.get(boost_category, []):
+                                base_boost += 0.2  # Ekstra pozitif boost
+                                break
+                    
+                    keyword_boost += base_boost
                     
             result['similarity_score'] += keyword_boost
             result['keyword_boost'] = keyword_boost
-            
+        
+        # HARD RESET: Keyword boost sonrası
+        logger.info("Keyword boosting completed - hard reset")
+        
         return results
     
+    def filter_negative_departments(self, candidate_indices: list, user_input: str):
+        """Department'ları negatif keyword'lere göre filtrele - similarity hesaplamadan önce"""
+        user_lower = user_input.lower()
+        
+        negative_categories = {
+            'sağlık': ['tıp', 'tip', 'sağlık', 'hemşire', 'diş', 'veteriner', 'eczacı'],
+            'mühendislik': ['mühendislik', 'mühendis'],
+            'teknoloji': ['teknoloji', 'bilgisayar', 'yazılım'],
+            'hukuk': ['hukuk', 'avukat'],
+            'matematik': ['matematik', 'hesap'],
+            'spor': ['spor', 'fitness'],
+            'işletme': ['işletme', 'pazarlama'],
+            'eğitim': ['öğretmen', 'eğitim'],
+            'finans': ['finans', 'banka']
+        }
+        
+        negative_words = ['istemiyorum', 'sevmiyorum', 'sevmem', 'olmasın']
+        
+        filtered_indices = []
+        excluded_count = 0
+        
+        for idx in candidate_indices:
+            dept_name = self.departments_df.iloc[idx]['bolum_adi'].lower()
+            should_exclude = False
+            
+            for category, keywords in negative_categories.items():
+                for keyword in keywords:
+                    for neg_word in negative_words:
+                        pattern1 = f"{keyword} {neg_word}"
+                        pattern2 = f"{neg_word} {keyword}"
+                        
+                        if (pattern1 in user_lower or pattern2 in user_lower):
+                            # Bu kategoriyi exclude et
+                            if any(kw in dept_name for kw in keywords):
+                                should_exclude = True
+                                excluded_count += 1
+                                logger.info(f"EXCLUDED: {self.departments_df.iloc[idx]['bolum_adi']} - {category} filtrelendi")
+                                break
+                    if should_exclude:
+                        break
+                if should_exclude:
+                    break
+            
+            if not should_exclude:
+                filtered_indices.append(idx)
+        
+        logger.info(f"Negative filtering: {len(candidate_indices)} -> {len(filtered_indices)} departments ({excluded_count} excluded)")
+        return filtered_indices
+    
     def recommend(self, user_input: str, top_k: int = 10, tolerance_percent: float = 0.20):
-        """Main recommendation function with percentage-based ranking tolerance"""
         logger.info(f"Processing recommendation for: {user_input}")
-        def safe_taban_puan(value):
-            if pd.isna(value):
-                return None
-            try:
-                str_val = str(value)
-                if ',' in str_val:
-                    return None  # Virgüllü değerleri skip et
-                return float(str_val.replace('.', ''))
-            except:
-                return None
-
-        # Parse input
+        
         interests, ranking = self.extract_interests_and_ranking(user_input)
         logger.info(f"Extracted interests: '{interests}', ranking: {ranking}")
         
-        # Filter by ranking with percentage tolerance
         candidate_indices = self.filter_by_ranking(ranking, tolerance_percent)
         
         if not candidate_indices:
             return []
-            
-        # Compute semantic similarity
+        
+        # 1. ÖNCE NEGATİF FİLTRELEME YAP (similarity hesaplamadan önce)
+        candidate_indices = self.filter_negative_departments(candidate_indices, user_input)
+        
+        if not candidate_indices:
+            logger.info("No departments left after negative filtering")
+            return []
+        
+        # 2. Sonra similarity hesapla
         results = self.compute_semantic_similarity(interests, candidate_indices)
-        
-        # Boost keyword matches
         results = self.boost_keyword_matches(interests, results)
-
-        # Filter negative interests
-        results = self.filter_negative_interests(results, user_input)
         
-        # Sort by score
+        # 3. Sort by score
         results.sort(key=lambda x: x['similarity_score'], reverse=True)
         
-        # Apply diversification
-        results = self.diversify_by_department_type(results, top_k)
+        # 4. Sadece en iyi sonuçları al (diversification kaldırıldı)
+        results = results[:top_k]
         
-        # Prepare final recommendations
+        # 5. Prepare final recommendations
         recommendations = []
         for result in results:
             idx = result['index']
             dept_row = self.departments_df.iloc[idx]
             
-            # Similarity_Prompt.py'de recommend fonksiyonunda
-
+            # Similarity score'u yüzde olarak hesapla
+            similarity_percentage = min(100, int(result['similarity_score'] * 100))
+            
             recommendation = {
                 'bolum_adi': dept_row['bolum_adi'],
                 'universite': dept_row['Universite'],
                 'sehir': dept_row['Sehir'],
-                'ranking_2025': int(dept_row['ranking_2025']),  # Mevcut - değiştirme
-                'taban_puan': None,  
+                'ranking_2025': int(dept_row['ranking_2025']),
+                'taban_puan': None,
                 'similarity_score': round(result['similarity_score'], 4),
+                'similarity_percentage': f"{similarity_percentage}%",
                 'keyword_boost': round(result.get('keyword_boost', 0), 4),
                 'description_preview': dept_row['Aciklama'][:150] + '...'
             }
             recommendations.append(recommendation)
-            
+        
         logger.info(f"Generated {len(recommendations)} recommendations")
+        logger.info("Recommendation process completed - FULL HARD RESET")
+        
         return recommendations
-        
-    def explain_recommendation(self, recommendation: dict):
-        """Explain why this recommendation was made"""
-        explanation = f"""
-        Bölüm: {recommendation['bolum_adi']}
-        Üniversite: {recommendation['universite']}
-        Sıralama: {recommendation['ranking_2025']}
-        
-        Benzerlik Skoru: {recommendation['similarity_score']:.4f}
-        Anahtar Kelime Bonusu: {recommendation['keyword_boost']:.4f}
-        
-        Açıklama: {recommendation['description_preview']}
-        """
-        return explanation.strip()
-    
-    def diversify_by_department_type(self, results, top_k=6):
-        """Farklı bölüm türlerinden seç"""
-        diverse_results = []
-        used_dept_names = {}  # Dict ile count tutalım
-        
-        for result in results:
-            idx = result['index']
-            dept_name = self.departments_df.iloc[idx]['bolum_adi']
-            
-            # Bölüm adının temel kısmını al
-            dept_base = dept_name.split('(')[0].split('-')[0].strip().upper()
-            
-            # Bu bölüm türünden kaç tane aldık kontrol et
-            current_count = used_dept_names.get(dept_base, 0)
-            
-            # Aynı bölüm türünden maksimum 2 tane al
-            if current_count < 2:
-                diverse_results.append(result)
-                used_dept_names[dept_base] = current_count + 1
-                
-                logger.info(f"Added: {dept_base} (Count: {current_count + 1})")
-            else:
-                logger.info(f"Skipped: {dept_base} (Already have {current_count})")
-                
-            if len(diverse_results) >= top_k:
-                break
-        
-        return diverse_results
+
 def main():
-    """Test the recommendation engine"""
-    
-    # Initialize engine
     dataset_path = "./Backend/Data/2yillik_Bolumler_aciklamali_yeni.csv"
     engine = HybridRecommendationEngine(dataset_path)
     
-    # Test cases
     test_cases = [
-        "sağlık alanında çalışmak istiyorum ama sayısal iyi değilim içinde teknolojik bir şey olmasın sıralamam 500.000"
+        "sanat ve tasarım çok seviyorum 120 bin sıralama",
+        "mühendislik istiyorum tıp istemiyorum 50 bin",
+        "hukuk okumak istiyorum avukat olmak istiyorum 20 bin"
     ]
     
     for i, test_case in enumerate(test_cases, 1):
@@ -474,7 +556,7 @@ def main():
         for j, rec in enumerate(recommendations, 1):
             print(f"{j}. {rec['bolum_adi']} - {rec['universite']}")
             print(f"   Sıralama: {rec['ranking_2025']}")
-            print(f"   Benzerlik: {rec['similarity_score']:.4f}")
+            print(f"   Uyum: {rec['similarity_percentage']} ({rec['similarity_score']:.4f})")
 
 if __name__ == "__main__":
     main()
