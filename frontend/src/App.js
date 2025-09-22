@@ -382,7 +382,7 @@ function App() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1 + index * 0.1 }}
                       >
-                        {(result.similarity_score * 100).toFixed(0)}% uyum
+                        Uyum Skoru: {(result.similarity_score * 100).toFixed(0)}
                       </motion.span>
                     </div>
                   </motion.div>
