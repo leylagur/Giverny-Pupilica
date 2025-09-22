@@ -3,7 +3,7 @@ import time
 import pandas as pd
 import google.generativeai as genai
 
-# 🔑 API Key
+# Datasetlerin ham halinde bölümler ile ilgili açıklama olmadığından gemini a sorgu atılarak 4 dataset için de açıklama eklenmiştir
 genai.configure(api_key="apı key gelecek")
 
 model = genai.GenerativeModel("gemini-1.5-flash")
@@ -23,23 +23,18 @@ def generate_description(bolum):
 # -----------------------------
 csv_path = "/Users/ardaerdegirmenci/Desktop/Pupilica/giverny/Dataset_creation/Datasets/Esit_Agirlik_Aciklamali.csv"
 
-# 1. CSV oku (virgüllü formatta)
 df = pd.read_csv(csv_path)
 
-# Eğer Aciklama sütunu yoksa ekle
 if "Aciklama" not in df.columns:
     df["Aciklama"] = ""
 
-# 2. Benzersiz bölümler
 unique_bolumler = df["bolum_adi"].unique()
 
 try:
-    # 3. Açıklaması olmayanları doldur
     for bolum in unique_bolumler:
         mevcut = df.loc[df["bolum_adi"] == bolum, "Aciklama"]
         if mevcut.notna().any() and mevcut.astype(str).str.strip().any():
-            continue  # zaten açıklaması var
-
+            continue  
         try:
             aciklama = generate_description(bolum)
             df.loc[df["bolum_adi"] == bolum, "Aciklama"] = aciklama
@@ -48,9 +43,9 @@ try:
             print(f"Hata: {bolum} -> {e}")
             df.loc[df["bolum_adi"] == bolum, "Aciklama"] = ""
 
-        time.sleep(5)  # free tier güvenlik için bekleme
+        time.sleep(5)  
 
 finally:
-    # 4. Aynı dosyanın üzerine yaz
+    # 4. Aynı dosyanın üzerine yazılmıştır
     df.to_csv(csv_path, index=False)
-    print(f"💾 Güncel CSV kaydedildi: {csv_path}")
+    print(f" Güncel CSV kaydedildi: {csv_path}")

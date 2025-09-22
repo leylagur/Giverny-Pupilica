@@ -1,3 +1,4 @@
+# Ana Dosya
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
@@ -46,7 +47,6 @@ def get_recommendations():
         
         recommendations = engine.recommend(user_input, top_k=6)
         
-        # float32 ve diğer NumPy tiplerini Python tipine çevir
         clean_recommendations = []
         for rec in recommendations:
             clean_rec = {
@@ -70,7 +70,6 @@ def get_recommendations():
         return jsonify({'success': False, 'error': str(e)}), 500
     
     finally:
-        # Her istekten sonra hafıza temizliği
         gc.collect()
         print("Memory cleared after request")
 

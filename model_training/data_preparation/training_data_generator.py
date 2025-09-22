@@ -2,6 +2,7 @@ import json
 import random
 from typing import List, Dict, Any
 
+# Fine-tune kullanılarak yapılacak bir model için kurgulanmıştır sonrasında kullanılmamıştır.
 class TrainingDataGenerator:
     def __init__(self):
         self.ranking_ranges = [

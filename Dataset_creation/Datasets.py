@@ -1,6 +1,6 @@
 ## Bu Kod pdf şeklinde bulduğumuz datamızı pdften okuyarak csv ye aktarmak için kullanılmıştır 
 # csv oluşturulduktan sonra data temizleme dataiku uygulamasında yapılmıştır
-# yapılan değişiklikler github da ekran görüntüsü şeklinde yüklenecektir
+
 
 import pdfplumber
 import pandas as pd
@@ -12,7 +12,7 @@ pdf_path = "/Users/ardaerdegirmenci/Desktop/Pupilica/2025_YKS_Genel_Kontenjan_EA
 def fix_turkish_chars(text):
     if not isinstance(text, str):
         return text
-    text = unicodedata.normalize("NFC", text)  # Unicode normalizasyonu
+    text = unicodedata.normalize("NFC", text)  
     replacements = {
         "ç": "ç", "ğ": "ğ", "ö": "ö", "ü": "ü", "ş": "ş", "ı": "ı",
         "Ç": "Ç", "Ğ": "Ğ", "Ö": "Ö", "Ü": "Ü", "Ş": "Ş", "İ": "İ"

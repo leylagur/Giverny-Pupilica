@@ -16,11 +16,36 @@ BölümBul, öğrencilerin ilgi alanlarına göre en uygun üniversite bölümle
 - **Progressive Result Cards** - Staggered loading animasyonları
 
 ### Backend
-- **Python Flask API** - RESTful servis mimarisi
-- **Machine Learning Model** - Similarity-based recommendation
-- **Multi-System Support** - Hybrid recommendation engine
-- **Data Processing Pipeline** - CSV verilerinden model eğitimi
-- **Program-Specific Results** - Her program türü için ayrı model
+Nasıl Çalışır
+Bu sistem yapay zeka ve makine öğrenmesi teknolojileri kullanarak kullanıcının doğal dilde yazdığı metni analiz eder ve kişiselleştirilmiş üniversite bölümü önerileri sunar.
+Ana Özellikler
+1. Akıllı Sıralama Algılama
+
+"450k sıralama", "23 bin", "32.000" formatlarını otomatik algılar
+%20 tolerance ile uygun aralıktaki bölümleri filtreler
+
+2. AI Tabanlı İlgi Alanı Tespiti
+
+12 kategoride akıllı eşleştirme: teknoloji, sağlık, sanat, spor, işletme, gastronomi, eğitim, mühendislik, hukuk, finans, medya, turizm
+SentenceTransformer modeli ile semantic similarity analizi
+Bölüm açıklamalarını AI ile karşılaştırır
+
+3. Akıllı Negatif Filtreleme
+
+"mühendislik istemiyorum", "teknoloji sevmiyorum" gibi ifadeleri doğal dil işleme ile algılar
+İstenmeyen kategorilerdeki bölümleri otomatik filtreler
+10 kategoride negatif sentiment analizi
+
+Teknik Altyapı
+
+SentenceTransformer: Çok dilli BERT tabanlı model
+Cosine Similarity: 4000+ bölüm arasında benzerlik hesaplama
+Hybrid ML: Kural tabanlı + makine öğrenmesi kombinasyonu
+NLP Pipeline: Regex patterns + transformer modeli
+
+Örnek Kullanım
+Girdi: "450k sıralama sağlık alanı istiyorum "
+Sonuç: 360k-540k aralığında sağlık bölümleri önerilir
 
 ## Teknoloji Stack
 
